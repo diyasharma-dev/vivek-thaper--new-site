@@ -1,14 +1,14 @@
 <template>
-  <div class="pt-28 pb-20 bg-[#0d0f12]">
+  <div class="pt-28 pb-20 bg-[#0c0d10]">
     
     <!-- Hero Header -->
     <section class="relative py-16 overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#13161c] border border-white/[0.08] text-neutral-300 text-xs mb-4">
-          <Layers class="w-3.5 h-3.5 text-[#d4a36a]" />
-          <span class="font-mono uppercase tracking-widest text-[11px] text-[#d4a36a]">Executive Capabilities</span>
-        </div>
-        <h1 class="text-3xl sm:text-4xl lg:text-[46px] font-serif font-normal text-white tracking-tight leading-tight">
+        <span class="eyebrow-label mb-4">
+          <Layers class="w-3.5 h-3.5" />
+          <span>Executive Capabilities</span>
+        </span>
+        <h1 class="text-3xl sm:text-5xl lg:text-[48px] font-serif font-normal text-white tracking-tight leading-tight">
           Bespoke Engineering &amp; High-Yield Revenue Systems
         </h1>
         <p class="mt-4 text-base sm:text-lg text-neutral-400 leading-relaxed font-sans">
@@ -26,12 +26,12 @@
           <div 
             v-for="service in serviceDetails" 
             :key="service.title"
-            class="p-8 rounded-xl bg-[#13161c] border border-white/[0.08] hover:border-white/[0.16] flex flex-col justify-between transition-all"
+            class="card-architectural p-8 flex flex-col justify-between"
           >
             <div>
               <div class="flex items-center justify-between mb-4">
-                <span class="text-xs font-mono font-semibold text-[#d4a36a] uppercase tracking-widest">{{ service.id }}</span>
-                <span class="text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-[#0d0f12] text-neutral-400 border border-white/[0.06]">
+                <span class="text-xs font-mono font-semibold text-[#c59b63] uppercase tracking-widest">{{ service.id }}</span>
+                <span class="text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-[#0c0d10] text-neutral-400 border border-white/[0.06]">
                   {{ service.badge }}
                 </span>
               </div>
@@ -51,17 +51,17 @@
                   :key="d"
                   class="flex items-center gap-2.5 text-xs text-neutral-300 font-sans"
                 >
-                  <CheckCircle2 class="w-4 h-4 text-[#d4a36a] shrink-0" />
+                  <CheckCircle2 class="w-4 h-4 text-[#c59b63] shrink-0" />
                   <span>{{ d }}</span>
                 </div>
               </div>
             </div>
 
             <div class="pt-4 border-t border-white/[0.06] flex items-center justify-between">
-              <span class="text-xs font-mono font-medium text-[#d4a36a]">{{ service.stat }}</span>
+              <span class="text-xs font-mono font-medium text-[#c59b63]">{{ service.stat }}</span>
               <router-link 
                 to="/contact" 
-                class="inline-flex items-center gap-1.5 text-xs font-medium text-white hover:text-[#d4a36a] transition-colors"
+                class="inline-flex items-center gap-1.5 text-xs font-medium text-white hover:text-[#c59b63] transition-colors"
               >
                 <span>Inquire Scope</span>
                 <ArrowRight class="w-3.5 h-3.5" />
@@ -75,42 +75,42 @@
     </section>
 
     <!-- 4 Step Engagement Workflow -->
-    <section class="py-20 bg-[#0d0f12] border-t border-white/[0.06]">
+    <section class="py-20 bg-[#0c0d10] border-t border-white/[0.06]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="max-w-2xl mb-14 space-y-2">
-          <span class="text-xs font-mono uppercase tracking-widest text-[#d4a36a]">Execution Framework</span>
+          <span class="text-xs font-mono uppercase tracking-widest text-[#c59b63]">Execution Framework</span>
           <h2 class="text-3xl font-serif text-white">From Strategic Logic to Shipped Revenue</h2>
-          <p class="text-xs sm:text-sm text-neutral-400">How Vivek structures every project engagement with military precision.</p>
+          <p class="text-xs sm:text-sm text-neutral-400 font-sans">How Vivek structures every project engagement with military precision.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="p-6 rounded-xl bg-[#13161c] border border-white/[0.07]">
-            <span class="text-2xl font-serif text-[#d4a36a]">01</span>
+          <div class="card-architectural p-6">
+            <span class="text-2xl font-serif text-[#c59b63]">01</span>
             <h3 class="text-base font-semibold text-white mt-2 mb-1">Discovery &amp; Audit</h3>
             <p class="text-xs text-neutral-400 leading-relaxed font-sans">
               Deep immersion into unit economics, traffic quality, conversion drop-offs, and competitor vulnerabilities.
             </p>
           </div>
 
-          <div class="p-6 rounded-xl bg-[#13161c] border border-white/[0.07]">
-            <span class="text-2xl font-serif text-[#d4a36a]">02</span>
+          <div class="card-architectural p-6">
+            <span class="text-2xl font-serif text-[#c59b63]">02</span>
             <h3 class="text-base font-semibold text-white mt-2 mb-1">Logic Blueprint</h3>
             <p class="text-xs text-neutral-400 leading-relaxed font-sans">
               If-this-then-that flowcharting. Technical schema, user conversion journeys, and funnel architecture mapped.
             </p>
           </div>
 
-          <div class="p-6 rounded-xl bg-[#13161c] border border-white/[0.07]">
-            <span class="text-2xl font-serif text-[#d4a36a]">03</span>
+          <div class="card-architectural p-6">
+            <span class="text-2xl font-serif text-[#c59b63]">03</span>
             <h3 class="text-base font-semibold text-white mt-2 mb-1">Custom Engineering</h3>
             <p class="text-xs text-neutral-400 leading-relaxed font-sans">
               Clean reactive code written from scratch. Zero bloated themes, sub-second load times, and HIPAA/ADA compliance.
             </p>
           </div>
 
-          <div class="p-6 rounded-xl bg-[#13161c] border border-white/[0.07]">
-            <span class="text-2xl font-serif text-[#d4a36a]">04</span>
+          <div class="card-architectural p-6">
+            <span class="text-2xl font-serif text-[#c59b63]">04</span>
             <h3 class="text-base font-semibold text-white mt-2 mb-1">Omnichannel Scaling</h3>
             <p class="text-xs text-neutral-400 leading-relaxed font-sans">
               Turning on high-intent PPC, Google 3-pack local dominance, and automated lead capture follow-ups.

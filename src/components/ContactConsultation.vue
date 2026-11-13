@@ -1,13 +1,13 @@
 <template>
-  <section id="contact" class="py-24 relative overflow-hidden bg-[#0d0f12] border-t border-white/[0.06]">
+  <section id="contact" class="py-24 relative overflow-hidden bg-[#0c0d10] border-t border-white/[0.06]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
       <div class="max-w-3xl mb-14 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#13161c] border border-white/[0.08] text-neutral-300 text-xs">
-          <Send class="w-3.5 h-3.5 text-[#d4a36a]" />
-          <span class="font-mono uppercase tracking-widest text-[11px] text-[#d4a36a]">Direct Advisory Access</span>
-        </div>
+        <span class="eyebrow-label">
+          <Send class="w-3.5 h-3.5" />
+          <span>Direct Advisory Access</span>
+        </span>
         <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
           Initiate a Strategic Conversation with Vivek Thapar
         </h2>
@@ -21,12 +21,12 @@
         <!-- Left: Contact Information & Office Details (5 cols) -->
         <div class="lg:col-span-5 space-y-6">
           
-          <div class="p-8 rounded-xl bg-[#13161c] border border-white/[0.08] space-y-6">
+          <div class="card-architectural p-8 space-y-6">
             <h3 class="text-xl font-serif text-white">NYC Executive Headquarters</h3>
             
             <div class="space-y-5 text-sm">
               <div class="flex items-start gap-4">
-                <div class="w-9 h-9 rounded-lg bg-[#0d0f12] border border-white/[0.08] flex items-center justify-center text-[#d4a36a] shrink-0 mt-0.5">
+                <div class="w-9 h-9 rounded-lg bg-[#0c0d10] border border-white/[0.08] flex items-center justify-center text-[#c59b63] shrink-0 mt-0.5">
                   <MapPin class="w-4 h-4" />
                 </div>
                 <div>
@@ -39,41 +39,41 @@
               </div>
 
               <div class="flex items-start gap-4">
-                <div class="w-9 h-9 rounded-lg bg-[#0d0f12] border border-white/[0.08] flex items-center justify-center text-[#d4a36a] shrink-0 mt-0.5">
+                <div class="w-9 h-9 rounded-lg bg-[#0c0d10] border border-white/[0.08] flex items-center justify-center text-[#c59b63] shrink-0 mt-0.5">
                   <Phone class="w-4 h-4" />
                 </div>
                 <div>
                   <strong class="text-white block font-medium">Direct Telephone Lines</strong>
                   <div class="space-y-0.5 text-xs text-neutral-400 mt-1 font-mono">
-                    <p><a href="tel:+17182074446" class="hover:text-[#d4a36a] text-neutral-300 font-medium">(718) 207-4446</a> <span class="text-neutral-500 font-sans">(Direct Desk)</span></p>
-                    <p><a href="tel:+15169698550" class="hover:text-[#d4a36a] text-neutral-300 font-medium">(516) 969-8550</a> <span class="text-neutral-500 font-sans">(Executive Line)</span></p>
-                    <p><a href="tel:+18555064724" class="hover:text-[#d4a36a] text-neutral-300 font-medium">(855) 506-4724</a> <span class="text-neutral-500 font-sans">(Toll-Free)</span></p>
+                    <p><a href="tel:+17182074446" class="hover:text-[#c59b63] text-neutral-300 font-medium">(718) 207-4446</a> <span class="text-neutral-500 font-sans">(Direct Desk)</span></p>
+                    <p><a href="tel:+15169698550" class="hover:text-[#c59b63] text-neutral-300 font-medium">(516) 969-8550</a> <span class="text-neutral-500 font-sans">(Executive Line)</span></p>
+                    <p><a href="tel:+18555064724" class="hover:text-[#c59b63] text-neutral-300 font-medium">(855) 506-4724</a> <span class="text-neutral-500 font-sans">(Toll-Free)</span></p>
                   </div>
                 </div>
               </div>
 
               <div class="flex items-start gap-4">
-                <div class="w-9 h-9 rounded-lg bg-[#0d0f12] border border-white/[0.08] flex items-center justify-center text-[#d4a36a] shrink-0 mt-0.5">
+                <div class="w-9 h-9 rounded-lg bg-[#0c0d10] border border-white/[0.08] flex items-center justify-center text-[#c59b63] shrink-0 mt-0.5">
                   <Mail class="w-4 h-4" />
                 </div>
                 <div>
                   <strong class="text-white block font-medium">Email Inquiries</strong>
                   <div class="space-y-0.5 text-xs text-neutral-400 mt-1 font-mono">
-                    <p><a href="mailto:vivek@mirchmedia.com" class="hover:text-[#d4a36a] text-neutral-300">vivek@mirchmedia.com</a></p>
-                    <p><a href="mailto:info@vivekthapar.com" class="hover:text-[#d4a36a] text-neutral-300">info@vivekthapar.com</a></p>
+                    <p><a href="mailto:vivek@mirchmedia.com" class="hover:text-[#c59b63] text-neutral-300">vivek@mirchmedia.com</a></p>
+                    <p><a href="mailto:info@vivekthapar.com" class="hover:text-[#c59b63] text-neutral-300">info@vivekthapar.com</a></p>
                   </div>
                 </div>
               </div>
 
               <div class="flex items-start gap-4">
-                <div class="w-9 h-9 rounded-lg bg-[#0d0f12] border border-white/[0.08] flex items-center justify-center text-[#d4a36a] shrink-0 mt-0.5">
+                <div class="w-9 h-9 rounded-lg bg-[#0c0d10] border border-white/[0.08] flex items-center justify-center text-[#c59b63] shrink-0 mt-0.5">
                   <Clock class="w-4 h-4" />
                 </div>
                 <div>
                   <strong class="text-white block font-medium">Office Hours</strong>
                   <p class="text-xs text-neutral-400 mt-1 font-sans">
                     Mon – Fri: 9:00 AM – 6:00 PM EST<br />
-                    <span class="text-[#d4a36a]">Private evening executive briefings by appointment</span>
+                    <span class="text-[#c59b63]">Private evening executive briefings by appointment</span>
                   </p>
                 </div>
               </div>
@@ -81,21 +81,21 @@
 
             <!-- Guarantee Callout -->
             <div class="pt-4 border-t border-white/[0.06] text-xs text-neutral-400 flex items-center gap-2 font-sans">
-              <ShieldCheck class="w-4 h-4 text-[#d4a36a] shrink-0" />
+              <ShieldCheck class="w-4 h-4 text-[#c59b63] shrink-0" />
               <span>Strict Non-Disclosure Guarantee · Responses within 24 business hours.</span>
             </div>
 
           </div>
 
           <!-- NYC Office Photo Card -->
-          <div class="rounded-xl overflow-hidden border border-white/[0.08] relative aspect-[4/3] bg-[#13161c]">
+          <div class="rounded-xl overflow-hidden border border-white/[0.08] relative aspect-[4/3] bg-[#090a0d]">
             <img 
               src="/media/nyc-office.webp" 
               alt="Mirch Media NYC Headquarters"
               class="w-full h-full object-cover object-center filter contrast-[1.02]"
             />
-            <div class="absolute inset-0 bg-[#0d0f12]/30"></div>
-            <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-[#0d0f12]/90 backdrop-blur-md border border-white/[0.1] text-[10px] font-mono uppercase tracking-wider text-neutral-300">
+            <div class="absolute inset-0 bg-[#0c0d10]/30 pointer-events-none"></div>
+            <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-[#0c0d10]/90 backdrop-blur-md border border-white/[0.1] text-[10px] font-mono uppercase tracking-wider text-neutral-300">
               Forest Hills, Queens · New York City
             </div>
           </div>
@@ -104,10 +104,10 @@
 
         <!-- Right: Consultation Request Form (7 cols) -->
         <div class="lg:col-span-7">
-          <div class="p-8 sm:p-10 rounded-xl bg-[#13161c] border border-white/[0.08] shadow-2xl relative">
+          <div class="card-architectural p-8 sm:p-10 shadow-2xl relative">
             
             <div v-if="submitted" class="py-12 text-center space-y-4">
-              <div class="w-14 h-14 rounded-full bg-[#c59b63]/15 border border-[#c59b63] text-[#d4a36a] flex items-center justify-center mx-auto">
+              <div class="w-14 h-14 rounded-full bg-[#c59b63]/15 border border-[#c59b63] text-[#c59b63] flex items-center justify-center mx-auto">
                 <CheckCircle2 class="w-7 h-7" />
               </div>
               <h3 class="text-2xl font-serif text-white">Inquiry Received by Vivek Thapar</h3>
@@ -117,7 +117,7 @@
               <div class="pt-4">
                 <button 
                   @click="submitted = false"
-                  class="px-5 py-2.5 rounded-lg text-xs font-medium text-neutral-300 bg-[#0d0f12] border border-white/[0.1] hover:text-white"
+                  class="btn-secondary text-xs"
                 >
                   Send Another Inquiry
                 </button>
@@ -128,7 +128,7 @@
               
               <div>
                 <h3 class="text-xl font-serif text-white">Schedule an Executive Consultation</h3>
-                <p class="text-xs text-neutral-400 mt-1">Direct review by Vivek Thapar · Zero junior screening</p>
+                <p class="text-xs text-neutral-400 mt-1 font-sans">Direct review by Vivek Thapar · Zero junior screening</p>
               </div>
 
               <!-- Name & Email Row -->
@@ -140,7 +140,7 @@
                     required 
                     v-model="form.name"
                     placeholder="e.g. David Sterling"
-                    class="w-full px-4 py-3 rounded-lg bg-[#0d0f12] border border-white/[0.08] text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#c59b63] transition-colors"
+                    class="form-input-field"
                   />
                 </div>
                 <div>
@@ -150,7 +150,7 @@
                     required 
                     v-model="form.email"
                     placeholder="e.g. david@firm.com"
-                    class="w-full px-4 py-3 rounded-lg bg-[#0d0f12] border border-white/[0.08] text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#c59b63] transition-colors"
+                    class="form-input-field"
                   />
                 </div>
               </div>
@@ -163,14 +163,14 @@
                     type="tel" 
                     v-model="form.phone"
                     placeholder="e.g. (212) 555-0199"
-                    class="w-full px-4 py-3 rounded-lg bg-[#0d0f12] border border-white/[0.08] text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#c59b63] transition-colors font-mono"
+                    class="form-input-field font-mono"
                   />
                 </div>
                 <div>
                   <label class="block text-xs font-mono uppercase tracking-wider text-neutral-300 mb-2">Engagement Type *</label>
                   <select 
                     v-model="form.inquiryType"
-                    class="w-full px-4 py-3 rounded-lg bg-[#0d0f12] border border-white/[0.08] text-sm text-white focus:outline-none focus:border-[#c59b63] transition-colors"
+                    class="form-input-field cursor-pointer"
                   >
                     <option value="strategy">Executive Growth Strategy Session</option>
                     <option value="engineering">Custom Web Architecture &amp; App Engineering</option>
@@ -191,10 +191,10 @@
                     :key="b"
                     @click="form.budget = b"
                     :class="[
-                      'py-2.5 px-3 rounded-lg text-xs font-medium border transition-all text-center',
+                      'py-2.5 px-3 rounded-md text-xs font-medium border transition-all text-center cursor-pointer',
                       form.budget === b 
-                        ? 'bg-[#c59b63]/20 border-[#c59b63] text-white'
-                        : 'bg-[#0d0f12] border-white/[0.08] text-neutral-400 hover:text-white'
+                        ? 'bg-[#c59b63]/20 border-[#c59b63] text-white font-semibold'
+                        : 'bg-[#0c0d10] border-white/[0.08] text-neutral-400 hover:text-white'
                     ]"
                   >
                     {{ b }}
@@ -210,7 +210,7 @@
                   required
                   v-model="form.message"
                   placeholder="Tell Vivek about your business, current traffic/leads, timeline, or speaking engagement details..."
-                  class="w-full px-4 py-3 rounded-lg bg-[#0d0f12] border border-white/[0.08] text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#c59b63] transition-colors resize-none font-sans"
+                  class="form-input-field resize-none font-sans"
                 ></textarea>
               </div>
 
@@ -218,7 +218,7 @@
               <button 
                 type="submit" 
                 :disabled="isSubmitting"
-                class="w-full py-3.5 px-6 rounded-lg font-semibold text-xs text-[#0d0f12] bg-[#c59b63] hover:bg-[#dfc698] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                class="w-full btn-primary py-3.5 cursor-pointer disabled:opacity-50"
               >
                 <span v-if="!isSubmitting">Dispatch Consultation Request to Vivek Thapar</span>
                 <span v-else>Transmitting Briefing...</span>

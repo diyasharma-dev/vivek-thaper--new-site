@@ -1,13 +1,13 @@
 <template>
-  <section id="faq" class="py-24 relative overflow-hidden bg-[#0d0f12] border-t border-white/[0.06]">
+  <section id="faq" class="py-24 relative overflow-hidden bg-[#0c0d10] border-t border-white/[0.06]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
       <div class="max-w-3xl mb-14 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#13161c] border border-white/[0.08] text-neutral-300 text-xs">
-          <HelpCircle class="w-3.5 h-3.5 text-[#d4a36a]" />
-          <span class="font-mono uppercase tracking-widest text-[11px] text-[#d4a36a]">Clarity &amp; Engagements</span>
-        </div>
+        <span class="eyebrow-label">
+          <HelpCircle class="w-3.5 h-3.5" />
+          <span>Clarity &amp; Engagements</span>
+        </span>
         <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
           Frequently Answered Founder Questions
         </h2>
@@ -21,7 +21,7 @@
         <div 
           v-for="(item, idx) in faqs" 
           :key="item.q"
-          class="rounded-xl bg-[#13161c] border border-white/[0.07] overflow-hidden transition-all"
+          class="card-architectural overflow-hidden"
         >
           <button 
             @click="activeFaq = activeFaq === idx ? -1 : idx"
@@ -30,7 +30,7 @@
             <span class="text-sm sm:text-base font-medium text-white font-sans">{{ item.q }}</span>
             <ChevronDown 
               class="w-4 h-4 text-neutral-400 shrink-0 transition-transform duration-200"
-              :class="{ 'rotate-180 text-[#d4a36a]': activeFaq === idx }"
+              :class="{ 'rotate-180 text-[#c59b63]': activeFaq === idx }"
             />
           </button>
 
@@ -44,16 +44,16 @@
       </div>
 
       <!-- Still have questions footer banner -->
-      <div class="mt-12 p-6 rounded-xl bg-[#13161c] border border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="mt-12 p-6 rounded-xl card-architectural flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           <h4 class="text-sm font-semibold text-white">Have a specific question regarding your platform?</h4>
-          <p class="text-xs text-neutral-400 mt-0.5">Speak directly with Vivek Thapar. No sales reps, zero pressure.</p>
+          <p class="text-xs text-neutral-400 mt-0.5 font-sans">Speak directly with Vivek Thapar. No sales reps, zero pressure.</p>
         </div>
         <a 
           href="tel:+17182074446"
-          class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-mono font-medium text-white bg-[#0d0f12] border border-white/[0.1] hover:border-[#c59b63] transition-all shrink-0"
+          class="inline-flex items-center gap-2 px-4 py-2.5 rounded-md text-xs font-mono font-medium text-white bg-[#0c0d10] border border-white/[0.1] hover:border-[#c59b63] transition-all shrink-0"
         >
-          <Phone class="w-3.5 h-3.5 text-[#d4a36a]" />
+          <Phone class="w-3.5 h-3.5 text-[#c59b63]" />
           <span>(718) 207-4446</span>
         </a>
       </div>

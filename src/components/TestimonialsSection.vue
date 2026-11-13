@@ -1,13 +1,13 @@
 <template>
-  <section class="py-24 relative overflow-hidden bg-[#0d0f12] border-t border-white/[0.06]">
+  <section class="py-24 relative overflow-hidden bg-[#0c0d10] border-t border-white/[0.06]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
       <div class="max-w-3xl mb-14 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#13161c] border border-white/[0.08] text-neutral-300 text-xs">
-          <Quote class="w-3.5 h-3.5 text-[#d4a36a]" />
-          <span class="font-mono uppercase tracking-widest text-[11px] text-[#d4a36a]">Client Endorsements</span>
-        </div>
+        <span class="eyebrow-label">
+          <Quote class="w-3.5 h-3.5" />
+          <span>Client Endorsements</span>
+        </span>
         <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
           Executive Voices &amp; Long-Term Client Partnerships
         </h2>
@@ -22,12 +22,12 @@
         <div 
           v-for="item in testimonials" 
           :key="item.author"
-          class="p-8 rounded-xl bg-[#13161c] border border-white/[0.08] flex flex-col justify-between"
+          class="card-architectural p-8 flex flex-col justify-between"
         >
           <div>
             <!-- Star rating in quiet matte brass -->
-            <div class="flex items-center gap-1 text-[#d4a36a] mb-5">
-              <Star v-for="n in 5" :key="n" class="w-3.5 h-3.5 fill-[#d4a36a]" />
+            <div class="flex items-center gap-1 text-[#c59b63] mb-5">
+              <Star v-for="n in 5" :key="n" class="w-3.5 h-3.5 fill-[#c59b63]" />
             </div>
 
             <!-- Quote Text in editorial serif -->
@@ -38,13 +38,13 @@
 
           <!-- Author Info -->
           <div class="pt-4 border-t border-white/[0.06] flex items-center gap-3">
-            <div class="w-9 h-9 rounded-lg bg-[#0d0f12] border border-white/[0.1] flex items-center justify-center font-mono text-xs font-semibold text-[#d4a36a] shrink-0">
+            <div class="w-9 h-9 rounded-lg bg-[#0c0d10] border border-white/[0.08] flex items-center justify-center font-mono text-xs font-semibold text-[#c59b63] shrink-0">
               {{ item.initials }}
             </div>
             <div>
-              <h4 class="text-xs font-semibold text-white">{{ item.author }}</h4>
-              <p class="text-[11px] text-[#d4a36a] font-normal">{{ item.role }}</p>
-              <p class="text-[10px] text-neutral-500">{{ item.company }}</p>
+              <h4 class="text-xs font-semibold text-white font-sans">{{ item.author }}</h4>
+              <p class="text-[11px] text-[#c59b63] font-normal font-sans">{{ item.role }}</p>
+              <p class="text-[10px] text-neutral-500 font-sans">{{ item.company }}</p>
             </div>
           </div>
 

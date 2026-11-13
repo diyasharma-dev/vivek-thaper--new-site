@@ -1,42 +1,42 @@
 <template>
-  <section class="py-16 relative overflow-hidden bg-[#0d0f12] border-y border-white/[0.06]">
+  <section class="py-16 relative overflow-hidden bg-[#0c0d10] border-y border-white/[0.06]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <div class="text-center mb-10">
+      <div class="text-center mb-8">
         <p class="text-[11px] uppercase tracking-widest font-mono text-neutral-400">
           Selected Commercial Clients, Enterprise Brands &amp; Local Institutions
         </p>
       </div>
 
-      <!-- Monochrome Editorial Logo Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 items-center">
+      <!-- Unified Architectural Logo Grid -->
+      <div class="border border-white/[0.08] rounded-xl overflow-hidden bg-[#12141a]/40 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 divide-x divide-y divide-white/[0.06]">
         <div 
           v-for="client in clients" 
           :key="client.name"
-          class="h-20 sm:h-22 p-4 rounded-xl bg-[#13161c] border border-white/[0.06] hover:border-white/[0.15] flex items-center justify-center transition-all group cursor-default"
+          class="h-20 sm:h-24 p-4 flex items-center justify-center transition-colors hover:bg-[#12141a] group cursor-default"
           :title="client.name"
         >
           <img 
             :src="client.logo" 
             :alt="client.name"
-            class="max-h-10 sm:max-h-11 max-w-[130px] sm:max-w-[145px] w-auto h-auto object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+            class="max-h-9 sm:max-h-10 max-w-[120px] sm:max-w-[135px] w-auto h-auto object-contain filter grayscale opacity-55 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
             loading="lazy"
           />
         </div>
       </div>
 
       <!-- Trust & Engagement Principles -->
-      <div class="mt-12 pt-8 border-t border-white/[0.06] flex flex-wrap items-center justify-center gap-8 sm:gap-14 text-neutral-400 text-xs">
-        <div class="flex items-center gap-2.5">
-          <ShieldCheck class="w-4 h-4 text-[#d4a36a] shrink-0" />
+      <div class="mt-10 pt-6 border-t border-white/[0.04] flex flex-wrap items-center justify-center gap-8 sm:gap-14 text-neutral-400 text-xs font-sans">
+        <div class="flex items-center gap-2">
+          <ShieldCheck class="w-4 h-4 text-[#c59b63] shrink-0" />
           <span>Clients Retain 100% Full Ownership of All Code &amp; Assets</span>
         </div>
-        <div class="flex items-center gap-2.5">
-          <CheckCircle class="w-4 h-4 text-[#d4a36a] shrink-0" />
+        <div class="flex items-center gap-2">
+          <CheckCircle class="w-4 h-4 text-[#c59b63] shrink-0" />
           <span>Direct Founder Architecture &amp; Senior Code Oversight</span>
         </div>
-        <div class="flex items-center gap-2.5">
-          <Clock class="w-4 h-4 text-[#d4a36a] shrink-0" />
+        <div class="flex items-center gap-2">
+          <Clock class="w-4 h-4 text-[#c59b63] shrink-0" />
           <span>Under 24-Hour Executive Direct Response Guarantee</span>
         </div>
       </div>

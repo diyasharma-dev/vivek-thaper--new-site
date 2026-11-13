@@ -1,15 +1,15 @@
 <template>
-  <div class="pt-28 pb-20 bg-[#0d0f12]">
+  <div class="pt-28 pb-20 bg-[#0c0d10]">
     
     <!-- Hero Header -->
     <section class="relative py-16 overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="max-w-3xl space-y-3">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#13161c] border border-white/[0.08] text-neutral-300 text-xs">
-            <User class="w-3.5 h-3.5 text-[#d4a36a]" />
-            <span class="font-mono uppercase tracking-widest text-[11px] text-[#d4a36a]">Executive Profile &amp; History</span>
-          </div>
-          <h1 class="text-3xl sm:text-4xl lg:text-[46px] font-serif font-normal text-white tracking-tight leading-tight">
+          <span class="eyebrow-label">
+            <User class="w-3.5 h-3.5" />
+            <span>Executive Profile &amp; History</span>
+          </span>
+          <h1 class="text-3xl sm:text-5xl lg:text-[48px] font-serif font-normal text-white tracking-tight leading-tight">
             Twenty-one years at the intersection of code, commerce, and community in New York City.
           </h1>
           <p class="text-neutral-400 text-base sm:text-lg leading-relaxed font-sans">
@@ -38,7 +38,7 @@
               Over the past two decades, Vivek has guided more than 500 custom web and digital transformation projects across 15+ complex industries, including personal injury law, multi-location healthcare systems, telecom retail, enterprise real estate, and venture-backed mobile applications.
             </p>
 
-            <blockquote class="p-6 rounded-xl bg-[#13161c] border-l-2 border-[#c59b63] font-serif italic text-base text-neutral-200">
+            <blockquote class="p-6 rounded-lg bg-[#12141a] border-l-2 border-[#c59b63] font-serif italic text-base text-neutral-200">
               "We don't just do marketing; we have built and managed the actual businesses that marketing needs to support."
             </blockquote>
 
@@ -47,15 +47,15 @@
             </p>
 
             <div class="pt-4 grid grid-cols-3 gap-4 text-center sm:text-left">
-              <div class="p-4 rounded-lg bg-[#13161c] border border-white/[0.08]">
+              <div class="p-4 rounded-lg bg-[#12141a] border border-white/[0.08]">
                 <div class="text-2xl font-serif text-white">2006</div>
                 <div class="text-[11px] font-mono uppercase tracking-wider text-neutral-400 mt-1">Founded in NYC</div>
               </div>
-              <div class="p-4 rounded-lg bg-[#13161c] border border-white/[0.08]">
-                <div class="text-2xl font-serif text-[#d4a36a]">500+</div>
+              <div class="p-4 rounded-lg bg-[#12141a] border border-white/[0.08]">
+                <div class="text-2xl font-serif text-[#c59b63]">500+</div>
                 <div class="text-[11px] font-mono uppercase tracking-wider text-neutral-400 mt-1">Projects Shipped</div>
               </div>
-              <div class="p-4 rounded-lg bg-[#13161c] border border-white/[0.08]">
+              <div class="p-4 rounded-lg bg-[#12141a] border border-white/[0.08]">
                 <div class="text-2xl font-serif text-white">98%</div>
                 <div class="text-[11px] font-mono uppercase tracking-wider text-neutral-400 mt-1">Retention Rate</div>
               </div>
@@ -64,23 +64,23 @@
 
           <!-- Portrait Gallery Frame -->
           <div class="lg:col-span-6 relative">
-            <div class="rounded-2xl overflow-hidden border border-white/[0.08] bg-[#13161c] shadow-2xl p-3">
-              <div class="relative rounded-xl overflow-hidden aspect-[3/4] bg-[#090a0d]">
+            <div class="card-architectural p-3 shadow-2xl">
+              <div class="relative rounded-lg overflow-hidden aspect-[3/4] bg-[#090a0d]">
                 <img 
                   src="/media/vivek-thapar-founder.webp" 
                   alt="Vivek Thapar Portrait"
                   class="w-full h-full object-cover object-top filter brightness-[1.02] contrast-[1.02]"
                 />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0d0f12]/90 via-transparent to-transparent pointer-events-none"></div>
-                <div class="absolute bottom-3 inset-x-3 p-3.5 rounded-lg bg-[#0d0f12]/90 backdrop-blur-md border border-white/[0.08]">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0c0d10]/90 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-3 inset-x-3 p-3.5 rounded-md bg-[#0c0d10]/90 backdrop-blur-md border border-white/[0.08]">
                   <h3 class="text-sm font-semibold text-white">Vivek Thapar</h3>
-                  <p class="text-[11px] text-[#d4a36a]">Executive Director · Mirch Media NYC</p>
+                  <p class="text-[11px] text-[#c59b63]">Executive Director · Mirch Media NYC</p>
                 </div>
               </div>
 
-              <div class="mt-3 px-2 py-1 flex items-center justify-between text-[11px] text-neutral-400">
+              <div class="mt-3 px-2 py-0.5 flex items-center justify-between text-[11px] text-neutral-400 font-mono">
                 <span>Executive Leadership</span>
-                <span class="text-neutral-500 font-mono">Forest Hills, Queens</span>
+                <span class="text-neutral-500">Forest Hills, Queens</span>
               </div>
             </div>
           </div>
@@ -91,42 +91,42 @@
     </section>
 
     <!-- The 4 Core Pillars -->
-    <section class="py-16 bg-[#0d0f12] border-t border-white/[0.06]">
+    <section class="py-16 bg-[#0c0d10] border-t border-white/[0.06]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="max-w-2xl mb-12 space-y-2">
-          <span class="text-xs font-mono uppercase tracking-widest text-[#d4a36a]">Governing Standards</span>
+          <span class="text-xs font-mono uppercase tracking-widest text-[#c59b63]">Governing Standards</span>
           <h2 class="text-2xl sm:text-3xl font-serif text-white">The Four Pillars of Vivek's Methodology</h2>
-          <p class="text-xs sm:text-sm text-neutral-400">The operational framework applied to every client engagement.</p>
+          <p class="text-xs sm:text-sm text-neutral-400 font-sans">The operational framework applied to every client engagement.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="p-6 rounded-xl bg-[#13161c] border border-white/[0.07] hover:border-white/[0.15] transition-all">
-            <span class="text-[#d4a36a] font-mono text-xs font-semibold block mb-2">01 / STRATEGY</span>
+          <div class="card-architectural p-6">
+            <span class="text-[#c59b63] font-mono text-xs font-semibold block mb-2">01 / STRATEGY</span>
             <h3 class="text-base font-semibold text-white mb-2">Empathy &amp; Market Fit</h3>
             <p class="text-xs text-neutral-400 leading-relaxed font-sans">
               If you can't feel your product, you cannot become your product. Deep immersion into client unit economics and competitive positioning.
             </p>
           </div>
 
-          <div class="p-6 rounded-xl bg-[#13161c] border border-white/[0.07] hover:border-white/[0.15] transition-all">
-            <span class="text-[#d4a36a] font-mono text-xs font-semibold block mb-2">02 / LOGIC</span>
+          <div class="card-architectural p-6">
+            <span class="text-[#c59b63] font-mono text-xs font-semibold block mb-2">02 / LOGIC</span>
             <h3 class="text-base font-semibold text-white mb-2">Engineering Architecture</h3>
             <p class="text-xs text-neutral-400 leading-relaxed font-sans">
               If-this-then-that architectural precision. Automating repetitive funnels, eliminating downtime, and creating sub-second user flows.
             </p>
           </div>
 
-          <div class="p-6 rounded-xl bg-[#13161c] border border-white/[0.07] hover:border-white/[0.15] transition-all">
-            <span class="text-[#d4a36a] font-mono text-xs font-semibold block mb-2">03 / CONVERSION</span>
+          <div class="card-architectural p-6">
+            <span class="text-[#c59b63] font-mono text-xs font-semibold block mb-2">03 / CONVERSION</span>
             <h3 class="text-base font-semibold text-white mb-2">Consumer Psychology</h3>
             <p class="text-xs text-neutral-400 leading-relaxed font-sans">
               Understanding consumer behavior, friction points, and persuasion architectures to systematically generate high-intent pipeline.
             </p>
           </div>
 
-          <div class="p-6 rounded-xl bg-[#13161c] border border-white/[0.07] hover:border-white/[0.15] transition-all">
-            <span class="text-[#d4a36a] font-mono text-xs font-semibold block mb-2">04 / CIVIC IMPACT</span>
+          <div class="card-architectural p-6">
+            <span class="text-[#c59b63] font-mono text-xs font-semibold block mb-2">04 / CIVIC IMPACT</span>
             <h3 class="text-base font-semibold text-white mb-2">Community Leadership</h3>
             <p class="text-xs text-neutral-400 leading-relaxed font-sans">
               “You make a life by what you give.” Championing NYC public parks, fraternal heritage leadership, and mentoring emerging founders.
@@ -142,17 +142,17 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-white/[0.08] bg-[#13161c] p-2 aspect-[4/3] lg:aspect-[3/4] relative">
+          <div class="lg:col-span-5 card-architectural p-2 aspect-[4/3] lg:aspect-[3/4] relative bg-[#090a0d]">
             <img 
               src="/media/vivek-thapar-strategy.webp" 
               alt="Vivek Thapar Strategy Session"
-              class="w-full h-full object-cover object-top rounded-xl filter brightness-[1.02]"
+              class="w-full h-full object-cover object-top rounded-lg filter brightness-[1.02]"
             />
-            <div class="absolute inset-0 bg-[#0d0f12]/20 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-[#0c0d10]/20 pointer-events-none"></div>
           </div>
 
           <div class="lg:col-span-7 space-y-4">
-            <span class="text-xs font-mono uppercase tracking-widest text-[#d4a36a]">Engagement Standard</span>
+            <span class="text-xs font-mono uppercase tracking-widest text-[#c59b63]">Engagement Standard</span>
             <h2 class="text-2xl sm:text-3xl font-serif text-white">
               Direct Founder Access, Senior Code Quality
             </h2>
@@ -166,7 +166,7 @@
             <div class="pt-4">
               <router-link 
                 to="/contact" 
-                class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-xs text-[#0d0f12] bg-[#c59b63] hover:bg-[#dfc698] transition-all"
+                class="btn-primary"
               >
                 <span>Schedule a Discovery Consultation</span>
                 <ArrowRight class="w-4 h-4" />

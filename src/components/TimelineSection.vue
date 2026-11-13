@@ -1,13 +1,13 @@
 <template>
-  <section id="timeline" class="py-24 relative overflow-hidden bg-[#0d0f12] border-t border-white/[0.06]">
+  <section id="timeline" class="py-24 relative overflow-hidden bg-[#0c0d10] border-t border-white/[0.06]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
       <div class="max-w-3xl mb-16 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#13161c] border border-white/[0.08] text-neutral-300 text-xs">
-          <Clock class="w-3.5 h-3.5 text-[#d4a36a]" />
-          <span class="font-mono uppercase tracking-widest text-[11px] text-[#d4a36a]">Chronological Milestones</span>
-        </div>
+        <span class="eyebrow-label">
+          <Clock class="w-3.5 h-3.5" />
+          <span>Chronological Milestones</span>
+        </span>
         <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
           Two Decades of Continuous Evolution &amp; Execution
         </h2>
@@ -32,15 +32,15 @@
             ]"
           >
             <!-- Timeline Pin / Dot -->
-            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-[#0d0f12] border border-[#c59b63] flex items-center justify-center z-10 mt-1">
+            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-[#0c0d10] border border-[#c59b63] flex items-center justify-center z-10 mt-1">
               <div class="w-2 h-2 rounded-full bg-[#c59b63]"></div>
             </div>
 
             <!-- Content Card -->
             <div class="ml-12 sm:ml-0 sm:w-1/2 px-2 sm:px-6">
-              <div class="p-6 rounded-xl bg-[#13161c] border border-white/[0.08] hover:border-white/[0.16] transition-all">
+              <div class="card-architectural p-6">
                 <div class="flex items-center gap-2 mb-2">
-                  <span class="text-xs font-mono font-bold text-[#d4a36a]">
+                  <span class="text-xs font-mono font-bold text-[#c59b63]">
                     {{ item.year }}
                   </span>
                   <span class="text-neutral-600">·</span>

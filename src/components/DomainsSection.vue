@@ -1,13 +1,13 @@
 <template>
-  <section id="domains" class="py-24 relative overflow-hidden bg-[#0d0f12] border-t border-white/[0.06]">
+  <section id="domains" class="py-24 relative overflow-hidden bg-[#0c0d10] border-t border-white/[0.06]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
       <div class="max-w-3xl mb-12 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#13161c] border border-white/[0.08] text-neutral-300 text-xs">
-          <Layers class="w-3.5 h-3.5 text-[#d4a36a]" />
-          <span class="font-mono uppercase tracking-widest text-[11px] text-[#d4a36a]">Core Competencies</span>
-        </div>
+        <span class="eyebrow-label">
+          <Layers class="w-3.5 h-3.5" />
+          <span>Core Competencies</span>
+        </span>
         <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
           Specialized Domains &amp; Engineering Disciplines
         </h2>
@@ -24,8 +24,8 @@
             :class="[
               'px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer',
               activeCategory === cat.id
-                ? 'bg-[#c59b63] text-[#0d0f12] font-semibold'
-                : 'bg-[#13161c] text-neutral-400 hover:text-white border border-white/[0.08]'
+                ? 'bg-[#c59b63] text-[#0c0d10] font-semibold'
+                : 'bg-[#12141a] text-neutral-400 hover:text-white border border-white/[0.08]'
             ]"
           >
             {{ cat.label }}
@@ -38,21 +38,21 @@
         <div
           v-for="(domain, idx) in filteredDomains"
           :key="domain.title"
-          class="p-6 rounded-xl bg-[#13161c] border border-white/[0.07] hover:border-white/[0.16] flex flex-col justify-between transition-all group"
+          class="card-architectural p-6 flex flex-col justify-between group"
         >
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-mono font-semibold text-[#d4a36a]">0{{ idx + 1 }}</span>
-              <span class="text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-[#0d0f12] text-neutral-400 border border-white/[0.06]">
+              <span class="text-xs font-mono font-semibold text-[#c59b63]">0{{ idx + 1 }}</span>
+              <span class="text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-[#0c0d10] text-neutral-400 border border-white/[0.06]">
                 {{ domain.tag }}
               </span>
             </div>
 
-            <h3 class="text-base font-semibold text-white mb-2 group-hover:text-[#d4a36a] transition-colors">
+            <h3 class="text-base font-semibold text-white mb-2 group-hover:text-[#c59b63] transition-colors">
               {{ domain.title }}
             </h3>
 
-            <p class="text-xs text-neutral-400 leading-relaxed mb-4">
+            <p class="text-xs text-neutral-400 leading-relaxed mb-4 font-sans">
               {{ domain.description }}
             </p>
 
@@ -60,7 +60,7 @@
               <li 
                 v-for="bullet in domain.bullets" 
                 :key="bullet"
-                class="flex items-center gap-2 text-[11px] text-neutral-300"
+                class="flex items-center gap-2 text-[11px] text-neutral-300 font-sans"
               >
                 <div class="w-1 h-1 rounded-full bg-[#c59b63] shrink-0"></div>
                 <span>{{ bullet }}</span>
@@ -70,27 +70,27 @@
 
           <div class="mt-6 pt-3 border-t border-white/[0.06] flex items-center justify-between text-xs">
             <span class="text-neutral-500 font-mono text-[10px]">Impact</span>
-            <span class="font-medium text-[#d4a36a]">{{ domain.impact }}</span>
+            <span class="font-medium text-[#c59b63]">{{ domain.impact }}</span>
           </div>
         </div>
       </div>
 
       <!-- Studio & NYC Office Feature Strip -->
-      <div class="mt-16 p-8 rounded-2xl bg-[#13161c] border border-white/[0.08] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <div class="lg:col-span-4 rounded-xl overflow-hidden aspect-[4/3] lg:aspect-auto h-full min-h-[220px] relative border border-white/[0.08]">
+      <div class="mt-16 p-8 rounded-xl card-architectural grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-4 rounded-lg overflow-hidden aspect-[4/3] lg:aspect-auto h-full min-h-[220px] relative border border-white/[0.08] bg-[#090a0d]">
           <img 
             src="/media/web-design-studio.webp" 
             alt="Modern Web Design & Engineering Studio"
             class="w-full h-full object-cover object-center filter contrast-[1.02]"
           />
-          <div class="absolute inset-0 bg-[#0d0f12]/30"></div>
-          <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-[#0d0f12]/90 backdrop-blur-md border border-white/[0.1] text-[10px] font-mono uppercase tracking-wider text-neutral-300">
+          <div class="absolute inset-0 bg-[#0c0d10]/30"></div>
+          <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-[#0c0d10]/90 backdrop-blur-md border border-white/[0.1] text-[10px] font-mono uppercase tracking-wider text-neutral-300">
             NYC Development Lab
           </div>
         </div>
 
         <div class="lg:col-span-8 space-y-4">
-          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#d4a36a]">
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#c59b63]">
             <Terminal class="w-3.5 h-3.5" />
             <span>Architecture &amp; Code Quality</span>
           </div>
@@ -102,11 +102,11 @@
           </p>
 
           <div class="pt-2 flex flex-wrap gap-2 text-xs font-mono text-neutral-300">
-            <span class="px-2.5 py-1 rounded bg-[#0d0f12] border border-white/[0.06]">Vue 3 / Vite</span>
-            <span class="px-2.5 py-1 rounded bg-[#0d0f12] border border-white/[0.06]">Tailwind CSS</span>
-            <span class="px-2.5 py-1 rounded bg-[#0d0f12] border border-white/[0.06]">REST &amp; GraphQL APIs</span>
-            <span class="px-2.5 py-1 rounded bg-[#0d0f12] border border-white/[0.06]">Semantic Schema Markup</span>
-            <span class="px-2.5 py-1 rounded bg-[#0d0f12] border border-white/[0.06]">Edge CDN Delivery</span>
+            <span class="px-2.5 py-1 rounded bg-[#0c0d10] border border-white/[0.06]">Vue 3 / Vite</span>
+            <span class="px-2.5 py-1 rounded bg-[#0c0d10] border border-white/[0.06]">Tailwind CSS</span>
+            <span class="px-2.5 py-1 rounded bg-[#0c0d10] border border-white/[0.06]">REST &amp; GraphQL APIs</span>
+            <span class="px-2.5 py-1 rounded bg-[#0c0d10] border border-white/[0.06]">Semantic Schema Markup</span>
+            <span class="px-2.5 py-1 rounded bg-[#0c0d10] border border-white/[0.06]">Edge CDN Delivery</span>
           </div>
         </div>
       </div>

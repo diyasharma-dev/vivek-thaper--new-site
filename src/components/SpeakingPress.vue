@@ -1,13 +1,13 @@
 <template>
-  <section id="speaking" class="py-24 relative overflow-hidden bg-[#0d0f12] border-t border-white/[0.06]">
+  <section id="speaking" class="py-24 relative overflow-hidden bg-[#0c0d10] border-t border-white/[0.06]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
       <div class="max-w-3xl mb-14 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#13161c] border border-white/[0.08] text-neutral-300 text-xs">
-          <Mic class="w-3.5 h-3.5 text-[#d4a36a]" />
-          <span class="font-mono uppercase tracking-widest text-[11px] text-[#d4a36a]">Keynotes &amp; Industry Engagements</span>
-        </div>
+        <span class="eyebrow-label">
+          <Mic class="w-3.5 h-3.5" />
+          <span>Keynotes &amp; Industry Engagements</span>
+        </span>
         <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
           Keynote Addresses, Masterclasses &amp; Strategic Panels
         </h2>
@@ -21,26 +21,26 @@
         
         <!-- Keynote Stage Photo (5 cols) -->
         <div class="lg:col-span-5 relative">
-          <div class="rounded-2xl overflow-hidden border border-white/[0.08] bg-[#13161c] shadow-2xl p-3">
-            <div class="relative rounded-xl overflow-hidden aspect-[3/4] bg-[#090a0d]">
+          <div class="card-architectural p-3 shadow-2xl">
+            <div class="relative rounded-lg overflow-hidden aspect-[3/4] bg-[#090a0d]">
               <img 
                 src="/media/vivek-thapar-keynote.webp" 
                 alt="Vivek Thapar delivering keynote at NYC conference"
                 class="w-full h-full object-cover object-top filter brightness-[1.02] contrast-[1.02]"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0d0f12]/90 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0c0d10]/90 via-transparent to-transparent pointer-events-none"></div>
 
-              <div class="absolute bottom-3 inset-x-3 p-3 rounded-lg bg-[#0d0f12]/90 backdrop-blur-md border border-white/[0.08]">
-                <span class="text-[10px] font-mono uppercase tracking-wider text-[#d4a36a] block mb-0.5">Live Stage Appearance</span>
+              <div class="absolute bottom-3 inset-x-3 p-3 rounded-md bg-[#0c0d10]/90 backdrop-blur-md border border-white/[0.08]">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-[#c59b63] block mb-0.5">Live Stage Appearance</span>
                 <p class="text-xs font-semibold text-white">NYC Tech &amp; Business Summits</p>
                 <p class="text-[11px] text-neutral-400">Keynotes, university masterclasses, and executive roundtables</p>
               </div>
             </div>
 
             <!-- Caption below stage photo -->
-            <div class="mt-3 px-2 py-1 flex items-center justify-between text-[11px] text-neutral-400">
+            <div class="mt-3 px-2 py-0.5 flex items-center justify-between text-[11px] text-neutral-400 font-mono">
               <span>Keynote Speaker &amp; Panelist</span>
-              <span class="text-neutral-500 font-mono">Available Worldwide</span>
+              <span class="text-neutral-500">Available Worldwide</span>
             </div>
           </div>
         </div>
@@ -49,33 +49,33 @@
         <div class="lg:col-span-7 space-y-4">
           <div class="mb-2">
             <h3 class="text-xl font-serif text-white">Signature Keynote Presentations</h3>
-            <p class="text-xs text-neutral-400 mt-1">Tailored for corporate conferences, university panels, and executive leadership retreats.</p>
+            <p class="text-xs text-neutral-400 mt-1 font-sans">Tailored for corporate conferences, university panels, and executive leadership retreats.</p>
           </div>
 
           <div 
             v-for="(topic, idx) in topics" 
             :key="topic.title"
-            class="p-5 rounded-xl bg-[#13161c] border border-white/[0.07] hover:border-white/[0.14] transition-all cursor-pointer"
+            class="card-architectural p-5 cursor-pointer"
             @click="activeTopic = activeTopic === idx ? -1 : idx"
           >
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <span class="text-xs font-mono font-semibold text-[#d4a36a]">0{{ idx + 1 }}</span>
+                <span class="text-xs font-mono font-semibold text-[#c59b63]">0{{ idx + 1 }}</span>
                 <h4 class="text-sm sm:text-base font-semibold text-white">{{ topic.title }}</h4>
               </div>
               <ChevronDown 
                 class="w-4 h-4 text-neutral-400 transition-transform duration-200" 
-                :class="{ 'rotate-180 text-[#d4a36a]': activeTopic === idx }"
+                :class="{ 'rotate-180 text-[#c59b63]': activeTopic === idx }"
               />
             </div>
 
-            <div v-if="activeTopic === idx" class="mt-3 pt-3 border-t border-white/[0.06] text-xs text-neutral-300 leading-relaxed space-y-2">
+            <div v-if="activeTopic === idx" class="mt-3 pt-3 border-t border-white/[0.06] text-xs text-neutral-300 leading-relaxed space-y-2 font-sans">
               <p>{{ topic.description }}</p>
               <div class="flex flex-wrap gap-1.5 pt-1">
                 <span 
                   v-for="tag in topic.tags" 
                   :key="tag"
-                  class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#0d0f12] text-[#d4a36a] border border-white/[0.06]"
+                  class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#0c0d10] text-[#c59b63] border border-white/[0.06]"
                 >
                   {{ tag }}
                 </span>
@@ -84,14 +84,14 @@
           </div>
 
           <!-- Booking Callout Banner -->
-          <div class="mt-6 p-6 rounded-xl bg-[#13161c] border border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="mt-6 p-6 rounded-xl card-architectural flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="space-y-0.5 text-center sm:text-left">
               <h4 class="text-sm font-semibold text-white">Book Vivek for Your Next Event</h4>
-              <p class="text-xs text-neutral-400">Keynotes · Fireside Chats · Executive Workshops</p>
+              <p class="text-xs text-neutral-400 font-sans">Keynotes · Fireside Chats · Executive Workshops</p>
             </div>
             <router-link 
               to="/contact" 
-              class="px-5 py-2.5 rounded-lg font-semibold text-xs text-[#0d0f12] bg-[#c59b63] hover:bg-[#dfc698] transition-all shrink-0"
+              class="btn-primary text-xs shrink-0"
             >
               Request Speaker Rider
             </router-link>
@@ -104,9 +104,9 @@
       <!-- Awards & Press Recognition Triplet -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <div class="p-6 rounded-xl bg-[#13161c] border border-white/[0.07]">
+        <div class="card-architectural p-6">
           <div class="flex items-center justify-between mb-3">
-            <span class="text-[10px] font-mono uppercase tracking-wider text-[#d4a36a]">Agency Leadership</span>
+            <span class="text-[10px] font-mono uppercase tracking-wider text-[#c59b63]">Agency Leadership</span>
             <span class="text-xs text-neutral-500 font-mono">2006 – 2026</span>
           </div>
           <h4 class="text-base font-semibold text-white mb-1">Mirch Media Milestone</h4>
@@ -115,9 +115,9 @@
           </p>
         </div>
 
-        <div class="p-6 rounded-xl bg-[#13161c] border border-white/[0.07]">
+        <div class="card-architectural p-6">
           <div class="flex items-center justify-between mb-3">
-            <span class="text-[10px] font-mono uppercase tracking-wider text-[#d4a36a]">Collegiate Impact</span>
+            <span class="text-[10px] font-mono uppercase tracking-wider text-[#c59b63]">Collegiate Impact</span>
             <span class="text-xs text-neutral-500 font-mono">National</span>
           </div>
           <h4 class="text-base font-semibold text-white mb-1">Iota Nu Delta Directorate</h4>
@@ -126,9 +126,9 @@
           </p>
         </div>
 
-        <div class="p-6 rounded-xl bg-[#13161c] border border-white/[0.07]">
+        <div class="card-architectural p-6">
           <div class="flex items-center justify-between mb-3">
-            <span class="text-[10px] font-mono uppercase tracking-wider text-[#d4a36a]">Civic Leadership</span>
+            <span class="text-[10px] font-mono uppercase tracking-wider text-[#c59b63]">Civic Leadership</span>
             <span class="text-xs text-neutral-500 font-mono">NYC Parks</span>
           </div>
           <h4 class="text-base font-semibold text-white mb-1">Urban Public Space Initiative</h4>
