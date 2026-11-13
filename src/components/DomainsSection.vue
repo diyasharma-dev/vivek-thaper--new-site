@@ -11,7 +11,7 @@
         <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
           Specialized Domains &amp; Engineering Disciplines
         </h2>
-        <p class="text-neutral-400 text-base leading-relaxed font-sans">
+        <p class="text-neutral-300 text-base leading-relaxed font-sans">
           Full-lifecycle execution — from product logic planning and bespoke code development to omnichannel search dominance.
         </p>
 
@@ -25,7 +25,7 @@
               'px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer',
               activeCategory === cat.id
                 ? 'bg-[#c59b63] text-[#0c0d10] font-semibold'
-                : 'bg-[#12141a] text-neutral-400 hover:text-white border border-white/[0.08]'
+                : 'bg-[#12141a] text-neutral-300 hover:text-white border border-white/[0.12]'
             ]"
           >
             {{ cat.label }}
@@ -43,7 +43,7 @@
           <div>
             <div class="flex items-center justify-between mb-4">
               <span class="text-xs font-mono font-semibold text-[#c59b63]">0{{ idx + 1 }}</span>
-              <span class="text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-[#0c0d10] text-neutral-400 border border-white/[0.06]">
+              <span class="text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-[#0c0d10] text-neutral-300 border border-white/[0.08]">
                 {{ domain.tag }}
               </span>
             </div>
@@ -52,7 +52,7 @@
               {{ domain.title }}
             </h3>
 
-            <p class="text-xs text-neutral-400 leading-relaxed mb-4 font-sans">
+            <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-4 font-sans">
               {{ domain.description }}
             </p>
 
@@ -60,17 +60,17 @@
               <li 
                 v-for="bullet in domain.bullets" 
                 :key="bullet"
-                class="flex items-center gap-2 text-[11px] text-neutral-300 font-sans"
+                class="flex items-center gap-2 text-[11px] sm:text-xs text-neutral-200 font-sans"
               >
-                <div class="w-1 h-1 rounded-full bg-[#c59b63] shrink-0"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-[#c59b63] shrink-0"></div>
                 <span>{{ bullet }}</span>
               </li>
             </ul>
           </div>
 
           <div class="mt-6 pt-3 border-t border-white/[0.06] flex items-center justify-between text-xs">
-            <span class="text-neutral-500 font-mono text-[10px]">Impact</span>
-            <span class="font-medium text-[#c59b63]">{{ domain.impact }}</span>
+            <span class="text-neutral-400 font-mono text-[10px] uppercase tracking-wider">Impact</span>
+            <span class="font-semibold text-[#c59b63]">{{ domain.impact }}</span>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@
             class="w-full h-full object-cover object-center filter contrast-[1.02]"
           />
           <div class="absolute inset-0 bg-[#0c0d10]/30"></div>
-          <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-[#0c0d10]/90 backdrop-blur-md border border-white/[0.1] text-[10px] font-mono uppercase tracking-wider text-neutral-300">
+          <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-[#0c0d10]/90 backdrop-blur-md border border-white/[0.1] text-[10px] font-mono uppercase tracking-wider text-neutral-200 font-medium">
             NYC Development Lab
           </div>
         </div>
@@ -97,7 +97,7 @@
           <h3 class="text-xl sm:text-2xl font-serif text-white">
             Engineered for Extreme Speed, Natural Search Dominance &amp; Conversion Logic
           </h3>
-          <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed font-sans">
+          <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed font-sans">
             We reject bloated page builders and fragile template marketplaces. Every platform is architected with modern component systems, optimized database schemas, and structured schema data that search engines index with priority.
           </p>
 

@@ -103,8 +103,8 @@
 
           <div class="lg:col-span-5 rounded-lg overflow-hidden border border-white/[0.08] aspect-[4/3] relative bg-[#090a0d]">
             <img 
-              src="/media/nyc-office.webp" 
-              alt="Queens NYC Neighborhood"
+              src="/media/work-vision.webp" 
+              alt="Queens NYC Neighborhood and Community Vision"
               class="w-full h-full object-cover object-center filter contrast-[1.02]"
             />
             <div class="absolute inset-0 bg-[#0c0d10]/20"></div>

@@ -11,7 +11,7 @@
         <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
           Two Decades of Continuous Evolution &amp; Execution
         </h2>
-        <p class="text-neutral-400 text-base leading-relaxed font-sans">
+        <p class="text-neutral-300 text-base leading-relaxed font-sans">
           From a solo web developer in Queens to an acclaimed NYC agency founder, advisor, and keynote speaker.
         </p>
       </div>
@@ -43,14 +43,14 @@
                   <span class="text-xs font-mono font-bold text-[#c59b63]">
                     {{ item.year }}
                   </span>
-                  <span class="text-neutral-600">·</span>
-                  <span class="text-[10px] font-mono uppercase tracking-wider text-neutral-400">{{ item.tag }}</span>
+                  <span class="text-neutral-500">·</span>
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-neutral-300 font-medium">{{ item.tag }}</span>
                 </div>
 
                 <h3 class="text-base font-serif text-white mb-2">{{ item.title }}</h3>
-                <p class="text-xs text-neutral-400 leading-relaxed font-sans">{{ item.description }}</p>
+                <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed font-sans">{{ item.description }}</p>
 
-                <div class="mt-4 pt-3 border-t border-white/[0.06] text-[11px] font-mono text-neutral-400">
+                <div class="mt-4 pt-3 border-t border-white/[0.06] text-[11px] font-mono text-neutral-300 font-medium">
                   {{ item.metric }}
                 </div>
               </div>

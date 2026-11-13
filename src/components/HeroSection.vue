@@ -19,18 +19,18 @@
           </div>
 
           <!-- Main Title -->
-          <h1 class="text-3xl sm:text-5xl lg:text-[50px] font-serif font-normal text-[#f5f5f2] tracking-[-0.02em] leading-[1.18]">
+          <h1 class="text-3xl sm:text-5xl lg:text-[50px] font-serif font-normal text-white tracking-[-0.02em] leading-[1.18]">
             Twenty-one years building digital businesses, directing engineering, and scaling revenue in New York City.
           </h1>
 
           <!-- Personal Statement & Subheading -->
           <div class="space-y-4">
-            <blockquote class="border-l-2 border-[#c59b63] pl-4 py-0.5 text-left text-base sm:text-lg text-neutral-300 font-sans leading-relaxed">
-              <span class="text-white font-medium">"I have a confession to make:</span> I love creating, designing, logic planning, leading teams, and working with startups. My 21+ years of experience with digital marketing and website engineering make me a natural project manager."
+            <blockquote class="border-l-2 border-[#c59b63] pl-4 py-0.5 text-left text-base sm:text-lg text-neutral-200 font-sans leading-relaxed">
+              <span class="text-white font-semibold">"I have a confession to make:</span> I love creating, designing, logic planning, leading teams, and working with startups. My 21+ years of experience with digital marketing and website engineering make me a natural project manager."
             </blockquote>
 
-            <p class="text-sm text-neutral-400 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans">
-              Founder &amp; CEO of <strong class="text-neutral-200 font-medium">Mirch Media</strong> in Forest Hills, Queens. Direct founder accountability for enterprises, law firms, healthcare systems, and growing startups.
+            <p class="text-sm sm:text-base text-neutral-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans">
+              Founder &amp; CEO of <strong class="text-white font-medium">Mirch Media</strong> in Forest Hills, Queens. Direct founder accountability for enterprises, law firms, healthcare systems, and growing startups.
             </p>
           </div>
 
@@ -56,7 +56,7 @@
 
             <a 
               href="tel:+17182074446"
-              class="inline-flex items-center gap-2 px-3 py-2.5 rounded-md text-xs font-mono font-medium text-neutral-400 hover:text-white transition-colors"
+              class="inline-flex items-center gap-2 px-3 py-2.5 rounded-md text-xs font-mono font-medium text-neutral-200 hover:text-white transition-colors"
             >
               <Phone class="w-3.5 h-3.5 text-[#c59b63]" />
               <span>(718) 207-4446</span>
@@ -64,22 +64,22 @@
           </div>
 
           <!-- Editorial Metric Strip -->
-          <div class="pt-8 border-t border-white/[0.08] grid grid-cols-2 sm:grid-cols-4 gap-6 text-center sm:text-left">
+          <div class="pt-8 border-t border-white/[0.1] grid grid-cols-2 sm:grid-cols-4 gap-6 text-center sm:text-left">
             <div>
               <div class="text-2xl sm:text-3xl font-serif text-white">21+</div>
-              <div class="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mt-0.5">Years Experience</div>
+              <div class="text-[11px] font-mono text-neutral-300 uppercase tracking-wider mt-0.5">Years Experience</div>
             </div>
             <div>
               <div class="text-2xl sm:text-3xl font-serif text-[#c59b63]">500+</div>
-              <div class="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mt-0.5">Projects Shipped</div>
+              <div class="text-[11px] font-mono text-neutral-300 uppercase tracking-wider mt-0.5">Projects Shipped</div>
             </div>
             <div>
               <div class="text-2xl sm:text-3xl font-serif text-white">98%</div>
-              <div class="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mt-0.5">Retention Rate</div>
+              <div class="text-[11px] font-mono text-neutral-300 uppercase tracking-wider mt-0.5">Retention Rate</div>
             </div>
             <div>
               <div class="text-2xl sm:text-3xl font-serif text-white">NYC</div>
-              <div class="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mt-0.5">Queens Office</div>
+              <div class="text-[11px] font-mono text-neutral-300 uppercase tracking-wider mt-0.5">Queens Office</div>
             </div>
           </div>
 

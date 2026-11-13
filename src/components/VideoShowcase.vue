@@ -11,7 +11,7 @@
         <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
           A personal message on founder accountability, engineering logic, and transparent growth.
         </h2>
-        <p class="text-neutral-400 text-base leading-relaxed font-sans">
+        <p class="text-neutral-300 text-base leading-relaxed font-sans">
           Hear Vivek explain why direct senior involvement and bespoke software development outperform agency middlemen.
         </p>
       </div>
@@ -36,12 +36,12 @@
             ></video>
 
             <!-- Video Status Bar -->
-            <div class="p-4 bg-[#12141a] border-t border-white/[0.06] flex items-center justify-between text-xs text-neutral-400">
+            <div class="p-4 bg-[#12141a] border-t border-white/[0.06] flex items-center justify-between text-xs text-neutral-300">
               <div class="flex items-center gap-2.5">
                 <span class="w-2 h-2 rounded-full bg-[#c59b63]"></span>
-                <span class="font-sans text-neutral-300 font-medium">Vivek Thapar speaking from NYC</span>
+                <span class="font-sans text-neutral-200 font-medium">Vivek Thapar speaking from NYC</span>
               </div>
-              <div class="font-mono text-[11px] text-neutral-400">
+              <div class="font-mono text-[11px] text-neutral-300">
                 0:52 Runtime
               </div>
             </div>
@@ -55,7 +55,7 @@
           <div class="card-architectural p-6">
             <span class="text-[10px] font-mono uppercase tracking-widest text-[#c59b63] block mb-1">01 / Experience</span>
             <h3 class="text-base font-semibold text-white mb-1.5">21-Year Proven Track Record</h3>
-            <p class="text-xs text-neutral-400 leading-relaxed font-sans">
+            <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed font-sans">
               Driving lead generation, organic search supremacy, and customer lifetime value across legal, healthcare, real estate, and venture startups.
             </p>
           </div>
@@ -63,7 +63,7 @@
           <div class="card-architectural p-6">
             <span class="text-[10px] font-mono uppercase tracking-widest text-[#c59b63] block mb-1">02 / Architecture</span>
             <h3 class="text-base font-semibold text-white mb-1.5">Zero Cookie-Cutter Templates</h3>
-            <p class="text-xs text-neutral-400 leading-relaxed font-sans">
+            <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed font-sans">
               Custom-coded architectures engineered from the ground up for lightning speed, frictionless conversion flow, and sustainable scalability.
             </p>
           </div>
@@ -71,7 +71,7 @@
           <div class="card-architectural p-6">
             <span class="text-[10px] font-mono uppercase tracking-widest text-[#c59b63] block mb-1">03 / Partnership</span>
             <h3 class="text-base font-semibold text-white mb-1.5">Direct Founder Oversight</h3>
-            <p class="text-xs text-neutral-400 leading-relaxed font-sans">
+            <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed font-sans">
               No account coordinators, no offshore handoffs, and zero inflated agency retainers. You collaborate directly with Vivek on vision and execution.
             </p>
           </div>

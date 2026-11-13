@@ -3,41 +3,49 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="text-center mb-8">
-        <p class="text-[11px] uppercase tracking-widest font-mono text-neutral-400">
+        <p class="text-[11px] uppercase tracking-widest font-mono text-neutral-300 font-semibold">
           Selected Commercial Clients, Enterprise Brands &amp; Local Institutions
         </p>
       </div>
 
-      <!-- Unified Architectural Logo Grid -->
-      <div class="border border-white/[0.08] rounded-xl overflow-hidden bg-[#12141a]/40 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 divide-x divide-y divide-white/[0.06]">
+      <!-- High-Contrast Architectural Logo Grid -->
+      <div class="border border-white/[0.12] rounded-xl overflow-hidden bg-[#12141a] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 divide-x divide-y divide-white/[0.08]">
         <div 
           v-for="client in clients" 
           :key="client.name"
-          class="h-20 sm:h-24 p-4 flex items-center justify-center transition-colors hover:bg-[#12141a] group cursor-default"
+          class="h-28 sm:h-32 p-4 flex flex-col items-center justify-center gap-2.5 transition-colors hover:bg-[#181c24] group cursor-default"
           :title="client.name"
         >
-          <img 
-            :src="client.logo" 
-            :alt="client.name"
-            class="max-h-9 sm:max-h-10 max-w-[120px] sm:max-w-[135px] w-auto h-auto object-contain filter grayscale opacity-55 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-            loading="lazy"
-          />
+          <!-- Logo rendered in pure crisp white via brightness-0 invert so it pops clearly against dark background -->
+          <div class="h-10 sm:h-12 w-full flex items-center justify-center">
+            <img 
+              :src="client.logo" 
+              :alt="client.name"
+              class="max-h-8 sm:max-h-9 max-w-[125px] sm:max-w-[135px] w-auto h-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-200"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Crisp, readable brand name text underneath -->
+          <span class="text-[11px] font-mono font-medium text-neutral-300 group-hover:text-white transition-colors text-center truncate max-w-full px-1">
+            {{ client.name }}
+          </span>
         </div>
       </div>
 
-      <!-- Trust & Engagement Principles -->
-      <div class="mt-10 pt-6 border-t border-white/[0.04] flex flex-wrap items-center justify-center gap-8 sm:gap-14 text-neutral-400 text-xs font-sans">
+      <!-- Trust & Engagement Principles with high-contrast text -->
+      <div class="mt-10 pt-6 border-t border-white/[0.06] flex flex-wrap items-center justify-center gap-8 sm:gap-14 text-neutral-300 text-xs font-sans">
         <div class="flex items-center gap-2">
           <ShieldCheck class="w-4 h-4 text-[#c59b63] shrink-0" />
-          <span>Clients Retain 100% Full Ownership of All Code &amp; Assets</span>
+          <span class="font-medium text-neutral-200">Clients Retain 100% Full Ownership of All Code &amp; Assets</span>
         </div>
         <div class="flex items-center gap-2">
           <CheckCircle class="w-4 h-4 text-[#c59b63] shrink-0" />
-          <span>Direct Founder Architecture &amp; Senior Code Oversight</span>
+          <span class="font-medium text-neutral-200">Direct Founder Architecture &amp; Senior Code Oversight</span>
         </div>
         <div class="flex items-center gap-2">
           <Clock class="w-4 h-4 text-[#c59b63] shrink-0" />
-          <span>Under 24-Hour Executive Direct Response Guarantee</span>
+          <span class="font-medium text-neutral-200">Under 24-Hour Executive Direct Response Guarantee</span>
         </div>
       </div>
 
@@ -57,7 +65,7 @@ const clients = [
   { name: 'R&S Law Group', logo: '/media/client-rs.webp' },
   { name: 'TOBI Fashion', logo: '/media/client-tobi.webp' },
   { name: 'Community Pharmacy', logo: '/media/client-communitypharmacy.webp' },
-  { name: 'Bespoke Cleaners', logo: '/media/client-bespoke.webp' },
+  { name: 'Bespoke Metals', logo: '/media/client-bespoke.webp' },
   { name: 'BarberAnywhere', logo: '/media/client-barber.webp' },
   { name: 'Divs Gourmet', logo: '/media/client-divs.webp' },
   { name: 'GreenVision Eco', logo: '/media/client-greenvision.webp' }

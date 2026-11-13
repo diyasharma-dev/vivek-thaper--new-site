@@ -11,7 +11,7 @@
         <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
           Measurable Commercial Outcomes &amp; Proven Case Histories
         </h2>
-        <p class="text-neutral-400 text-base leading-relaxed font-sans">
+        <p class="text-neutral-300 text-base leading-relaxed font-sans">
           From multi-million dollar legal practices to enterprise real estate portals and nationwide consumer platforms.
         </p>
       </div>
@@ -35,7 +35,7 @@
               <div class="absolute inset-0 bg-gradient-to-t from-[#12141a] via-transparent to-transparent pointer-events-none"></div>
               
               <!-- Tag badge -->
-              <div class="absolute top-3 left-3 px-2.5 py-1 rounded bg-[#0c0d10]/90 backdrop-blur-md border border-white/[0.1] text-[10px] font-mono uppercase tracking-wider text-[#c59b63]">
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded bg-[#0c0d10]/90 backdrop-blur-md border border-white/[0.1] text-[10px] font-mono uppercase tracking-wider text-[#c59b63] font-medium">
                 {{ study.industry }}
               </div>
 
@@ -51,7 +51,7 @@
                 {{ study.title }}
               </h3>
               
-              <p class="text-xs text-neutral-400 leading-relaxed font-sans">
+              <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed font-sans">
                 {{ study.description }}
               </p>
 
@@ -60,7 +60,7 @@
                 <span 
                   v-for="tag in study.tags" 
                   :key="tag"
-                  class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#0c0d10] text-neutral-400 border border-white/[0.06]"
+                  class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#0c0d10] text-neutral-300 font-medium border border-white/[0.08]"
                 >
                   {{ tag }}
                 </span>
@@ -70,8 +70,8 @@
 
           <!-- Bottom Action / Key Outcome -->
           <div class="px-6 py-4 bg-[#0c0d10] border-t border-white/[0.06] flex items-center justify-between text-xs">
-            <div class="text-neutral-400 font-sans">
-              Verified: <strong class="text-neutral-200 font-medium">{{ study.outcome }}</strong>
+            <div class="text-neutral-300 font-sans">
+              Verified: <strong class="text-white font-medium">{{ study.outcome }}</strong>
             </div>
             <router-link to="/case-studies" class="p-1 rounded text-[#c59b63] hover:text-white transition-colors">
               <ArrowUpRight class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -86,7 +86,7 @@
       <div class="mt-14 p-6 rounded-xl card-architectural flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           <h4 class="text-sm font-semibold text-white">Require an in-depth case briefing for your specific industry?</h4>
-          <p class="text-xs text-neutral-400 mt-0.5 font-sans">We maintain extensive private performance dossiers across legal, medical, and franchise sectors.</p>
+          <p class="text-xs sm:text-sm text-neutral-300 mt-0.5 font-sans">We maintain extensive private performance dossiers across legal, medical, and franchise sectors.</p>
         </div>
         <router-link 
           to="/contact" 

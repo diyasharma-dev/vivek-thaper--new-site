@@ -11,7 +11,7 @@
         <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
           Frequently Answered Founder Questions
         </h2>
-        <p class="text-neutral-400 text-base leading-relaxed font-sans">
+        <p class="text-neutral-300 text-base leading-relaxed font-sans">
           Clear, straightforward answers regarding advisory engagements, technical capabilities, and project delivery timelines.
         </p>
       </div>
@@ -29,14 +29,14 @@
           >
             <span class="text-sm sm:text-base font-medium text-white font-sans">{{ item.q }}</span>
             <ChevronDown 
-              class="w-4 h-4 text-neutral-400 shrink-0 transition-transform duration-200"
+              class="w-4 h-4 text-neutral-300 shrink-0 transition-transform duration-200"
               :class="{ 'rotate-180 text-[#c59b63]': activeFaq === idx }"
             />
           </button>
 
           <div 
             v-if="activeFaq === idx"
-            class="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-neutral-400 leading-relaxed border-t border-white/[0.06] font-sans"
+            class="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-neutral-200 leading-relaxed border-t border-white/[0.08] font-sans"
           >
             {{ item.a }}
           </div>
@@ -47,7 +47,7 @@
       <div class="mt-12 p-6 rounded-xl card-architectural flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           <h4 class="text-sm font-semibold text-white">Have a specific question regarding your platform?</h4>
-          <p class="text-xs text-neutral-400 mt-0.5 font-sans">Speak directly with Vivek Thapar. No sales reps, zero pressure.</p>
+          <p class="text-xs sm:text-sm text-neutral-300 mt-0.5 font-sans">Speak directly with Vivek Thapar. No sales reps, zero pressure.</p>
         </div>
         <a 
           href="tel:+17182074446"

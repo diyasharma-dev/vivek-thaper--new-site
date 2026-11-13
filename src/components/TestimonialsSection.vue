@@ -11,7 +11,7 @@
         <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
           Executive Voices &amp; Long-Term Client Partnerships
         </h2>
-        <p class="text-neutral-400 text-base leading-relaxed font-sans">
+        <p class="text-neutral-300 text-base leading-relaxed font-sans">
           What founders, managing attorneys, and corporate executives say about partnering directly with Vivek Thapar.
         </p>
       </div>
@@ -31,7 +31,7 @@
             </div>
 
             <!-- Quote Text in editorial serif -->
-            <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed font-serif italic mb-6">
+            <p class="text-xs sm:text-sm text-neutral-200 leading-relaxed font-serif italic mb-6">
               "{{ item.quote }}"
             </p>
           </div>
@@ -44,7 +44,7 @@
             <div>
               <h4 class="text-xs font-semibold text-white font-sans">{{ item.author }}</h4>
               <p class="text-[11px] text-[#c59b63] font-normal font-sans">{{ item.role }}</p>
-              <p class="text-[10px] text-neutral-500 font-sans">{{ item.company }}</p>
+              <p class="text-[10px] text-neutral-400 font-sans">{{ item.company }}</p>
             </div>
           </div>
 
