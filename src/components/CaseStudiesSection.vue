@@ -1,17 +1,17 @@
 <template>
-  <section id="cases" class="py-24 relative overflow-hidden bg-[#0c0d10] border-t border-white/[0.06]">
+  <section id="cases" class="py-24 relative overflow-hidden bg-slate-50/70 border-b border-slate-200/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
       <div class="max-w-3xl mb-14 space-y-3">
-        <span class="eyebrow-label">
-          <Briefcase class="w-3.5 h-3.5" />
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-slate-800 font-mono text-[11px] font-semibold tracking-wider uppercase shadow-2xs">
+          <Briefcase class="w-3.5 h-3.5 text-amber-600" />
           <span>Selected Case Dossiers</span>
         </span>
-        <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
+        <h2 class="text-3xl sm:text-4xl font-serif font-normal text-slate-900 tracking-tight leading-tight">
           Measurable Commercial Outcomes &amp; Proven Case Histories
         </h2>
-        <p class="text-neutral-300 text-base leading-relaxed font-sans">
+        <p class="text-slate-600 text-base leading-relaxed font-sans">
           From multi-million dollar legal practices to enterprise real estate portals and nationwide consumer platforms.
         </p>
       </div>
@@ -22,36 +22,36 @@
         <div 
           v-for="study in caseStudies" 
           :key="study.title"
-          class="card-architectural overflow-hidden flex flex-col justify-between group"
+          class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group"
         >
           <div>
             <!-- Thumbnail Visual -->
-            <div class="relative aspect-[4/3] overflow-hidden bg-[#090a0d]">
+            <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
               <img 
                 :src="study.image" 
                 :alt="study.title"
-                class="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-500 filter contrast-[1.02]"
+                class="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-500 filter contrast-[1.02]"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-[#12141a] via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none"></div>
               
               <!-- Tag badge -->
-              <div class="absolute top-3 left-3 px-2.5 py-1 rounded bg-[#0c0d10]/90 backdrop-blur-md border border-white/[0.1] text-[10px] font-mono uppercase tracking-wider text-[#c59b63] font-medium">
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-white/95 backdrop-blur-md border border-slate-200 text-[10px] font-mono uppercase tracking-wider text-slate-900 font-bold shadow-xs">
                 {{ study.industry }}
               </div>
 
               <!-- Metric Highlight Pill -->
-              <div class="absolute bottom-3 right-3 px-3 py-1 rounded-md bg-[#c59b63] text-[#0c0d10] text-xs font-mono font-bold">
+              <div class="absolute bottom-3 right-3 px-3 py-1.5 rounded-lg bg-slate-900 text-white text-xs font-mono font-bold shadow-md">
                 {{ study.stat }}
               </div>
             </div>
 
             <!-- Content Area -->
             <div class="p-6 space-y-3">
-              <h3 class="text-lg font-serif text-white group-hover:text-[#c59b63] transition-colors leading-snug">
+              <h3 class="text-lg font-serif font-bold text-slate-900 group-hover:text-amber-700 transition-colors leading-snug">
                 {{ study.title }}
               </h3>
               
-              <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed font-sans">
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
                 {{ study.description }}
               </p>
 
@@ -60,7 +60,7 @@
                 <span 
                   v-for="tag in study.tags" 
                   :key="tag"
-                  class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#0c0d10] text-neutral-300 font-medium border border-white/[0.08]"
+                  class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 text-slate-700 font-medium border border-slate-200/80"
                 >
                   {{ tag }}
                 </span>
@@ -69,11 +69,11 @@
           </div>
 
           <!-- Bottom Action / Key Outcome -->
-          <div class="px-6 py-4 bg-[#0c0d10] border-t border-white/[0.06] flex items-center justify-between text-xs">
-            <div class="text-neutral-300 font-sans">
-              Verified: <strong class="text-white font-medium">{{ study.outcome }}</strong>
+          <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs">
+            <div class="text-slate-700 font-sans">
+              Verified: <strong class="text-slate-950 font-bold">{{ study.outcome }}</strong>
             </div>
-            <router-link to="/case-studies" class="p-1 rounded text-[#c59b63] hover:text-white transition-colors">
+            <router-link to="/case-studies" class="p-1 rounded-md text-amber-700 hover:text-amber-900 transition-colors">
               <ArrowUpRight class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </router-link>
           </div>
@@ -83,17 +83,17 @@
       </div>
 
       <!-- Bottom Consultation Teaser -->
-      <div class="mt-14 p-6 rounded-xl card-architectural flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="mt-14 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
-          <h4 class="text-sm font-semibold text-white">Require an in-depth case briefing for your specific industry?</h4>
-          <p class="text-xs sm:text-sm text-neutral-300 mt-0.5 font-sans">We maintain extensive private performance dossiers across legal, medical, and franchise sectors.</p>
+          <h4 class="text-sm font-bold text-slate-900">Require an in-depth case briefing for your specific industry?</h4>
+          <p class="text-xs sm:text-sm text-slate-600 mt-0.5 font-sans">We maintain extensive private performance dossiers across legal, medical, and franchise sectors.</p>
         </div>
         <router-link 
           to="/contact" 
           class="btn-secondary text-xs shrink-0"
         >
           <span>Request Industry Dossier</span>
-          <ArrowRight class="w-3.5 h-3.5 text-[#c59b63]" />
+          <ArrowRight class="w-3.5 h-3.5 text-amber-700" />
         </router-link>
       </div>
 

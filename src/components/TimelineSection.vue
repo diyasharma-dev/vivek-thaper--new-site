@@ -1,17 +1,17 @@
 <template>
-  <section id="timeline" class="py-24 relative overflow-hidden bg-[#0c0d10] border-t border-white/[0.06]">
+  <section id="timeline" class="py-24 relative overflow-hidden bg-white border-b border-slate-200/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
       <div class="max-w-3xl mb-16 space-y-3">
-        <span class="eyebrow-label">
-          <Clock class="w-3.5 h-3.5" />
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-800 font-mono text-[11px] font-semibold tracking-wider uppercase shadow-2xs">
+          <Clock class="w-3.5 h-3.5 text-amber-600" />
           <span>Chronological Milestones</span>
         </span>
-        <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
+        <h2 class="text-3xl sm:text-4xl font-serif font-normal text-slate-900 tracking-tight leading-tight">
           Two Decades of Continuous Evolution &amp; Execution
         </h2>
-        <p class="text-neutral-300 text-base leading-relaxed font-sans">
+        <p class="text-slate-600 text-base leading-relaxed font-sans">
           From a solo web developer in Queens to an acclaimed NYC agency founder, advisor, and keynote speaker.
         </p>
       </div>
@@ -19,7 +19,7 @@
       <!-- Timeline Vertical Track -->
       <div class="relative max-w-4xl mx-auto">
         <!-- Central Line -->
-        <div class="absolute left-4 sm:left-1/2 top-0 bottom-0 w-[1px] bg-white/[0.1] sm:-translate-x-1/2"></div>
+        <div class="absolute left-4 sm:left-1/2 top-0 bottom-0 w-[2px] bg-slate-200 sm:-translate-x-1/2"></div>
 
         <div class="space-y-12">
           
@@ -32,25 +32,25 @@
             ]"
           >
             <!-- Timeline Pin / Dot -->
-            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-[#0c0d10] border border-[#c59b63] flex items-center justify-center z-10 mt-1">
-              <div class="w-2 h-2 rounded-full bg-[#c59b63]"></div>
+            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-slate-900 shadow-md flex items-center justify-center z-10 mt-1">
+              <div class="w-2.5 h-2.5 rounded-full bg-amber-600"></div>
             </div>
 
             <!-- Content Card -->
             <div class="ml-12 sm:ml-0 sm:w-1/2 px-2 sm:px-6">
-              <div class="card-architectural p-6">
+              <div class="card-architectural p-6 hover:-translate-y-0.5">
                 <div class="flex items-center gap-2 mb-2">
-                  <span class="text-xs font-mono font-bold text-[#c59b63]">
+                  <span class="text-xs font-mono font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200/80">
                     {{ item.year }}
                   </span>
-                  <span class="text-neutral-500">·</span>
-                  <span class="text-[10px] font-mono uppercase tracking-wider text-neutral-300 font-medium">{{ item.tag }}</span>
+                  <span class="text-slate-400">·</span>
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-slate-500 font-bold">{{ item.tag }}</span>
                 </div>
 
-                <h3 class="text-base font-serif text-white mb-2">{{ item.title }}</h3>
-                <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed font-sans">{{ item.description }}</p>
+                <h3 class="text-base font-serif font-bold text-slate-900 mb-2">{{ item.title }}</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">{{ item.description }}</p>
 
-                <div class="mt-4 pt-3 border-t border-white/[0.06] text-[11px] font-mono text-neutral-300 font-medium">
+                <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 font-semibold">
                   {{ item.metric }}
                 </div>
               </div>

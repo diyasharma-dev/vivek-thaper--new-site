@@ -5,13 +5,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: dark;
-    background-color: #0c0d10;
+    color-scheme: light;
+    background-color: #f8fafc;
   }
 
   body {
-    background-color: #0c0d10;
-    color: #f5f5f2;
+    background-color: #f8fafc;
+    color: #1e293b;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     -webkit-font-smoothing: antialiased;
@@ -20,8 +20,9 @@
 
   /* Headings typography default */
   h1, h2, h3, h4 {
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
     text-wrap: balance;
+    color: #0f172a;
   }
 
   /* Refined minimal scrollbar */
@@ -29,28 +30,30 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #0c0d10;
+    background: #f1f5f9;
   }
   ::-webkit-scrollbar-thumb {
-    background: #20232c;
+    background: #cbd5e1;
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #c59b63;
+    background: #94a3b8;
   }
 }
 
 @layer components {
   /* Unified Architectural Card */
   .card-architectural {
-    background-color: #12141a;
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: 0.75rem; /* 12px */
-    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    background-color: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 1rem; /* 16px */
+    box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.02);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .card-architectural:hover {
-    background-color: #151820;
-    border-color: rgba(255, 255, 255, 0.14);
+    background-color: #ffffff;
+    border-color: rgba(15, 23, 42, 0.16);
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
   }
 
   /* Eyebrow Label Pill */
@@ -58,16 +61,16 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.25rem 0.75rem;
+    padding: 0.35rem 0.85rem;
     border-radius: 9999px;
-    background-color: #12141a;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #f1f5f9;
+    border: 1px solid rgba(15, 23, 42, 0.08);
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-size: 0.6875rem; /* 11px */
-    font-weight: 500;
-    letter-spacing: 0.12em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #c59b63;
+    color: #0f172a;
   }
 
   /* Primary Solid Button */
@@ -76,19 +79,21 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.25rem;
-    border-radius: 0.5rem; /* 8px */
+    padding: 0.75rem 1.35rem;
+    border-radius: 0.625rem; /* 10px */
     font-size: 0.8125rem; /* 13px */
     font-weight: 600;
     letter-spacing: -0.01em;
-    background-color: #c59b63;
-    color: #0c0d10;
-    transition: background-color 0.15s ease, transform 0.15s ease;
+    background-color: #0f172a;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(15, 23, 42, 0.12);
+    transition: all 0.2s ease;
     cursor: pointer;
     white-space: nowrap;
   }
   .btn-primary:hover {
-    background-color: #d6af7a;
+    background-color: #1e293b;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2);
     transform: translateY(-1px);
   }
   .btn-primary:active {
@@ -101,41 +106,42 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.25rem;
-    border-radius: 0.5rem;
+    padding: 0.75rem 1.35rem;
+    border-radius: 0.625rem;
     font-size: 0.8125rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: -0.01em;
-    background-color: #12141a;
-    color: #f5f5f2;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+    background-color: #ffffff;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    transition: all 0.2s ease;
     cursor: pointer;
     white-space: nowrap;
   }
   .btn-secondary:hover {
-    background-color: #171a22;
-    border-color: rgba(197, 155, 99, 0.4);
-    color: #ffffff;
+    background-color: #f8fafc;
+    border-color: #94a3b8;
+    color: #000000;
   }
 
   /* Form Input Field */
   .form-input-field {
     width: 100%;
     padding: 0.75rem 1rem;
-    border-radius: 0.5rem;
-    background-color: #090a0d;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.625rem;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
     font-size: 0.875rem;
-    color: #f5f5f2;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    color: #0f172a;
+    transition: all 0.15s ease;
   }
   .form-input-field::placeholder {
-    color: #636874;
+    color: #94a3b8;
   }
   .form-input-field:focus {
     outline: none;
-    border-color: #c59b63;
-    box-shadow: 0 0 0 1px #c59b63;
+    border-color: #0f172a;
+    box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.1);
   }
 }

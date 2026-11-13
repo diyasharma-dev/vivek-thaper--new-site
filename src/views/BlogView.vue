@@ -1,29 +1,29 @@
 <template>
-  <div class="pt-28 pb-20 bg-[#0c0d10]">
+  <div class="pt-28 pb-20 bg-slate-50/50">
     
     <!-- Hero Header -->
-    <section class="relative py-16 overflow-hidden">
+    <section class="relative py-16 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl mx-auto">
-        <span class="eyebrow-label mb-4">
-          <BookOpen class="w-3.5 h-3.5" />
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-slate-800 font-mono text-[11px] font-semibold tracking-wider uppercase shadow-2xs mb-4">
+          <BookOpen class="w-3.5 h-3.5 text-amber-600" />
           <span>Essays &amp; Technical Perspectives</span>
         </span>
-        <h1 class="text-3xl sm:text-5xl lg:text-[48px] font-serif font-normal text-white tracking-tight leading-tight">
+        <h1 class="text-3xl sm:text-5xl lg:text-[48px] font-serif font-normal text-slate-900 tracking-tight leading-tight">
           Essays on Engineering, Search &amp; Leadership
         </h1>
-        <p class="mt-4 text-base sm:text-lg text-neutral-400 leading-relaxed font-sans">
+        <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-sans">
           Perspectives on machine learning, executive discipline, project architecture, minimalism, and search engine mastery.
         </p>
 
         <!-- Search & Filter Controls -->
         <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto">
           <div class="relative w-full">
-            <Search class="w-4 h-4 text-neutral-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input 
               type="text" 
               v-model="searchQuery"
               placeholder="Search essays by keyword, topic, or technology..."
-              class="form-input-field pl-10"
+              class="form-input-field pl-10 shadow-2xs"
             />
           </div>
         </div>
@@ -35,10 +35,10 @@
             :key="cat"
             @click="selectedCategory = cat"
             :class="[
-              'px-3.5 py-1.5 rounded-md text-xs font-medium transition-all cursor-pointer',
+              'px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer shadow-2xs',
               selectedCategory === cat 
-                ? 'bg-[#c59b63] text-[#0c0d10] font-semibold'
-                : 'bg-[#12141a] text-neutral-400 border border-white/[0.08] hover:text-white'
+                ? 'bg-slate-900 text-white shadow-xs'
+                : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-50'
             ]"
           >
             {{ cat }}
@@ -48,10 +48,10 @@
     </section>
 
     <!-- Articles Grid -->
-    <section class="py-12 border-t border-white/[0.06]">
+    <section class="py-16 bg-white border-b border-slate-200/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div v-if="filteredPosts.length === 0" class="text-center py-16 text-neutral-400 text-sm font-sans">
+        <div v-if="filteredPosts.length === 0" class="text-center py-16 text-slate-500 text-sm font-sans">
           No essays found matching your criteria.
         </div>
 
@@ -59,35 +59,35 @@
           <article 
             v-for="post in filteredPosts" 
             :key="post.slug"
-            class="card-architectural overflow-hidden flex flex-col justify-between group"
+            class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group"
           >
             <div>
-              <router-link :to="`/blog/${post.slug}`" class="block relative aspect-[4/3] overflow-hidden bg-[#090a0d]">
+              <router-link :to="`/blog/${post.slug}`" class="block relative aspect-[4/3] overflow-hidden bg-slate-100">
                 <img 
                   :src="post.image" 
                   :alt="post.title"
-                  class="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-500 filter contrast-[1.02]"
+                  class="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-500 filter contrast-[1.02]"
                 />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#12141a] via-transparent to-transparent pointer-events-none"></div>
-                <div class="absolute top-3 left-3 px-2.5 py-1 rounded bg-[#0c0d10]/90 backdrop-blur-md border border-white/[0.1] text-[10px] font-mono uppercase tracking-wider text-[#c59b63]">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-white/95 backdrop-blur-md border border-slate-200 text-[10px] font-mono uppercase tracking-wider text-slate-900 font-bold shadow-xs">
                   {{ post.category }}
                 </div>
               </router-link>
 
               <div class="p-6 space-y-3">
-                <div class="flex items-center gap-2 text-[11px] font-mono text-neutral-500">
+                <div class="flex items-center gap-2 text-[11px] font-mono text-slate-500 font-medium">
                   <span>{{ post.date }}</span>
                   <span>·</span>
                   <span>{{ post.readTime }}</span>
                 </div>
 
-                <h2 class="text-lg font-serif text-white group-hover:text-[#c59b63] transition-colors leading-snug">
+                <h2 class="text-lg font-serif font-bold text-slate-900 group-hover:text-amber-700 transition-colors leading-snug">
                   <router-link :to="`/blog/${post.slug}`">
                     {{ post.title }}
                   </router-link>
                 </h2>
 
-                <p class="text-xs text-neutral-400 leading-relaxed line-clamp-3 font-sans">
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-3 font-sans">
                   {{ post.excerpt }}
                 </p>
 
@@ -95,7 +95,7 @@
                   <span 
                     v-for="tag in post.tags.slice(0, 3)" 
                     :key="tag"
-                    class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#0c0d10] text-neutral-400 border border-white/[0.06]"
+                    class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 text-slate-700 font-medium border border-slate-200/80"
                   >
                     #{{ tag }}
                   </span>
@@ -103,11 +103,11 @@
               </div>
             </div>
 
-            <div class="px-6 py-4 bg-[#0c0d10] border-t border-white/[0.06] flex items-center justify-between text-xs font-sans">
-              <span class="text-neutral-500">By {{ post.author }}</span>
+            <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs font-sans">
+              <span class="text-slate-500 font-medium">By {{ post.author }}</span>
               <router-link 
                 :to="`/blog/${post.slug}`" 
-                class="inline-flex items-center gap-1 font-medium text-[#c59b63] hover:text-white transition-colors"
+                class="inline-flex items-center gap-1 font-bold text-amber-700 hover:text-amber-900 transition-colors"
               >
                 <span>Read Essay</span>
                 <ArrowRight class="w-3.5 h-3.5" />
