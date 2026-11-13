@@ -1,18 +1,18 @@
 <template>
-  <section class="py-24 relative overflow-hidden bg-dark-900/60 border-t border-slate-800">
+  <section class="py-24 relative overflow-hidden bg-[#0d0f12] border-t border-white/[0.06]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold">
-          <Star class="w-3.5 h-3.5 fill-brand-400 text-brand-400" />
-          <span>Executive Endorsements</span>
+      <div class="max-w-3xl mb-14 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#13161c] border border-white/[0.08] text-neutral-300 text-xs">
+          <Quote class="w-3.5 h-3.5 text-[#d4a36a]" />
+          <span class="font-mono uppercase tracking-widest text-[11px] text-[#d4a36a]">Client Endorsements</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight">
-          Client Voices &amp; <span class="gold-gradient-text">Partner Trust</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
+          Executive Voices &amp; Long-Term Client Partnerships
         </h2>
-        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
-          What founders, managing attorneys, and corporate executives say about working directly with Vivek Thapar.
+        <p class="text-neutral-400 text-base leading-relaxed font-sans">
+          What founders, managing attorneys, and corporate executives say about partnering directly with Vivek Thapar.
         </p>
       </div>
 
@@ -22,31 +22,29 @@
         <div 
           v-for="item in testimonials" 
           :key="item.author"
-          class="p-8 rounded-3xl glass-panel glass-panel-hover border border-slate-700/60 flex flex-col justify-between"
+          class="p-8 rounded-xl bg-[#13161c] border border-white/[0.08] flex flex-col justify-between"
         >
           <div>
-            <!-- Star rating -->
-            <div class="flex items-center gap-1 text-brand-400 mb-4">
-              <Star v-for="n in 5" :key="n" class="w-4 h-4 fill-brand-400" />
+            <!-- Star rating in quiet matte brass -->
+            <div class="flex items-center gap-1 text-[#d4a36a] mb-5">
+              <Star v-for="n in 5" :key="n" class="w-3.5 h-3.5 fill-[#d4a36a]" />
             </div>
 
-            <!-- Quote Text -->
-            <p class="text-xs sm:text-sm text-slate-200 leading-relaxed italic mb-6">
+            <!-- Quote Text in editorial serif -->
+            <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed font-serif italic mb-6">
               "{{ item.quote }}"
             </p>
           </div>
 
           <!-- Author Info -->
-          <div class="pt-4 border-t border-slate-800/80 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-500 to-indigo-600 p-[1px] shrink-0">
-              <div class="w-full h-full rounded-full bg-dark-950 flex items-center justify-center font-bold text-xs text-white">
-                {{ item.initials }}
-              </div>
+          <div class="pt-4 border-t border-white/[0.06] flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-[#0d0f12] border border-white/[0.1] flex items-center justify-center font-mono text-xs font-semibold text-[#d4a36a] shrink-0">
+              {{ item.initials }}
             </div>
             <div>
-              <h4 class="text-xs font-bold text-white">{{ item.author }}</h4>
-              <p class="text-[11px] text-brand-300">{{ item.role }}</p>
-              <p class="text-[10px] text-slate-500">{{ item.company }}</p>
+              <h4 class="text-xs font-semibold text-white">{{ item.author }}</h4>
+              <p class="text-[11px] text-[#d4a36a] font-normal">{{ item.role }}</p>
+              <p class="text-[10px] text-neutral-500">{{ item.company }}</p>
             </div>
           </div>
 
@@ -59,7 +57,7 @@
 </template>
 
 <script setup>
-import { Star } from 'lucide-vue-next'
+import { Star, Quote } from 'lucide-vue-next'
 
 const testimonials = [
   {

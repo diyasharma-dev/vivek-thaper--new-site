@@ -1,20 +1,17 @@
 <template>
-  <div class="pt-28 pb-20">
+  <div class="pt-28 pb-20 bg-[#0d0f12]">
     
     <!-- Hero Header -->
     <section class="relative py-16 overflow-hidden">
-      <div class="glow-ambient -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-brand-600/15"></div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold mb-4">
-          <Briefcase class="w-3.5 h-3.5" />
-          <span>Case Studies &amp; Proven Track Record</span>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#13161c] border border-white/[0.08] text-neutral-300 text-xs mb-4">
+          <Briefcase class="w-3.5 h-3.5 text-[#d4a36a]" />
+          <span class="font-mono uppercase tracking-widest text-[11px] text-[#d4a36a]">Case Studies &amp; Performance Record</span>
         </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight leading-tight">
-          Measurable Impact, <br />
-          <span class="gold-gradient-text">Verified Client Results</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-[46px] font-serif font-normal text-white tracking-tight leading-tight">
+          Measurable Commercial Outcomes &amp; Case Histories
         </h1>
-        <p class="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+        <p class="mt-4 text-base sm:text-lg text-neutral-400 leading-relaxed font-sans">
           Explore how Vivek Thapar’s engineering, search dominance, and conversion logic helped diverse businesses capture market share and drive scalable revenue.
         </p>
 
@@ -25,10 +22,10 @@
             :key="filter.id"
             @click="activeFilter = filter.id"
             :class="[
-              'px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer',
+              'px-4 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer',
               activeFilter === filter.id
-                ? 'bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-lg shadow-brand-600/30'
-                : 'bg-dark-900 text-slate-400 hover:text-white border border-slate-800'
+                ? 'bg-[#c59b63] text-[#0d0f12] font-semibold'
+                : 'bg-[#13161c] text-neutral-400 hover:text-white border border-white/[0.08]'
             ]"
           >
             {{ filter.label }}
@@ -38,52 +35,51 @@
     </section>
 
     <!-- Case Studies Detailed Grid -->
-    <section class="py-12 border-t border-slate-800">
+    <section class="py-12 border-t border-white/[0.06]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div 
             v-for="study in filteredStudies" 
             :key="study.title"
-            class="rounded-3xl overflow-hidden glass-panel glass-panel-hover flex flex-col justify-between group border border-slate-700/60"
+            class="rounded-xl overflow-hidden bg-[#13161c] border border-white/[0.08] hover:border-white/[0.18] flex flex-col justify-between transition-all group"
           >
             <div>
-              <!-- aspect-[4/3] preserves square artwork without severe clipping -->
-              <div class="relative aspect-[4/3] overflow-hidden bg-dark-950">
+              <div class="relative aspect-[4/3] overflow-hidden bg-[#090a0d]">
                 <img 
                   :src="study.image" 
                   :alt="study.title"
-                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  class="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-500 filter contrast-[1.02]"
                 />
-                <div class="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#13161c] via-transparent to-transparent pointer-events-none"></div>
                 
-                <div class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-dark-950/80 backdrop-blur-md border border-slate-700 text-[10px] font-bold uppercase tracking-wider text-brand-300">
+                <div class="absolute top-3 left-3 px-2.5 py-1 rounded bg-[#0d0f12]/90 backdrop-blur-md border border-white/[0.1] text-[10px] font-mono uppercase tracking-wider text-[#d4a36a]">
                   {{ study.industry }}
                 </div>
 
-                <div class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-brand-500 text-dark-950 text-xs font-black shadow-lg">
+                <div class="absolute bottom-3 right-3 px-3 py-1 rounded-md bg-[#c59b63] text-[#0d0f12] text-xs font-mono font-bold">
                   {{ study.metric }}
                 </div>
               </div>
 
               <div class="p-6 space-y-4">
                 <div>
-                  <h2 class="text-xl font-bold text-white font-display group-hover:text-brand-300 transition-colors">
+                  <h2 class="text-xl font-serif text-white group-hover:text-[#d4a36a] transition-colors leading-snug">
                     {{ study.title }}
                   </h2>
-                  <p class="text-xs text-brand-400 font-semibold mt-0.5">{{ study.subtitle }}</p>
+                  <p class="text-xs text-[#d4a36a] font-mono mt-0.5">{{ study.subtitle }}</p>
                 </div>
 
-                <div class="space-y-2 text-xs text-slate-300 leading-relaxed">
-                  <p><strong>The Challenge:</strong> {{ study.challenge }}</p>
-                  <p><strong>The Solution:</strong> {{ study.solution }}</p>
+                <div class="space-y-2 text-xs text-neutral-400 leading-relaxed font-sans">
+                  <p><strong class="text-neutral-200">The Challenge:</strong> {{ study.challenge }}</p>
+                  <p><strong class="text-neutral-200">The Solution:</strong> {{ study.solution }}</p>
                 </div>
 
-                <div class="pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+                <div class="pt-3 border-t border-white/[0.06] flex flex-wrap gap-1.5">
                   <span 
                     v-for="tag in study.tags" 
                     :key="tag"
-                    class="px-2 py-0.5 rounded text-[10px] font-medium bg-dark-950 text-slate-400 border border-slate-800"
+                    class="px-2 py-0.5 rounded text-[10px] font-mono bg-[#0d0f12] text-neutral-400 border border-white/[0.06]"
                   >
                     {{ tag }}
                   </span>
@@ -91,9 +87,9 @@
               </div>
             </div>
 
-            <div class="px-6 py-4 bg-dark-950/60 border-t border-slate-800/80 flex items-center justify-between">
-              <span class="text-xs font-bold text-white">Verified Result: {{ study.outcome }}</span>
-              <router-link to="/contact" class="p-1 rounded text-brand-400 hover:text-white">
+            <div class="px-6 py-4 bg-[#0d0f12] border-t border-white/[0.06] flex items-center justify-between text-xs">
+              <span class="text-neutral-300 font-medium">Outcome: {{ study.outcome }}</span>
+              <router-link to="/contact" class="p-1 rounded text-[#d4a36a] hover:text-white transition-colors">
                 <ArrowUpRight class="w-4 h-4" />
               </router-link>
             </div>

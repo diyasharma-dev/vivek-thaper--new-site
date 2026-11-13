@@ -6,67 +6,66 @@
   html {
     scroll-behavior: smooth;
     color-scheme: dark;
+    background-color: #0d0f12;
   }
 
   body {
-    background-color: #07090e;
-    color: #f1f5f9;
+    background-color: #0d0f12;
+    color: #f4f4f0;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
-  /* Custom scrollbar */
+  /* Refined minimal scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #0b0f19;
+    background: #0d0f12;
   }
   ::-webkit-scrollbar-thumb {
-    background: #1e2942;
-    border-radius: 4px;
+    background: #222631;
+    border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #c58245;
+    background: #c59b63;
   }
 }
 
-/* Glassmorphism helpers */
-.glass-panel {
-  background: rgba(17, 23, 38, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Bespoke Architectural Card Styles */
+.editorial-card {
+  background-color: #13161c;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.glass-panel-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.glass-panel-hover:hover {
-  background: rgba(22, 31, 51, 0.85);
-  border-color: rgba(223, 166, 79, 0.35);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6), 0 0 25px -5px rgba(223, 166, 79, 0.15);
+.editorial-card:hover {
+  background-color: #171b23;
+  border-color: rgba(197, 155, 99, 0.35);
+  transform: translateY(-2px);
 }
 
-.gold-gradient-text {
-  background: linear-gradient(135deg, #fbe29a 0%, #dfa64f 50%, #b26a38 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hairline-border {
+  border-color: rgba(255, 255, 255, 0.07);
 }
 
-.silver-gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.brass-gradient-text {
+  color: #d4a36a;
 }
 
-.badge-glow {
-  box-shadow: 0 0 20px rgba(223, 166, 79, 0.25);
+.brass-button {
+  background-color: #c59b63;
+  color: #0d0f12;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 
-.glow-ambient {
-  position: absolute;
-  filter: blur(100px);
-  pointer-events: none;
-  z-index: 0;
-  border-radius: 9999px;
+.brass-button:hover {
+  background-color: #dfc698;
+  transform: translateY(-1px);
+}
+
+.brass-pill {
+  border: 1px solid rgba(197, 155, 99, 0.25);
+  background: rgba(197, 155, 99, 0.08);
+  color: #d4a36a;
 }

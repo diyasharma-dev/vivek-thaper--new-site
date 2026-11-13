@@ -1,170 +1,139 @@
 <template>
-  <section class="relative min-h-[92vh] pt-32 pb-20 flex items-center overflow-hidden">
-    <!-- Ambient Background Light Gradients -->
-    <div class="glow-ambient -top-40 -left-40 w-[550px] h-[550px] bg-brand-600/15"></div>
-    <div class="glow-ambient top-1/2 -right-40 w-[600px] h-[600px] bg-indigo-900/15"></div>
-    <div class="glow-ambient -bottom-32 left-1/3 w-[500px] h-[500px] bg-brand-500/10"></div>
-
-    <!-- Subtle Grid Background -->
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+  <section class="relative min-h-[90vh] pt-32 pb-20 flex items-center overflow-hidden bg-[#0d0f12]">
+    
+    <!-- Subtle architectural hairline grid -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_10%,#000_60%,transparent_100%)] pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
         
         <!-- Left Column: Copy & CTAs (7 cols) -->
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
           
-          <!-- Availability / Credential Pill -->
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-brand-500/30 shadow-inner">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            <span class="w-2 h-2 rounded-full bg-emerald-400 -ml-4"></span>
-            <span class="text-xs font-semibold text-slate-300">
-              NYC Founder &amp; Digital Growth Strategist <span class="text-brand-400 font-bold ml-1">· Est. 2006</span>
-            </span>
+          <!-- Editorial Label -->
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#13161c] border border-white/[0.08] text-neutral-300 text-xs">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#c59b63]"></span>
+            <span class="font-mono uppercase tracking-widest text-[11px] text-[#d4a36a] font-medium">New York City · Est. 2006</span>
           </div>
 
           <!-- Main Title -->
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight leading-[1.12]">
-            Transforming Ideas Into <br class="hidden sm:inline" />
-            <span class="gold-gradient-text">High-Velocity Digital Growth</span>
+          <h1 class="text-3xl sm:text-4xl lg:text-[46px] font-serif font-normal text-[#f4f4f0] tracking-tight leading-[1.2]">
+            Twenty-one years building digital businesses, directing engineering, and scaling revenue in New York City.
           </h1>
 
           <!-- Personal Statement & Subheading -->
-          <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-            <strong class="text-white font-semibold">"I have a confession to make:</strong> I love creating, designing, logic planning, leading teams, and working with startups. My <span class="text-brand-300 font-semibold">21+ years</span> of digital marketing and web engineering make me a natural project manager."
-          </p>
+          <div class="space-y-4">
+            <p class="text-base sm:text-lg text-neutral-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans">
+              <span class="text-white font-medium">"I have a confession to make:</span> I love creating, designing, logic planning, leading teams, and working with startups. My 21+ years of experience with digital marketing and website engineering make me a natural project manager."
+            </p>
 
-          <p class="text-sm text-slate-400 max-w-xl mx-auto lg:mx-0">
-            Founder &amp; CEO of <strong>Mirch Media</strong> in Forest Hills, Queens. Helping founders, enterprise leaders, and local communities turn digital presence into real revenue and measurable impact.
-          </p>
+            <p class="text-sm text-neutral-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Founder &amp; CEO of <strong class="text-neutral-200 font-semibold">Mirch Media</strong> in Forest Hills, Queens. Direct founder accountability for enterprises, law firms, healthcare systems, and growing startups.
+            </p>
+          </div>
 
           <!-- Primary & Secondary Action Buttons -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-1">
             <button 
               @click="$emit('open-video')"
-              class="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl font-bold text-sm text-dark-950 bg-gradient-to-r from-brand-300 via-brand-gold to-brand-500 hover:from-brand-goldLight hover:to-brand-gold shadow-lg shadow-brand-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg font-semibold text-sm text-[#0d0f12] bg-[#c59b63] hover:bg-[#dfc698] shadow-sm transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
             >
-              <div class="w-7 h-7 rounded-full bg-dark-950/20 flex items-center justify-center">
-                <Play class="w-3.5 h-3.5 fill-dark-950 text-dark-950 ml-0.5" />
+              <div class="w-6 h-6 rounded-full bg-[#0d0f12]/20 flex items-center justify-center">
+                <Play class="w-3.5 h-3.5 fill-[#0d0f12] text-[#0d0f12] ml-0.5" />
               </div>
-              <span>Watch Message From Vivek</span>
+              <span>Watch Message From Vivek (52s)</span>
             </button>
 
             <router-link 
               to="/contact"
-              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-slate-200 bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-brand-500/50 shadow-md transition-all transform hover:-translate-y-0.5"
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg font-medium text-sm text-neutral-200 bg-[#13161c] hover:bg-[#181c24] border border-white/[0.1] hover:border-[#c59b63]/50 transition-all"
             >
               <span>Schedule Strategy Call</span>
-              <ArrowUpRight class="w-4 h-4 text-brand-400" />
+              <ArrowUpRight class="w-4 h-4 text-[#d4a36a]" />
             </router-link>
 
-            <router-link 
-              to="/speaking"
-              class="inline-flex items-center gap-1.5 px-4 py-3.5 rounded-xl text-xs font-semibold text-slate-400 hover:text-white transition-colors"
+            <a 
+              href="tel:+17182074446"
+              class="inline-flex items-center gap-2 px-4 py-3.5 rounded-lg text-xs font-mono font-medium text-neutral-400 hover:text-white transition-colors"
             >
-              <Mic class="w-4 h-4 text-slate-400" />
-              <span>Keynote &amp; Media</span>
-            </router-link>
+              <Phone class="w-3.5 h-3.5 text-[#d4a36a]" />
+              <span>(718) 207-4446</span>
+            </a>
           </div>
 
-          <!-- Metric Strip -->
-          <div class="pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center sm:text-left">
+          <!-- Editorial Metric Strip -->
+          <div class="pt-8 border-t border-white/[0.08] grid grid-cols-2 sm:grid-cols-4 gap-6 text-center sm:text-left">
             <div>
-              <div class="text-2xl sm:text-3xl font-display font-extrabold text-white">21+</div>
-              <div class="text-xs text-slate-400 font-medium">Years Experience</div>
+              <div class="text-2xl sm:text-3xl font-serif text-white">21+</div>
+              <div class="text-xs text-neutral-400 font-medium uppercase tracking-wider mt-0.5">Years Experience</div>
             </div>
             <div>
-              <div class="text-2xl sm:text-3xl font-display font-extrabold gold-gradient-text">500+</div>
-              <div class="text-xs text-slate-400 font-medium">Projects Shipped</div>
+              <div class="text-2xl sm:text-3xl font-serif text-[#d4a36a]">500+</div>
+              <div class="text-xs text-neutral-400 font-medium uppercase tracking-wider mt-0.5">Projects Shipped</div>
             </div>
             <div>
-              <div class="text-2xl sm:text-3xl font-display font-extrabold text-white">300+</div>
-              <div class="text-xs text-slate-400 font-medium">Clients Scaled</div>
+              <div class="text-2xl sm:text-3xl font-serif text-white">98%</div>
+              <div class="text-xs text-neutral-400 font-medium uppercase tracking-wider mt-0.5">Client Retention</div>
             </div>
             <div>
-              <div class="text-2xl sm:text-3xl font-display font-extrabold text-brand-400">98%</div>
-              <div class="text-xs text-slate-400 font-medium">Client Retention</div>
+              <div class="text-2xl sm:text-3xl font-serif text-white">NYC</div>
+              <div class="text-xs text-neutral-400 font-medium uppercase tracking-wider mt-0.5">Queens Office</div>
             </div>
           </div>
 
         </div>
 
-        <!-- Right Column: Interactive Portrait Card (5 cols) -->
+        <!-- Right Column: Gallery-Grade Executive Portrait (5 cols) -->
         <div class="lg:col-span-5 relative flex justify-center">
           
           <div class="relative w-full max-w-md">
             
-            <!-- Glow background halo -->
-            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-brand-600/40 via-brand-400/20 to-indigo-600/30 blur-2xl opacity-75"></div>
-
-            <!-- Portrait Frame -->
-            <div class="relative rounded-3xl overflow-hidden border border-slate-700/60 bg-dark-900/90 shadow-2xl p-2.5">
+            <!-- Museum-grade passe-partout frame -->
+            <div class="relative rounded-2xl overflow-hidden border border-white/[0.08] bg-[#13161c] shadow-2xl p-3">
               
-              <!-- Perfect 3:4 container preventing any cropping of head or body -->
-              <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-dark-950">
+              <!-- Perfect 3:4 portrait container preventing head or shoulder crop -->
+              <div class="relative rounded-xl overflow-hidden aspect-[3/4] bg-[#090a0d]">
                 <img 
                   src="/media/vivek-thapar-ceo.webp" 
                   alt="Vivek Thapar - Founder & CEO of Mirch Media"
-                  class="w-full h-full object-cover object-top filter contrast-[1.02] brightness-[1.02] transform hover:scale-[1.02] transition-transform duration-500"
+                  class="w-full h-full object-cover object-top filter contrast-[1.03] brightness-[1.01]"
                   loading="eager"
                 />
 
-                <!-- Subtle gradient scrim at bottom to ensure info text contrast without masking body -->
-                <div class="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-dark-950/10 to-transparent"></div>
+                <!-- Subtle bottom shadow for caption contrast -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0d0f12]/95 via-transparent to-transparent pointer-events-none"></div>
 
-                <!-- Floating Video Trigger Over Photo -->
+                <!-- Video trigger button quietly placed -->
                 <button 
                   @click="$emit('open-video')"
-                  class="absolute top-4 right-4 z-20 group/btn flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-full bg-dark-950/80 backdrop-blur-md border border-brand-500/40 hover:border-brand-400 text-white text-xs font-semibold shadow-xl transition-all cursor-pointer"
+                  class="absolute top-4 right-4 z-20 group/btn flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d0f12]/80 backdrop-blur-md border border-white/[0.15] hover:border-[#c59b63] text-white text-xs font-medium shadow-md transition-all cursor-pointer"
                 >
-                  <span class="relative flex h-3 w-3">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-500"></span>
-                  </span>
-                  <span>Play Intro (0:52)</span>
+                  <Play class="w-3 h-3 text-[#d4a36a] fill-[#d4a36a]" />
+                  <span>Watch Video (0:52)</span>
                 </button>
 
-                <!-- In-card Bottom Identification Info -->
-                <div class="absolute bottom-3 inset-x-3 p-3.5 rounded-xl bg-dark-900/90 backdrop-blur-md border border-slate-700/70">
+                <!-- In-card Bottom Identification -->
+                <div class="absolute bottom-3 inset-x-3 p-3.5 rounded-lg bg-[#0d0f12]/90 backdrop-blur-md border border-white/[0.08]">
                   <div class="flex items-center justify-between">
                     <div>
-                      <h3 class="text-sm sm:text-base font-display font-bold text-white flex items-center gap-1.5">
-                        Vivek Thapar
-                        <CheckCircle class="w-4 h-4 text-brand-400 fill-brand-500/20 shrink-0" />
-                      </h3>
-                      <p class="text-[11px] sm:text-xs text-brand-300 font-medium">Founder &amp; CEO · Mirch Media NYC</p>
+                      <h3 class="text-sm font-semibold text-white">Vivek Thapar</h3>
+                      <p class="text-[11px] text-[#d4a36a] font-normal">Founder &amp; CEO · Mirch Media NYC</p>
                     </div>
                     <div class="text-right shrink-0">
-                      <span class="text-[9px] uppercase tracking-wider text-slate-400 font-bold block">Base</span>
-                      <span class="text-xs font-semibold text-slate-200">Queens, NYC</span>
+                      <span class="text-[9px] uppercase tracking-widest text-neutral-400 font-mono block">Headquarters</span>
+                      <span class="text-xs font-medium text-neutral-200">Queens, NYC</span>
                     </div>
                   </div>
                 </div>
 
               </div>
 
-            </div>
+              <!-- Editorial caption beneath photo -->
+              <div class="mt-3 px-1 py-1 flex items-center justify-between text-[11px] text-neutral-400">
+                <span>Direct Executive Advisory</span>
+                <span class="text-neutral-500 font-mono">108-14 72nd Ave, NY</span>
+              </div>
 
-            <!-- Floating Credential Badge 1 (Top Left) -->
-            <div class="absolute -top-6 -left-6 hidden sm:flex items-center gap-3 p-3.5 rounded-2xl bg-dark-900/90 backdrop-blur-xl border border-slate-700/70 shadow-2xl animate-float-slow">
-              <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 shrink-0">
-                <Briefcase class="w-5 h-5" />
-              </div>
-              <div class="whitespace-nowrap">
-                <p class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Agency Leadership</p>
-                <p class="text-xs font-bold text-white">Mirch Media (2006–Present)</p>
-              </div>
-            </div>
-
-            <!-- Floating Credential Badge 2 (Bottom Right) -->
-            <div class="absolute -bottom-6 -right-6 hidden sm:flex items-center gap-3 p-3.5 rounded-2xl bg-dark-900/90 backdrop-blur-xl border border-slate-700/70 shadow-2xl">
-              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
-                <Users class="w-5 h-5" />
-              </div>
-              <div class="whitespace-nowrap">
-                <p class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Civic &amp; Community</p>
-                <p class="text-xs font-bold text-white">Board Director &amp; Volunteer Leader</p>
-              </div>
             </div>
 
           </div>
@@ -177,7 +146,7 @@
 </template>
 
 <script setup>
-import { Play, ArrowUpRight, Mic, CheckCircle, Briefcase, Users } from 'lucide-vue-next'
+import { Play, ArrowUpRight, Phone } from 'lucide-vue-next'
 
 defineEmits(['open-video'])
 </script>

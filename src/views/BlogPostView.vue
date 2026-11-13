@@ -1,23 +1,23 @@
 <template>
-  <div class="pt-28 pb-20">
+  <div class="pt-28 pb-20 bg-[#0d0f12]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Back Link -->
       <div class="mb-8">
         <router-link 
           to="/blog"
-          class="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-brand-300 transition-colors"
+          class="inline-flex items-center gap-2 text-xs font-mono font-medium text-neutral-400 hover:text-white transition-colors"
         >
           <ArrowLeft class="w-4 h-4" />
-          <span>Back to All Articles</span>
+          <span>Back to All Essays</span>
         </router-link>
       </div>
 
       <div v-if="!post" class="text-center py-20">
-        <h1 class="text-2xl font-bold text-white">Article Not Found</h1>
-        <p class="text-xs text-slate-400 mt-2">The requested essay could not be found.</p>
-        <router-link to="/blog" class="mt-4 inline-block px-4 py-2 rounded-lg bg-brand-500 text-dark-950 font-bold text-xs">
-          Return to Blog
+        <h1 class="text-2xl font-serif text-white">Essay Not Found</h1>
+        <p class="text-xs text-neutral-400 mt-2">The requested essay could not be found.</p>
+        <router-link to="/blog" class="mt-4 inline-block px-4 py-2 rounded-lg bg-[#c59b63] text-[#0d0f12] font-semibold text-xs">
+          Return to Essays
         </router-link>
       </div>
 
@@ -26,62 +26,62 @@
         <!-- Article Header -->
         <header class="space-y-4">
           <div class="flex items-center gap-2.5">
-            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-brand-500/10 text-brand-400 border border-brand-500/20">
+            <span class="px-2.5 py-1 rounded text-[10px] font-mono uppercase tracking-wider bg-[#13161c] text-[#d4a36a] border border-white/[0.08]">
               {{ post.category }}
             </span>
-            <span class="text-xs text-slate-400">{{ post.readTime }}</span>
+            <span class="text-xs font-mono text-neutral-500">{{ post.readTime }}</span>
           </div>
 
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+          <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-serif font-normal text-white tracking-tight leading-tight">
             {{ post.title }}
           </h1>
 
-          <div class="flex items-center gap-3 pt-2 pb-4 border-b border-slate-800">
-            <div class="w-10 h-10 rounded-full overflow-hidden border border-brand-500/40 shrink-0">
+          <div class="flex items-center gap-3 pt-3 pb-4 border-b border-white/[0.08]">
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-white/[0.1] shrink-0">
               <img src="/media/vivek-thapar-ceo.webp" alt="Vivek Thapar" class="w-full h-full object-cover object-top" />
             </div>
             <div>
-              <p class="text-xs font-bold text-white">{{ post.author }}</p>
-              <p class="text-[11px] text-slate-400">{{ post.date }} · Founder &amp; CEO, Mirch Media</p>
+              <p class="text-xs font-semibold text-white">{{ post.author }}</p>
+              <p class="text-[11px] text-neutral-400 font-mono">{{ post.date }} · Founder &amp; CEO, Mirch Media</p>
             </div>
           </div>
         </header>
 
-        <!-- Featured Banner Image: balanced aspect ratio avoiding harsh crops -->
-        <div class="rounded-3xl overflow-hidden aspect-[16/10] sm:aspect-[2/1] max-h-[440px] border border-slate-700/80 shadow-2xl relative bg-dark-950">
-          <img :src="post.image" :alt="post.title" class="w-full h-full object-cover object-center" />
+        <!-- Featured Banner Image -->
+        <div class="rounded-xl overflow-hidden aspect-[16/10] sm:aspect-[2/1] max-h-[440px] border border-white/[0.08] shadow-2xl relative bg-[#090a0d]">
+          <img :src="post.image" :alt="post.title" class="w-full h-full object-cover object-center filter contrast-[1.02]" />
         </div>
 
         <!-- Article Rich Body -->
         <div 
-          class="prose prose-invert prose-slate max-w-none text-slate-300 text-sm leading-relaxed space-y-6 [&>h2]:text-xl [&>h2]:font-bold [&>h2]:text-white [&>h2]:font-display [&>h2]:mt-8 [&>blockquote]:p-5 [&>blockquote]:rounded-2xl [&>blockquote]:bg-dark-900 [&>blockquote]:border-l-4 [&>blockquote]:border-l-brand-400 [&>blockquote]:italic [&>blockquote]:text-slate-200 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-2 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:space-y-2"
+          class="prose prose-invert max-w-none text-neutral-300 text-sm leading-relaxed space-y-6 [&>h2]:text-2xl [&>h2]:font-serif [&>h2]:text-white [&>h2]:mt-10 [&>blockquote]:p-5 [&>blockquote]:rounded-xl [&>blockquote]:bg-[#13161c] [&>blockquote]:border-l-2 [&>blockquote]:border-[#c59b63] [&>blockquote]:italic [&>blockquote]:text-neutral-200 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-2 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:space-y-2"
           v-html="post.content"
         ></div>
 
         <!-- Tags -->
-        <div class="pt-6 border-t border-slate-800 flex flex-wrap items-center gap-2">
-          <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">Topics:</span>
+        <div class="pt-6 border-t border-white/[0.08] flex flex-wrap items-center gap-2">
+          <span class="text-xs font-mono uppercase tracking-wider text-neutral-500">Topics:</span>
           <span 
             v-for="tag in post.tags" 
             :key="tag"
-            class="px-2.5 py-1 rounded-lg text-xs font-medium bg-dark-900 text-brand-300 border border-slate-800"
+            class="px-2.5 py-1 rounded text-xs font-mono bg-[#13161c] text-[#d4a36a] border border-white/[0.06]"
           >
             #{{ tag }}
           </span>
         </div>
 
         <!-- Author Box -->
-        <div class="p-6 sm:p-8 rounded-3xl glass-panel border border-slate-700/70 flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
-          <div class="w-20 h-20 rounded-2xl overflow-hidden border-2 border-brand-500/40 shrink-0">
+        <div class="p-6 sm:p-8 rounded-xl bg-[#13161c] border border-white/[0.08] flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+          <div class="w-20 h-20 rounded-xl overflow-hidden border border-white/[0.1] shrink-0">
             <img src="/media/vivek-thapar-ceo.webp" alt="Vivek Thapar" class="w-full h-full object-cover object-top" />
           </div>
           <div class="space-y-2">
-            <h3 class="text-base font-bold text-white font-display">About Vivek Thapar</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Serial entrepreneur, growth strategist, and Founder &amp; CEO of Mirch Media in Queens, NYC. With 21+ years in tech and digital engineering, Vivek has directed 500+ digital deliverables and serves on various community and fraternal boards.
+            <h3 class="text-base font-serif text-white">About Vivek Thapar</h3>
+            <p class="text-xs text-neutral-400 leading-relaxed font-sans">
+              Serial entrepreneur, growth strategist, and Founder &amp; CEO of Mirch Media in Queens, NYC. With 21+ years in technology and digital engineering, Vivek has directed 500+ digital deliverables and serves on various community and fraternal boards.
             </p>
             <div class="pt-2">
-              <router-link to="/contact" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-400 hover:text-brand-300">
+              <router-link to="/contact" class="inline-flex items-center gap-1.5 text-xs font-medium text-[#d4a36a] hover:text-white transition-colors">
                 <span>Connect With Vivek</span>
                 <ArrowRight class="w-3.5 h-3.5" />
               </router-link>

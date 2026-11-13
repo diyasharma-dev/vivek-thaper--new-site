@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-dark-950 text-slate-100 flex flex-col selection:bg-brand-500 selection:text-white">
+  <div class="min-h-screen bg-[#0d0f12] text-[#f4f4f0] flex flex-col selection:bg-[#c59b63] selection:text-black">
     
     <!-- Navigation Bar -->
     <Navbar />
@@ -18,14 +18,14 @@
       @close="isVideoModalOpen = false" 
     />
 
-    <!-- Quick Floating Action Pill -->
+    <!-- Understated Floating Executive Contact Action -->
     <div class="fixed bottom-6 right-6 z-40 hidden sm:flex items-center gap-2">
       <router-link 
         to="/contact"
-        class="flex items-center gap-2 px-4 py-3 rounded-full bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 text-white font-bold text-xs shadow-2xl shadow-brand-600/40 border border-brand-400/30 transition-all transform hover:scale-105 active:scale-95"
+        class="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-[#13161c]/95 backdrop-blur-md hover:bg-[#181c24] text-neutral-200 hover:text-white font-medium text-xs shadow-2xl border border-white/[0.1] hover:border-[#c59b63] transition-all transform hover:-translate-y-0.5"
       >
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Book Strategy Call</span>
+        <span class="w-2 h-2 rounded-full bg-[#c59b63]"></span>
+        <span>Schedule Strategy Call</span>
       </router-link>
     </div>
 

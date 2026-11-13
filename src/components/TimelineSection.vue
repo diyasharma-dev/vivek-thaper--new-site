@@ -1,17 +1,17 @@
 <template>
-  <section id="timeline" class="py-24 relative overflow-hidden bg-dark-950 border-t border-slate-800">
+  <section id="timeline" class="py-24 relative overflow-hidden bg-[#0d0f12] border-t border-white/[0.06]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-semibold">
-          <Clock class="w-3.5 h-3.5" />
-          <span>The 20-Year Evolution</span>
+      <div class="max-w-3xl mb-16 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#13161c] border border-white/[0.08] text-neutral-300 text-xs">
+          <Clock class="w-3.5 h-3.5 text-[#d4a36a]" />
+          <span class="font-mono uppercase tracking-widest text-[11px] text-[#d4a36a]">Chronological Milestones</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight">
-          Two Decades Of <span class="gold-gradient-text">Relentless Execution</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-normal text-white tracking-tight leading-tight">
+          Two Decades of Continuous Evolution &amp; Execution
         </h2>
-        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+        <p class="text-neutral-400 text-base leading-relaxed font-sans">
           From a solo web developer in Queens to an acclaimed NYC agency founder, advisor, and keynote speaker.
         </p>
       </div>
@@ -19,7 +19,7 @@
       <!-- Timeline Vertical Track -->
       <div class="relative max-w-4xl mx-auto">
         <!-- Central Line -->
-        <div class="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-brand-500 via-brand-600/40 to-slate-800 sm:-translate-x-1/2"></div>
+        <div class="absolute left-4 sm:left-1/2 top-0 bottom-0 w-[1px] bg-white/[0.1] sm:-translate-x-1/2"></div>
 
         <div class="space-y-12">
           
@@ -32,24 +32,25 @@
             ]"
           >
             <!-- Timeline Pin / Dot -->
-            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-dark-950 border-2 border-brand-400 shadow-lg shadow-brand-500/30 flex items-center justify-center z-10 mt-1">
-              <div class="w-2.5 h-2.5 rounded-full bg-brand-400"></div>
+            <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-[#0d0f12] border border-[#c59b63] flex items-center justify-center z-10 mt-1">
+              <div class="w-2 h-2 rounded-full bg-[#c59b63]"></div>
             </div>
 
             <!-- Content Card -->
             <div class="ml-12 sm:ml-0 sm:w-1/2 px-2 sm:px-6">
-              <div class="p-6 rounded-2xl glass-panel glass-panel-hover border border-slate-700/70">
+              <div class="p-6 rounded-xl bg-[#13161c] border border-white/[0.08] hover:border-white/[0.16] transition-all">
                 <div class="flex items-center gap-2 mb-2">
-                  <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 border border-brand-500/30">
+                  <span class="text-xs font-mono font-bold text-[#d4a36a]">
                     {{ item.year }}
                   </span>
-                  <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">{{ item.tag }}</span>
+                  <span class="text-neutral-600">·</span>
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-neutral-400">{{ item.tag }}</span>
                 </div>
 
-                <h3 class="text-lg font-bold text-white font-display mb-2">{{ item.title }}</h3>
-                <p class="text-xs text-slate-300 leading-relaxed">{{ item.description }}</p>
+                <h3 class="text-base font-serif text-white mb-2">{{ item.title }}</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed font-sans">{{ item.description }}</p>
 
-                <div class="mt-4 pt-3 border-t border-slate-800/80 text-[11px] font-semibold text-brand-400">
+                <div class="mt-4 pt-3 border-t border-white/[0.06] text-[11px] font-mono text-neutral-400">
                   {{ item.metric }}
                 </div>
               </div>
@@ -73,38 +74,45 @@ import { Clock } from 'lucide-vue-next'
 const milestones = [
   {
     year: '2006',
-    tag: 'Origin Story',
+    tag: 'Founding',
     title: 'Mirch Media Founded in Queens, NYC',
-    description: 'Vivek starts Mirch Media as a one-person freelance web engineering operation with a laptop and a commitment to transparent delivery for local businesses.',
-    metric: 'Milestone 01 · 100% Bootstrap & Client-First DNA'
+    description: 'Vivek establishes Mirch Media as an independent web engineering practice with a commitment to transparent delivery for local and regional businesses.',
+    metric: 'Milestone 01 · 100% Bootstrap DNA'
   },
   {
-    year: '2010',
-    tag: 'Service Expansion',
-    title: 'Expanded to Full-Service Performance Marketing',
-    description: 'Integrated data-backed SEO, negative-keyword PPC sculpting, and conversion rate optimization into client deliverables.',
-    metric: 'Milestone 02 · Full-Service Digital Firm'
+    year: '2011',
+    tag: 'Enterprise Expansion',
+    title: 'Scaling Into Multi-Location Healthcare & Law',
+    description: 'Expands into high-stakes industries, building specialized acquisition funnels and custom search architectures for major regional practices.',
+    metric: 'Milestone 02 · 100+ Systems Deployed'
   },
   {
-    year: '2015',
-    tag: 'Enterprise Scale',
-    title: 'Multi-Industry Commercial Portfolio Growth',
-    description: 'Sustained growth across high-stakes industries including personal injury law, healthcare, telecom, and e-commerce across the Tri-State area.',
-    metric: 'Milestone 03 · 200+ Active Clients Serviced'
+    year: '2016',
+    tag: 'Custom SaaS & Portals',
+    title: 'Architecting Enterprise Web Applications',
+    description: 'Transitions agency focus toward bespoke reactive software development, building tenant portals and real-time dispatch systems handling millions in GMV.',
+    metric: 'Milestone 03 · 250+ Commercial Clients'
   },
   {
     year: '2020',
-    tag: 'Resilience',
-    title: 'Digital Transformation & Pandemic Pivot',
-    description: 'Guided dozens of brick-and-mortar retail and service clients through emergency online transitions, cloud ordering, and digital-first operations.',
-    metric: 'Milestone 04 · Zero Client Downtime During Crisis'
+    tag: 'Civic Directorate',
+    title: 'Assuming Presidency of Underbridge Dog Run & IND Board',
+    description: 'Formalizes civic commitments, partnering with NYC Parks Department for urban space upkeep and leading fraternal scholarship initiatives nationwide.',
+    metric: 'Milestone 04 · Civic Leadership & Mentorship'
   },
   {
-    year: '2024–2026',
-    tag: 'AI Disruption',
-    title: 'AI Search (GEO) & Next-Gen Vue Architecture',
-    description: 'Leading the frontier of Generative Engine Optimization (GEO), automated lead routing engines, and high-performance custom Vue.js web applications.',
-    metric: 'Milestone 05 · 500+ Projects & Global Reach'
+    year: '2024',
+    tag: 'Generative Engine Optimization',
+    title: 'Pioneering AI Search & Intent Architecture',
+    description: 'Helps enterprises navigate generative engine optimization (GEO), LLM search indexing, and modern AI automation workflows.',
+    metric: 'Milestone 05 · Next-Gen Search Leadership'
+  },
+  {
+    year: 'Present',
+    tag: '20+ Year Legacy',
+    title: 'Direct Senior Advisory & Strategic Tech Direction',
+    description: 'Actively partnering with ambitious founders, business owners, and corporate boards seeking direct accountability and verified market growth.',
+    metric: 'Milestone 06 · 500+ Projects Completed'
   }
 ]
 </script>
