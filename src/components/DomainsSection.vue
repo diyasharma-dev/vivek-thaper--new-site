@@ -1,31 +1,31 @@
 <template>
-  <section id="domains" class="py-24 relative overflow-hidden bg-white border-b border-slate-200/80">
+  <section id="domains" class="py-14 sm:py-16 md:py-20 relative overflow-hidden bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
-      <div class="max-w-3xl mb-12 space-y-3">
-        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-800 font-mono text-[11px] font-semibold tracking-wider uppercase shadow-2xs">
-          <Layers class="w-3.5 h-3.5 text-amber-600" />
-          <span>Core Competencies</span>
+      <div class="max-w-3xl mb-10 sm:mb-12 space-y-2.5 sm:space-y-3">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/90 text-orange-700 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs">
+          <Layers class="w-3.5 h-3.5 text-orange-600" />
+          <span>Core Capabilities &amp; Stack</span>
         </span>
-        <h2 class="text-3xl sm:text-4xl font-serif font-normal text-slate-900 tracking-tight leading-tight">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-slate-900 tracking-tight leading-tight">
           Specialized Domains &amp; Engineering Disciplines
         </h2>
-        <p class="text-slate-600 text-base leading-relaxed font-sans">
+        <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed font-sans">
           Full-lifecycle execution — from product logic planning and bespoke code development to omnichannel search dominance.
         </p>
 
-        <!-- Category Filter Tabs -->
-        <div class="flex flex-wrap items-center gap-2 pt-3">
+        <!-- Category Filter Tabs (Horizontal Scrollable on Mobile) -->
+        <div class="flex overflow-x-auto pb-1 scrollbar-none sm:flex-wrap items-center gap-1.5 sm:gap-2 pt-2">
           <button
             v-for="cat in categories"
             :key="cat.id"
             @click="activeCategory = cat.id"
             :class="[
-              'px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer shadow-2xs',
+              'px-3.5 py-1.5 rounded-xl text-xs font-heading font-bold transition-all cursor-pointer whitespace-nowrap shadow-2xs',
               activeCategory === cat.id
-                ? 'bg-slate-900 text-white shadow-xs'
-                : 'bg-slate-50 text-slate-700 hover:text-black hover:bg-slate-100 border border-slate-200'
+                ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-md shadow-orange-500/25'
+                : 'bg-white text-slate-700 hover:text-orange-600 hover:bg-orange-50/50 border border-slate-200'
             ]"
           >
             {{ cat.label }}
@@ -34,21 +34,21 @@
       </div>
 
       <!-- Domain Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
         <div
           v-for="(domain, idx) in filteredDomains"
           :key="domain.title"
-          class="card-architectural p-6 flex flex-col justify-between group hover:-translate-y-1"
+          class="card-architectural p-5 sm:p-6 flex flex-col justify-between group hover:-translate-y-1 hover:border-orange-300 hover:shadow-orange-500/10"
         >
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-mono font-bold text-amber-700">0{{ idx + 1 }}</span>
-              <span class="text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 font-semibold border border-slate-200/80">
+            <div class="flex items-center justify-between mb-3.5">
+              <span class="text-xs font-mono font-bold text-orange-600">0{{ idx + 1 }}</span>
+              <span class="text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded-md bg-orange-50 text-orange-700 font-bold border border-orange-200/80">
                 {{ domain.tag }}
               </span>
             </div>
 
-            <h3 class="text-base font-bold text-slate-900 mb-2 group-hover:text-amber-700 transition-colors">
+            <h3 class="text-base sm:text-lg font-heading font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
               {{ domain.title }}
             </h3>
 
@@ -58,56 +58,41 @@
 
             <ul class="space-y-1.5 pt-3 border-t border-slate-100">
               <li 
-                v-for="bullet in domain.bullets" 
-                :key="bullet"
+                v-for="skill in domain.skills" 
+                :key="skill"
                 class="flex items-center gap-2 text-xs text-slate-700 font-medium font-sans"
               >
-                <div class="w-1.5 h-1.5 rounded-full bg-amber-600 shrink-0"></div>
-                <span>{{ bullet }}</span>
+                <div class="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0"></div>
+                <span>{{ skill }}</span>
               </li>
             </ul>
           </div>
 
-          <div class="mt-6 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-            <span class="text-slate-400 font-mono text-[10px] uppercase tracking-wider font-medium">Impact</span>
-            <span class="font-bold text-amber-700 font-mono">{{ domain.impact }}</span>
+          <!-- Bottom Metric -->
+          <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono">
+            <span class="text-slate-500 font-medium">Standard</span>
+            <span class="text-orange-600 font-bold">{{ domain.metric }}</span>
           </div>
+
         </div>
       </div>
 
-      <!-- Studio & NYC Office Feature Strip -->
-      <div class="mt-16 p-8 rounded-2xl bg-slate-50 border border-slate-200 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xs">
-        <div class="lg:col-span-4 rounded-xl overflow-hidden aspect-[4/3] lg:aspect-auto h-full min-h-[220px] relative border border-slate-200 bg-slate-100">
-          <img 
-            src="/media/web-design-studio.webp" 
-            alt="Modern Web Design & Engineering Studio"
-            class="w-full h-full object-cover object-center filter contrast-[1.02]"
-          />
-          <div class="absolute inset-0 bg-slate-900/10"></div>
-          <div class="absolute bottom-3 left-3 px-3 py-1 rounded-lg bg-white/95 backdrop-blur-md border border-slate-200 text-[10px] font-mono uppercase tracking-wider text-slate-900 font-bold shadow-xs">
-            NYC Development Lab
-          </div>
+      <!-- Tech Stack Badges Strip -->
+      <div class="mt-10 sm:mt-12 p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border border-orange-500/30 shadow-xl shadow-orange-500/5 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 sm:gap-6">
+        <div class="space-y-1">
+          <span class="text-[10px] font-mono uppercase tracking-widest text-orange-400 font-bold">Technology Matrix</span>
+          <h3 class="text-base sm:text-lg font-heading font-bold text-white">Production-Proven Tech Stack</h3>
+          <p class="text-xs text-slate-300 font-sans">Engineered for sub-second performance, zero technical debt, and maximum conversion.</p>
         </div>
 
-        <div class="lg:col-span-8 space-y-4">
-          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-amber-700 font-bold">
-            <Terminal class="w-3.5 h-3.5" />
-            <span>Architecture &amp; Code Quality</span>
-          </div>
-          <h3 class="text-xl sm:text-2xl font-serif text-slate-900 font-semibold">
-            Engineered for Extreme Speed, Natural Search Dominance &amp; Conversion Logic
-          </h3>
-          <p class="text-sm text-slate-600 leading-relaxed font-sans">
-            We reject bloated page builders and fragile template marketplaces. Every platform is architected with modern component systems, optimized database schemas, and structured schema data that search engines index with priority.
-          </p>
-
-          <div class="pt-2 flex flex-wrap gap-2 text-xs font-mono text-slate-700 font-medium">
-            <span class="px-3 py-1 rounded-lg bg-white border border-slate-200 shadow-2xs">Vue 3 / Vite</span>
-            <span class="px-3 py-1 rounded-lg bg-white border border-slate-200 shadow-2xs">Tailwind CSS</span>
-            <span class="px-3 py-1 rounded-lg bg-white border border-slate-200 shadow-2xs">REST &amp; GraphQL APIs</span>
-            <span class="px-3 py-1 rounded-lg bg-white border border-slate-200 shadow-2xs">Semantic Schema Markup</span>
-            <span class="px-3 py-1 rounded-lg bg-white border border-slate-200 shadow-2xs">Edge CDN Delivery</span>
-          </div>
+        <div class="flex flex-wrap gap-1.5 sm:gap-2">
+          <span 
+            v-for="tech in techStack" 
+            :key="tech"
+            class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg text-xs font-mono bg-slate-800 text-slate-200 border border-slate-700 font-medium hover:border-orange-500 hover:text-orange-300 transition-colors"
+          >
+            {{ tech }}
+          </span>
         </div>
       </div>
 
@@ -117,82 +102,56 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { Layers, Terminal } from 'lucide-vue-next'
+import { Layers } from 'lucide-vue-next'
 
 const activeCategory = ref('all')
 
 const categories = [
-  { id: 'all', label: 'All Disciplines' },
-  { id: 'strategy', label: 'Strategy & Architecture' },
+  { id: 'all', label: 'All Capabilities' },
   { id: 'dev', label: 'Custom Engineering' },
-  { id: 'growth', label: 'Search & Acquisition' }
+  { id: 'growth', label: 'SEO & AI Search' },
+  { id: 'leadership', label: 'Executive Leadership' }
 ]
 
 const domains = [
   {
-    title: 'Project Direction & Systems',
-    category: 'strategy',
-    tag: 'Executive',
-    description: 'Senior product architecture, logic mapping, milestone management, and operational workflows.',
-    bullets: ['Requirements Analysis', 'Conditional User Mapping', 'Sprint Management'],
-    impact: '100% On-Time Delivery'
-  },
-  {
-    title: 'Custom Web & App Engineering',
+    title: 'Custom Web & Application Engineering',
     category: 'dev',
-    tag: 'Development',
-    description: 'Hand-crafted reactive applications built with Vue 3, Vite, Node, and scalable microservices.',
-    bullets: ['Custom Component Logic', 'API Integration', 'Zero Template Bloat'],
-    impact: '<0.8s Page Load Times'
+    tag: 'Engineering',
+    description: 'High-performance reactive frontend web applications, REST/GraphQL APIs, bespoke CMS setups, and client portals.',
+    skills: ['Vue.js & Modern SPA Architecture', 'Tailwind CSS Custom Design Systems', 'Node.js & Python Microservices', 'Sub-Second Page Load Optimization'],
+    metric: '< 800ms Load Time'
   },
   {
-    title: 'Local SEO & Organic Dominance',
+    title: 'Local SEO Dominance & Google 3-Pack',
     category: 'growth',
     tag: 'Acquisition',
-    description: 'Targeted organic rank engineering for competitive metropolitan markets and service categories.',
-    bullets: ['Schema Architecture', 'Intent Keywording', 'Google Maps Top 3'],
-    impact: '+340% Organic Inbounds'
+    description: 'Multi-location local search supremacy across New York City and national metros. Google Maps #1 positioning.',
+    skills: ['Google Business Profile Optimization', 'Hyper-Local Geo-Landing Pages', 'Structured Data & Schema Graphs', 'Reputation & Citation Network'],
+    metric: '#1 Map Rankings'
   },
   {
-    title: 'Conversion Funnel Optimization',
+    title: 'Generative Engine Optimization (GEO)',
     category: 'growth',
-    tag: 'Revenue',
-    description: 'Eliminating friction points and designing high-persuasion conversion funnels that convert visitors.',
-    bullets: ['Behavioral Analytics', 'Form Friction Reduction', 'A/B Testing Loops'],
-    impact: '+64% Conversion Lift'
+    tag: 'Future-Proof',
+    description: 'Engineering brand citations and algorithmic trust signals so LLMs (ChatGPT, Gemini, Perplexity) recommend your business.',
+    skills: ['Knowledge Graph Entity Seeding', 'AI Search Citation Engineering', 'Semantic Schema Markup', 'Information Density Authoring'],
+    metric: 'LLM Source Citation'
   },
   {
-    title: 'Brand Identity & Visual Direction',
-    category: 'strategy',
-    tag: 'Branding',
-    description: 'Distinctive, authoritative brand positioning that communicates market leadership and credibility.',
-    bullets: ['Editorial Typography', 'Logo & Visual Systems', 'Brand Guidelines'],
-    impact: 'Elevated Market Authority'
-  },
-  {
-    title: 'Paid Media & High-Intent PPC',
-    category: 'growth',
-    tag: 'Performance',
-    description: 'Data-driven Google Ads and Meta performance campaigns engineered for minimum CPA.',
-    bullets: ['Negative Keyword Auditing', 'Dynamic Landing Pages', 'Real-Time ROI Tracking'],
-    impact: '-62% Acquisition Cost'
-  },
-  {
-    title: 'Enterprise Technical Architecture',
-    category: 'dev',
-    tag: 'Scale',
-    description: 'Secure, high-availability hosting pipelines, automated deployments, and continuous monitoring.',
-    bullets: ['Edge Deployment', 'Zero Downtime', 'Enterprise Security'],
-    impact: '99.99% Guaranteed Uptime'
-  },
-  {
-    title: 'Founder Advisory & Mentorship',
-    category: 'strategy',
-    tag: 'Advisory',
-    description: 'Direct strategic counsel for startup founders on technical roadmap, team hiring, and capital deployment.',
-    bullets: ['MVP Scoping', 'Technical Due Diligence', 'Founder Coaching'],
-    impact: 'Capital Efficiency'
+    title: 'Startup Advisory & Logic Planning',
+    category: 'leadership',
+    tag: 'Executive',
+    description: 'Direct founder mentorship, software logic architecture, team building, and investor-ready technical roadmaps.',
+    skills: ['If-This-Then-That Business Logic', 'Agile Product Management', 'Unit Economics & CAC/LTV Modeling', 'Investor Technical Due Diligence'],
+    metric: '20+ Yrs Track Record'
   }
+]
+
+const techStack = [
+  'Vue.js', 'Vite', 'Tailwind CSS', 'Node.js', 'Python', 'TypeScript',
+  'PostgreSQL', 'Redis', 'Twilio API', 'Stripe Payments', 'Google Cloud',
+  'Docker', 'Cloudflare CDN', 'Schema.org JSON-LD'
 ]
 
 const filteredDomains = computed(() => {

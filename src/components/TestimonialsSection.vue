@@ -1,49 +1,56 @@
 <template>
-  <section class="py-24 relative overflow-hidden bg-slate-50/70 border-b border-slate-200/80">
+  <section class="py-14 sm:py-16 md:py-20 relative overflow-hidden bg-slate-50/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
-      <div class="max-w-3xl mb-14 space-y-3">
-        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-slate-800 font-mono text-[11px] font-semibold tracking-wider uppercase shadow-2xs">
-          <Quote class="w-3.5 h-3.5 text-amber-600" />
+      <div class="max-w-3xl mb-10 sm:mb-12 space-y-2.5 sm:space-y-3">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/90 text-orange-700 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs">
+          <Quote class="w-3.5 h-3.5 text-orange-600" />
           <span>Client Endorsements</span>
         </span>
-        <h2 class="text-3xl sm:text-4xl font-serif font-normal text-slate-900 tracking-tight leading-tight">
-          Executive Voices &amp; Long-Term Client Partnerships
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-slate-900 tracking-tight leading-tight">
+          Executive Voices &amp; Long-Term Partnerships
         </h2>
-        <p class="text-slate-600 text-base leading-relaxed font-sans">
+        <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed font-sans">
           What founders, managing attorneys, and corporate executives say about partnering directly with Vivek Thapar.
         </p>
       </div>
 
       <!-- Testimonials Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         
         <div 
-          v-for="item in testimonials" 
+          v-for="(item, idx) in testimonials" 
           :key="item.author"
-          class="card-architectural p-8 flex flex-col justify-between hover:-translate-y-1"
+          class="card-architectural p-6 sm:p-8 flex flex-col justify-between hover:-translate-y-1 hover:border-orange-300 hover:shadow-orange-500/10"
         >
           <div>
-            <!-- Star rating in warm amber -->
-            <div class="flex items-center gap-1 text-amber-500 mb-5">
-              <Star v-for="n in 5" :key="n" class="w-4 h-4 fill-amber-500" />
+            <!-- Star rating in vibrant golden amber -->
+            <div class="flex items-center gap-1 text-amber-400 mb-4 sm:mb-5">
+              <Star v-for="n in 5" :key="n" class="w-4 h-4 fill-amber-400 text-amber-400" />
             </div>
 
-            <!-- Quote Text in editorial serif -->
-            <p class="text-sm text-slate-700 leading-relaxed font-serif italic mb-6">
+            <!-- Quote Text in clean modern style -->
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed font-sans italic mb-6">
               "{{ item.quote }}"
             </p>
           </div>
 
-          <!-- Author Info -->
-          <div class="pt-5 border-t border-slate-100 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center font-mono text-xs font-bold text-slate-900 shrink-0">
+          <!-- Author Info with Distinct Gradient Avatars -->
+          <div class="pt-4 sm:pt-5 border-t border-slate-100 flex items-center gap-3">
+            <div 
+              :class="[
+                'w-10 h-10 rounded-xl flex items-center justify-center font-mono text-xs font-bold text-white shadow-2xs shrink-0',
+                idx === 0 ? 'bg-gradient-to-br from-orange-500 to-amber-500' :
+                idx === 1 ? 'bg-gradient-to-br from-blue-500 to-indigo-600' :
+                'bg-gradient-to-br from-emerald-500 to-teal-600'
+              ]"
+            >
               {{ item.initials }}
             </div>
             <div>
-              <h4 class="text-xs font-bold text-slate-900 font-sans">{{ item.author }}</h4>
-              <p class="text-[11px] text-amber-700 font-semibold font-sans">{{ item.role }}</p>
+              <h4 class="text-xs sm:text-sm font-heading font-bold text-slate-900">{{ item.author }}</h4>
+              <p class="text-[11px] text-orange-600 font-bold font-sans">{{ item.role }}</p>
               <p class="text-[10px] text-slate-500 font-sans">{{ item.company }}</p>
             </div>
           </div>
