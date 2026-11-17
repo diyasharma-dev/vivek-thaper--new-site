@@ -60,11 +60,11 @@
 
         <!-- Pillar 2: Iota Nu Delta Fraternal Board (Mirch Fiery Orange / Amber Theme) -->
         <div class="p-6 sm:p-10 bg-gradient-to-br from-white via-orange-50/25 to-amber-50/40 border border-orange-200/80 hover:border-orange-400/80 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center group">
-          <div class="lg:col-span-5 rounded-2xl overflow-hidden border-2 border-orange-200 aspect-[4/3] relative order-last lg:order-first bg-slate-100 shadow-md group-hover:shadow-orange-500/20 transition-all">
+          <div class="lg:col-span-5 rounded-2xl overflow-hidden border-2 border-orange-200 aspect-[4/3] relative order-last lg:order-first bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 shadow-md group-hover:shadow-orange-500/20 transition-all flex items-center justify-center p-6 sm:p-8">
             <img 
-              src="/media/work-foundation.webp" 
-              alt="Iota Nu Delta Heritage"
-              class="w-full h-full object-cover object-center filter contrast-[1.03] group-hover:scale-105 transition-transform duration-500"
+              src="/media/iota-nu-delta-crest.png" 
+              alt="Iota Nu Delta Official National Crest"
+              class="max-h-full max-w-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)] group-hover:scale-105 transition-transform duration-500"
             />
           </div>
 

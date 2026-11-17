@@ -158,7 +158,7 @@
               @click="mobileMenuOpen = false"
               class="flex items-center justify-center gap-2 p-3 rounded-xl text-xs font-heading font-bold text-white bg-gradient-to-r from-orange-500 to-amber-500 shadow-md shadow-orange-500/25"
             >
-              <span>Schedule Strategy Call</span>
+              <span>Schedule a Call</span>
               <ArrowRight class="w-4 h-4" />
             </router-link>
           </div>

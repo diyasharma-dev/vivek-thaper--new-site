@@ -15,7 +15,7 @@
           Two Decades of Continuous <span class="gradient-text-brand">Evolution &amp; Execution</span>
         </h2>
         <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-sans">
-          From a solo web developer in Queens to an acclaimed NYC agency founder, advisor, and keynote speaker.
+          From launching web solutions in Queens to building Mirch Media, managing cross-functional teams, and advising high-growth brands.
         </p>
       </div>
 

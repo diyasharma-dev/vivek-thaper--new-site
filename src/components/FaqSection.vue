@@ -56,7 +56,7 @@
           to="/contact" 
           class="btn-primary text-xs shrink-0 relative z-10"
         >
-          <span>Schedule Strategy Call</span>
+          <span>Schedule a Call</span>
           <ArrowRight class="w-3.5 h-3.5 text-white" />
         </router-link>
       </div>

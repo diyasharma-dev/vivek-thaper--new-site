@@ -51,7 +51,12 @@
               <span class="text-xs font-mono font-bold text-orange-800 bg-orange-100/60 px-2.5 py-1 rounded-md border border-orange-200">Director</span>
             </div>
             
-            <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-orange-950 transition-colors mb-3">Iota Nu Delta Fraternal Board</h3>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center p-1.5 shrink-0 shadow-xs border border-slate-800">
+                <img src="/media/iota-nu-delta-crest.png" alt="Iota Nu Delta Crest" class="w-full h-full object-contain" />
+              </div>
+              <h3 class="text-lg font-heading font-bold text-slate-900 group-hover:text-orange-950 transition-colors">Iota Nu Delta Fraternal Board</h3>
+            </div>
             
             <p class="text-sm text-slate-600 leading-relaxed font-sans">
               Serving on the National Board of Directors of <strong>Iota Nu Delta</strong>, the first South Asian fraternal organization in the United States. Providing structured collegiate mentorship, scholarship guidance, and cultural heritage leadership.

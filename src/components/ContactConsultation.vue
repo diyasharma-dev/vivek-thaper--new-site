@@ -6,13 +6,13 @@
       <div class="max-w-3xl mb-10 sm:mb-12 space-y-2.5 sm:space-y-3">
         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/90 text-orange-700 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs">
           <Send class="w-3.5 h-3.5 text-orange-600" />
-          <span>Direct Advisory Access</span>
+          <span>Get In Touch</span>
         </span>
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-slate-900 tracking-tight leading-tight">
-          Initiate a Strategic Conversation with Vivek Thapar
+          Start a Conversation with Vivek Thapar
         </h2>
         <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed font-sans">
-          Whether you need bespoke web application engineering, localized SEO supremacy, or a keynote speaker for your next summit — connect directly with Vivek.
+          Whether you need high-performance web development, SEO &amp; digital growth, or executive guidance — connect directly with Vivek.
         </p>
       </div>
 
@@ -125,16 +125,16 @@
               <div class="w-14 h-14 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-600 flex items-center justify-center mx-auto shadow-xs">
                 <CheckCircle2 class="w-7 h-7" />
               </div>
-              <h3 class="text-xl sm:text-2xl font-heading font-bold text-slate-900">Inquiry Received by Vivek Thapar</h3>
+              <h3 class="text-xl sm:text-2xl font-heading font-bold text-slate-900">Message Received</h3>
               <p class="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed font-sans">
-                Thank you, <strong class="text-slate-900 font-bold">{{ form.name }}</strong>. Your briefing has been transmitted directly to Vivek's desk. You will receive a personal reply or phone call within 24 business hours.
+                Thank you, <strong class="text-slate-900 font-bold">{{ form.name }}</strong>. Your message has been sent directly to Vivek. You will receive a response within 24 hours.
               </p>
               <div class="pt-3">
                 <button 
                   @click="submitted = false"
                   class="btn-secondary text-xs"
                 >
-                  Send Another Inquiry
+                  Send Another Message
                 </button>
               </div>
             </div>
@@ -142,8 +142,8 @@
             <form v-else @submit.prevent="handleSubmit" class="space-y-5 sm:space-y-6">
               
               <div>
-                <h3 class="text-lg sm:text-2xl font-heading font-bold text-slate-900">Schedule an Executive Consultation</h3>
-                <p class="text-xs text-slate-500 mt-1 font-sans">Direct review by Vivek Thapar · Confidential consultation</p>
+                <h3 class="text-lg sm:text-2xl font-heading font-bold text-slate-900">Schedule a Consultation</h3>
+                <p class="text-xs text-slate-500 mt-1 font-sans">Direct reply from Vivek Thapar · Confidential consultation</p>
               </div>
 
               <!-- Name & Email Row -->
@@ -159,7 +159,7 @@
                   />
                 </div>
                 <div>
-                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Business Email *</label>
+                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Email Address *</label>
                   <input 
                     type="email" 
                     required 
@@ -173,7 +173,7 @@
               <!-- Phone & Inquiry Type Row -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Direct Phone / Mobile</label>
+                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Phone Number</label>
                   <input 
                     type="tel" 
                     v-model="form.phone"
@@ -182,23 +182,23 @@
                   />
                 </div>
                 <div>
-                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Engagement Type *</label>
+                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Service Needed *</label>
                   <select 
                     v-model="form.inquiryType"
                     class="form-input-field cursor-pointer bg-white font-sans"
                   >
-                    <option value="strategy">Executive Growth Strategy Session</option>
-                    <option value="engineering">Custom Web Architecture &amp; App Engineering</option>
-                    <option value="seo">SEO &amp; Generative Engine (GEO) Dominance</option>
-                    <option value="speaking">Keynote Speaking &amp; Media Appearance</option>
-                    <option value="mentorship">Startup Advisory &amp; Technical Mentorship</option>
+                    <option value="web">Web Design &amp; Development</option>
+                    <option value="seo">SEO &amp; Digital Growth</option>
+                    <option value="strategy">Growth Strategy Consultation</option>
+                    <option value="speaking">Keynote Speaking &amp; Media</option>
+                    <option value="advisory">Startup Advisory &amp; Mentorship</option>
                   </select>
                 </div>
               </div>
 
-              <!-- Scope / Project Scale -->
+              <!-- Scope / Budget -->
               <div>
-                <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Estimated Scope / Capital Allocation</label>
+                <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Estimated Budget</label>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   <button
                     type="button"
@@ -219,12 +219,12 @@
 
               <!-- Message / Goals -->
               <div>
-                <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Project Objectives or Context *</label>
+                <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Your Message / Project Details *</label>
                 <textarea 
                   rows="4" 
                   required
                   v-model="form.message"
-                  placeholder="Tell Vivek about your business, current traffic/leads, timeline, or speaking engagement details..."
+                  placeholder="Tell Vivek about your project, current goals, timeline, or what you need help with..."
                   class="form-input-field resize-none font-sans"
                 ></textarea>
               </div>
@@ -235,8 +235,8 @@
                 :disabled="isSubmitting"
                 class="w-full btn-primary py-3.5 sm:py-4 cursor-pointer disabled:opacity-50 text-xs sm:text-sm font-bold shadow-md hover:shadow-xl font-heading justify-center"
               >
-                <span v-if="!isSubmitting">Dispatch Consultation Request to Vivek Thapar</span>
-                <span v-else>Transmitting Briefing...</span>
+                <span v-if="!isSubmitting">Schedule Consultation</span>
+                <span v-else>Sending Message...</span>
                 <ArrowRight class="w-4 h-4 ml-1" />
               </button>
 
@@ -262,14 +262,14 @@ const budgetOptions = [
   'Under $10k',
   '$10k – $25k',
   '$25k – $50k',
-  '$50k+ / Enterprise'
+  '$50k+'
 ]
 
 const form = reactive({
   name: '',
   email: '',
   phone: '',
-  inquiryType: 'strategy',
+  inquiryType: 'web',
   budget: '$10k – $25k',
   message: ''
 })

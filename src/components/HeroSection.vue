@@ -27,18 +27,18 @@
 
           <!-- Main Title: Modern Bold Geometric Heading with Vibrant Brand Gradient -->
           <h1 class="text-2xl sm:text-4xl lg:text-[46px] font-heading font-extrabold text-slate-900 tracking-tight leading-[1.18] sm:leading-[1.14]">
-            Twenty years building digital businesses, directing engineering, and scaling revenue in <span class="gradient-text-brand">New York City</span>.
+            Twenty years building digital businesses, directing strategy, and scaling revenue in <span class="gradient-text-brand">New York City</span>.
           </h1>
 
           <!-- Personal Statement & Subheading -->
           <div class="space-y-3 sm:space-y-4">
             <blockquote class="border-l-4 border-orange-500 bg-gradient-to-r from-orange-50/80 via-amber-50/50 to-white p-3.5 sm:p-4 rounded-r-xl text-left text-xs sm:text-sm md:text-base text-slate-800 font-sans leading-relaxed shadow-2xs">
-              <span class="text-slate-950 font-bold">"I have a confession to make:</span> I love creating, designing, logic planning, leading teams, and working with startups. My 20+ years of experience with digital marketing and website engineering make me a natural project manager."
+              <span class="text-slate-950 font-bold">"I have a confession to make:</span> I love creating, designing, logic planning, leading teams, and working with startups. My 20+ years of experience with digital marketing and website development make me a natural project manager."
               <span class="block text-xs font-mono font-bold text-orange-600 mt-2">— Vivek Thapar, Serial Entrepreneur</span>
             </blockquote>
 
             <p class="text-xs sm:text-sm md:text-base text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans">
-              Founder &amp; CEO of <strong class="text-slate-900 font-bold">Mirch Media</strong> in Forest Hills, Queens. Direct founder accountability for enterprise brands, medical institutions, legal litigation leaders, and high-growth startups nationwide.
+              Founder &amp; CEO of <strong class="text-slate-900 font-bold">Mirch Media</strong> in Forest Hills, Queens. Direct founder accountability, logic planning, and project management backed by a talented agency team of developers, designers, and marketers.
             </p>
           </div>
 

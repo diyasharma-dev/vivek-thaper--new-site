@@ -25,7 +25,7 @@
         class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 hover:from-orange-600 hover:to-amber-600 text-white font-heading font-bold text-xs shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 border border-white/25 transition-all hover:-translate-y-0.5"
       >
         <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-        <span>Schedule Strategy Call</span>
+        <span>Schedule a Call</span>
       </router-link>
     </div>
 

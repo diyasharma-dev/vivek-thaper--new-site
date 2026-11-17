@@ -33,21 +33,16 @@
             20+ years architecting digital marketing, high-performance web engineering, and enterprise project management. Based in Forest Hills, Queens, New York City.
           </p>
 
-          <!-- Mirch Media Agency Lockup -->
+          <!-- Mirch Media Agency Logo -->
           <div class="pt-2">
             <a 
               href="https://www.mirchmedia.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-3 p-2.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition-all group"
+              class="inline-flex items-center px-3.5 py-2 rounded-xl bg-white hover:bg-slate-100 border border-slate-800 hover:border-orange-400 transition-all shadow-xs group"
+              title="Mirch Media"
             >
-              <div class="h-6 px-2 py-0.5 bg-white rounded flex items-center justify-center">
-                <img src="/media/mirch-logo.webp" alt="Mirch Media" class="h-4 w-auto object-contain" />
-              </div>
-              <div class="text-[11px] leading-tight">
-                <span class="text-slate-200 font-bold block group-hover:text-brand-400 transition-colors">Mirch Media Official</span>
-                <span class="text-slate-500 font-mono text-[10px]">Where Media Meets Technology</span>
-              </div>
+              <img src="/media/mirch-logo.webp" alt="Mirch Media" class="h-5 w-auto object-contain group-hover:scale-105 transition-transform" />
             </a>
           </div>
 

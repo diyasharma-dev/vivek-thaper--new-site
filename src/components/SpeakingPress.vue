@@ -70,11 +70,20 @@
               />
             </div>
 
-            <div v-if="activeTopic === idx" class="mt-3 pt-3 border-t border-orange-100 space-y-2">
+            <div v-if="activeTopic === idx" class="mt-3 pt-3 border-t border-orange-100 space-y-3">
               <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">{{ topic.desc }}</p>
-              <div class="flex items-center gap-2 text-[11px] font-mono text-slate-500 font-semibold">
-                <span class="text-orange-600 font-bold">Target Audience:</span>
-                <span class="text-slate-800">{{ topic.target }}</span>
+              <div class="flex items-center justify-between gap-2 pt-1">
+                <div class="text-[11px] font-mono text-slate-500 font-semibold">
+                  <span class="text-orange-600 font-bold">Audience:</span>
+                  <span class="text-slate-800 ml-1">{{ topic.target }}</span>
+                </div>
+                <router-link 
+                  to="/contact" 
+                  class="btn-primary py-1.5 px-3 text-xs font-bold font-heading shrink-0 shadow-2xs"
+                >
+                  <span>Schedule Call</span>
+                  <ArrowRight class="w-3.5 h-3.5" />
+                </router-link>
               </div>
             </div>
           </div>
@@ -84,7 +93,7 @@
               to="/speaking" 
               class="btn-secondary text-xs"
             >
-              <span>Explore Speaker Rider &amp; Booking Details</span>
+              <span>View All Speaking Topics &amp; Formats</span>
               <ArrowRight class="w-3.5 h-3.5 text-orange-600" />
             </router-link>
           </div>
@@ -105,26 +114,26 @@ const activeTopic = ref(0)
 const topics = [
   {
     num: '01',
-    title: 'Generative Engine Optimization (GEO): The Post-Search Era',
-    desc: 'How LLMs and AI recommendation engines are supplanting traditional blue-link search engines, and what enterprise leaders must do today to ensure their brands are cited as definitive authorities.',
-    target: 'CMOs, Tech Founders, Digital Directors'
+    title: 'Digital Marketing Strategy & Local Search Supremacy',
+    desc: 'How NYC businesses capture market share through high-intent Google Maps rankings, consumer behavior psychology, and conversion funnels. Insights from 20+ years directing agency campaigns.',
+    target: 'Business Owners, CMOs, Agency Leaders'
   },
   {
     num: '02',
-    title: 'Architecting for Conversion: Beyond Cosmetic Web Design',
-    desc: 'A masterclass in information architecture, micro-friction reduction, and behavioral psychology that turns web traffic into qualified inbound pipeline.',
-    target: 'Product Managers, Growth Leaders, Agency Executives'
+    title: 'Picking The Perfect Project Manager: Execution Over Theory',
+    desc: 'Why great ideas fail without relentless logic planning, if-this-then-that dependency flowcharting, and an obsessive commitment to on-time milestone delivery.',
+    target: 'Product Directors, Project Managers, Startup Teams'
   },
   {
     num: '03',
     title: 'Bootstrapping a 20-Year Agency in Queens, NYC',
     desc: 'Unfiltered, battle-tested lessons on client retention, operational solvency, weathering macroeconomic shocks, and leading high-performing teams without venture capital.',
-    target: 'Founders, Entrepreneurs, University Programs'
+    target: 'Founders, Entrepreneurs, Business Students'
   },
   {
     num: '04',
-    title: 'Civic Responsibility & Entrepreneurial Stewardship',
-    desc: 'Why local neighborhood involvement, youth mentorship, and public space preservation are not optional hobbies for business owners, but vital civic duties.',
+    title: 'Civic Responsibility & Youth Mentorship',
+    desc: '“You make a living by what you get. You make a life by what you give.” Why local neighborhood involvement, youth mentorship, and public space preservation are vital civic duties.',
     target: 'Community Summits, Non-Profit Boards, Civic Forums'
   }
 ]

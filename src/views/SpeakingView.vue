@@ -97,24 +97,35 @@
         <!-- Topics Detailed List -->
         <div class="mt-12 sm:mt-16">
           <div class="max-w-2xl mb-8 sm:mb-10 space-y-2">
-            <span class="text-xs font-mono uppercase tracking-widest text-brand-600 font-bold">Curated Repertoire</span>
-            <h2 class="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-slate-900">Available Keynote Presentations</h2>
-            <p class="text-xs sm:text-sm text-slate-600 font-sans">Tailored for your audience's industry and executive seniority.</p>
+            <span class="text-xs font-mono uppercase tracking-widest text-brand-600 font-bold">Speaking &amp; Advisory Topics</span>
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-slate-900">Keynote Addresses &amp; Panel Topics</h2>
+            <p class="text-xs sm:text-sm text-slate-600 font-sans">Real-world topics grounded in 20+ years of digital marketing, project management, and agency growth in NYC.</p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
             <div 
               v-for="t in keynoteTopics" 
               :key="t.title"
-              class="card-architectural p-6 sm:p-8 space-y-3.5 hover:-translate-y-1"
+              class="card-architectural p-6 sm:p-8 flex flex-col justify-between hover:-translate-y-1 hover:border-orange-300 hover:shadow-orange-500/10 transition-all duration-300"
             >
-              <span class="text-xs font-mono font-bold text-brand-600 uppercase tracking-widest">{{ t.track }}</span>
-              <h3 class="text-base sm:text-lg font-heading font-bold text-slate-900">{{ t.title }}</h3>
-              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">{{ t.synopsis }}</p>
+              <div class="space-y-3.5">
+                <span class="text-xs font-mono font-bold text-brand-600 uppercase tracking-widest">{{ t.track }}</span>
+                <h3 class="text-base sm:text-lg font-heading font-bold text-slate-900">{{ t.title }}</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">{{ t.synopsis }}</p>
+              </div>
 
-              <div class="pt-3 border-t border-slate-100">
-                <span class="text-[11px] font-mono uppercase tracking-wider text-slate-400 font-bold block mb-1">Target Audience</span>
-                <span class="text-xs text-slate-800 font-bold font-sans">{{ t.audience }}</span>
+              <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold block">Target Audience</span>
+                  <span class="text-xs text-slate-800 font-bold font-sans">{{ t.audience }}</span>
+                </div>
+                <router-link 
+                  to="/contact" 
+                  class="btn-primary py-2 px-3 text-xs font-bold font-heading shrink-0 shadow-2xs"
+                >
+                  <span>Schedule a Call</span>
+                  <ArrowRight class="w-3.5 h-3.5" />
+                </router-link>
               </div>
             </div>
           </div>
@@ -131,28 +142,28 @@ import { Mic, CheckCircle2, ArrowRight } from 'lucide-vue-next'
 
 const keynoteTopics = [
   {
-    track: 'KEYNOTE / 01',
-    title: 'The AI Search Revolution: Generative Engine Optimization',
-    synopsis: 'How ChatGPT, Google Gemini, and Perplexity are rewriting the rules of commerce. Why legacy SEO playbooks are collapsing and what forward-looking brands must do today.',
-    audience: 'CMOs, Agency Leaders, Enterprise Founders'
+    track: 'SESSION / 01',
+    title: 'Digital Marketing Strategy & Local SEO Supremacy',
+    synopsis: 'How NYC businesses capture market share through high-intent Google Maps rankings, consumer behavior psychology, and conversion funnels. Insights from 20+ years directing agency campaigns.',
+    audience: 'Business Owners, CMOs, Agency Leaders'
   },
   {
-    track: 'KEYNOTE / 02',
+    track: 'SESSION / 02',
     title: 'Picking The Perfect Project Manager: Execution Over Theory',
     synopsis: 'Why great ideas fail without relentless logic planning, if-this-then-that dependency flowcharting, and an obsessive commitment to on-time milestone delivery.',
-    audience: 'Product Directors, Engineering Managers, Startup Teams'
+    audience: 'Product Directors, Project Managers, Startup Teams'
   },
   {
-    track: 'KEYNOTE / 03',
-    title: 'Bootstrap to 20-Year Empire: The Mirch Media Playbook',
-    synopsis: 'Starting with a laptop in Queens, NY to building an enduring digital agency. Lessons on zero outside funding, 98% client retention, and direct founder accountability.',
-    audience: 'Entrepreneurs, Business Students, Agency Owners'
+    track: 'SESSION / 03',
+    title: '20 Years of Mirch Media: Building an Enduring Agency',
+    synopsis: 'Starting with a laptop in Forest Hills, Queens, to building an enduring digital agency. Lessons on zero outside funding, direct founder accountability, and long-term client retention.',
+    audience: 'Entrepreneurs, Agency Owners, Business Students'
   },
   {
-    track: 'KEYNOTE / 04',
+    track: 'SESSION / 04',
     title: 'Civic Leadership & Heritage: Making a Life by What You Give',
-    synopsis: 'How business leaders can meaningfully uplift public urban green spaces, mentor youth, and preserve South Asian heritage while maintaining high commercial output.',
-    audience: 'Civic Leaders, University Summits, Cultural Organizations'
+    synopsis: '“You make a living by what you get. You make a life by what you give.” How business leaders can lead urban park preservation with NYC Parks, advocate for neighborhood upkeep, and mentor collegiate youth through Iota Nu Delta.',
+    audience: 'Civic Leaders, University Summits, Cultural Groups'
   }
 ]
 </script>

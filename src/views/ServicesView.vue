@@ -68,7 +68,7 @@
                 to="/contact" 
                 class="btn-secondary text-xs"
               >
-                <span>Initiate Scope</span>
+                <span>Schedule a Call</span>
                 <ArrowRight class="w-3.5 h-3.5 text-brand-600" />
               </router-link>
             </div>
@@ -80,12 +80,12 @@
         <!-- Consultation Banner -->
         <div class="mt-12 sm:mt-16 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-900 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="space-y-1.5 text-center md:text-left">
-            <span class="text-xs font-mono uppercase tracking-widest text-brand-400 font-bold">Scope Audit</span>
+            <span class="text-xs font-mono uppercase tracking-widest text-brand-400 font-bold">Direct Consultation</span>
             <h3 class="text-lg sm:text-xl font-heading font-bold text-white">
-              Need a bespoke scope or technical consultation for an enterprise build?
+              Need a custom web solution or digital growth strategy?
             </h3>
             <p class="text-xs sm:text-sm text-slate-300 font-sans max-w-xl">
-              Connect directly with Vivek Thapar to discuss architecture requirements, security parameters, and project milestones.
+              Connect directly with Vivek Thapar to discuss your project requirements, logic planning, and growth goals.
             </p>
           </div>
 
@@ -94,7 +94,7 @@
               to="/contact"
               class="btn-primary bg-white text-slate-900 hover:bg-slate-100 text-xs shadow-md"
             >
-              <span>Schedule Strategy Call</span>
+              <span>Schedule a Call</span>
               <ArrowRight class="w-3.5 h-3.5 text-brand-600" />
             </router-link>
           </div>

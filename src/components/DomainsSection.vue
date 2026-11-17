@@ -6,13 +6,13 @@
       <div class="max-w-3xl mb-10 sm:mb-12 space-y-2.5 sm:space-y-3">
         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/90 text-orange-700 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs">
           <Layers class="w-3.5 h-3.5 text-orange-600" />
-          <span>Core Capabilities &amp; Stack</span>
+          <span>Agency Capabilities &amp; Stack</span>
         </span>
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-slate-900 tracking-tight leading-tight">
-          Specialized Domains &amp; Engineering Disciplines
+          Specialized Disciplines Directed by Vivek Thapar
         </h2>
         <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed font-sans">
-          Full-lifecycle execution — from product logic planning and bespoke code development to omnichannel search dominance.
+          Vivek directs project logic, growth strategy, and quality oversight — while Mirch Media's dedicated engineering &amp; design team delivers production builds.
         </p>
 
         <!-- Category Filter Tabs (Horizontal Scrollable on Mobile) -->
@@ -80,9 +80,9 @@
       <!-- Tech Stack Badges Strip -->
       <div class="mt-10 sm:mt-12 p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border border-orange-500/30 shadow-xl shadow-orange-500/5 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 sm:gap-6">
         <div class="space-y-1">
-          <span class="text-[10px] font-mono uppercase tracking-widest text-orange-400 font-bold">Technology Matrix</span>
-          <h3 class="text-base sm:text-lg font-heading font-bold text-white">Production-Proven Tech Stack</h3>
-          <p class="text-xs text-slate-300 font-sans">Engineered for sub-second performance, zero technical debt, and maximum conversion.</p>
+          <span class="text-[10px] font-mono uppercase tracking-widest text-orange-400 font-bold">Agency Tech Matrix</span>
+          <h3 class="text-base sm:text-lg font-heading font-bold text-white">Agency Production Tech Stack</h3>
+          <p class="text-xs text-slate-300 font-sans">Technologies and frameworks leveraged by our engineering team at Mirch Media under Vivek's direct project management.</p>
         </div>
 
         <div class="flex flex-wrap gap-1.5 sm:gap-2">
@@ -107,19 +107,19 @@ import { Layers } from 'lucide-vue-next'
 const activeCategory = ref('all')
 
 const categories = [
-  { id: 'all', label: 'All Capabilities' },
-  { id: 'dev', label: 'Custom Engineering' },
-  { id: 'growth', label: 'SEO & AI Search' },
-  { id: 'leadership', label: 'Executive Leadership' }
+  { id: 'all', label: 'All Disciplines' },
+  { id: 'dev', label: 'Web & App Development' },
+  { id: 'growth', label: 'SEO & Growth Strategy' },
+  { id: 'leadership', label: 'Project Management & Advisory' }
 ]
 
 const domains = [
   {
-    title: 'Custom Web & Application Engineering',
+    title: 'Custom Web & Application Development',
     category: 'dev',
-    tag: 'Engineering',
-    description: 'High-performance reactive frontend web applications, REST/GraphQL APIs, bespoke CMS setups, and client portals.',
-    skills: ['Vue.js & Modern SPA Architecture', 'Tailwind CSS Custom Design Systems', 'Node.js & Python Microservices', 'Sub-Second Page Load Optimization'],
+    tag: 'Agency Team',
+    description: 'High-performance reactive frontend web applications, REST/GraphQL APIs, bespoke CMS setups, and client portals engineered by our specialized development team.',
+    skills: ['Vue.js & Modern Web Architecture', 'Tailwind CSS Custom Design Systems', 'Full-Stack Development by Agency Team', 'Fast Page Load & API Integrations'],
     metric: '< 800ms Load Time'
   },
   {
@@ -139,11 +139,11 @@ const domains = [
     metric: 'LLM Source Citation'
   },
   {
-    title: 'Startup Advisory & Logic Planning',
+    title: 'Natural Project Management & Logic Planning',
     category: 'leadership',
     tag: 'Executive',
-    description: 'Direct founder mentorship, software logic architecture, team building, and investor-ready technical roadmaps.',
-    skills: ['If-This-Then-That Business Logic', 'Agile Product Management', 'Unit Economics & CAC/LTV Modeling', 'Investor Technical Due Diligence'],
+    description: 'Direct founder mentorship, if-this-then-that software logic architecture, team leadership, and on-time milestone delivery.',
+    skills: ['If-This-Then-That Business Logic', 'Agile Product & Sprint Management', 'Cross-Functional Team Leadership', 'Startup Mentorship & Growth'],
     metric: '20+ Yrs Track Record'
   }
 ]

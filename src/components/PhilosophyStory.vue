@@ -55,7 +55,7 @@
 
           <div class="space-y-3.5 sm:space-y-4 text-slate-700 text-xs sm:text-sm md:text-base leading-relaxed font-sans">
             <blockquote class="border-l-4 border-brand-500 bg-brand-50/70 p-3.5 sm:p-4 rounded-r-xl text-left text-xs sm:text-sm md:text-base text-slate-800 font-sans leading-relaxed shadow-2xs">
-              <span class="text-slate-950 font-bold">"I have a confession to make:</span> I love creating, designing, logic planning, leading teams, and working with startups. My 20+ years of experience with digital marketing and website engineering makes me a natural project manager."
+              <span class="text-slate-950 font-bold">"I have a confession to make:</span> I love creating, designing, logic planning, leading teams, and working with startups. My 20+ years of experience with digital marketing and website development makes me a natural project manager."
             </blockquote>
 
             <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">
@@ -63,7 +63,7 @@
             </p>
 
             <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">
-              When you work with me, you speak directly to the person architecting the code, designing the conversion pathways, and directing search dominance. No account managers, no junior runaround — just seasoned technical leadership with an owner's mentality.
+              When you work with me, you collaborate directly with the leader directing the strategy, mapping user logic, and managing technical execution alongside my senior agency team. No account managers, no junior runaround — just seasoned leadership with an owner's mentality.
             </p>
           </div>
 
@@ -102,7 +102,7 @@
               to="/contact"
               class="btn-secondary text-xs"
             >
-              <span>Schedule Strategy Call</span>
+              <span>Schedule a Call</span>
               <ArrowUpRight class="w-3.5 h-3.5 text-brand-600" />
             </router-link>
           </div>

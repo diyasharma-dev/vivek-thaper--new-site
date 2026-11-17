@@ -154,10 +154,10 @@
           <div class="lg:col-span-7 space-y-4">
             <span class="text-xs font-mono uppercase tracking-widest text-brand-600 font-bold">Engagement Standard</span>
             <h2 class="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-slate-900">
-              Direct Founder Access, Senior Code Quality
+              Direct Founder Oversight &amp; Dedicated Team Delivery
             </h2>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
-              At Mirch Media, our core philosophy is simple: you never get handed off to a junior coordinator. Vivek maintains direct executive oversight on every client engagement, collaborating alongside senior developers, copywriters, and UI architects.
+              At Mirch Media, our core philosophy is simple: you never get handed off to an inexperienced junior coordinator. Vivek provides direct project management, logic architecture, and strategy on every engagement, collaborating directly alongside his senior developers, designers, and copywriters.
             </p>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
               This model guarantees accountability, rapid turnaround times, and strategic continuity from day one of onboarding to full post-launch scaling.
