@@ -144,14 +144,14 @@
             <div class="w-full max-w-sm sm:max-w-md bg-white border border-slate-200/90 p-3 sm:p-4 rounded-3xl shadow-xl">
               <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-slate-100">
                 <img 
-                  src="/media/vivek-thapar-founder.webp" 
-                  alt="Vivek Thapar Portrait"
+                  src="/media/vivek-thapar-ceo.webp" 
+                  alt="Vivek Thapar Executive Leadership"
                   class="w-full h-full object-cover object-top filter contrast-[1.02]"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
                 <div class="absolute bottom-3 inset-x-3 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-md">
                   <h3 class="text-sm font-heading font-bold text-slate-900">Vivek Thapar</h3>
-                  <p class="text-xs text-red-600 font-bold">Founder &amp; CEO · Mirch Media NYC</p>
+                  <p class="text-xs text-red-600 font-bold">Executive Agency Leadership · NYC</p>
                 </div>
               </div>
 
