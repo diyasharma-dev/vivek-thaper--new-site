@@ -15,7 +15,7 @@
             </svg>
             <span>Google Business Reviews · 5.0 ★</span>
           </span>
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-slate-900 tracking-tight leading-tight">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-slate-900 tracking-normal leading-[1.3] sm:leading-[1.32] lg:leading-[1.35]">
             What Clients Say on Google
           </h2>
           <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed font-sans">
@@ -29,13 +29,13 @@
             href="https://g.page/r/CYRWKmu-WcghEAI/review" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-200 shadow-xs hover:border-orange-400 hover:shadow-md transition-all group w-full sm:w-auto"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-200 shadow-xs hover:border-red-400 hover:shadow-md transition-all group w-full sm:w-auto"
           >
             <div class="flex items-center gap-1 text-amber-400">
               <Star v-for="n in 5" :key="n" class="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
             </div>
             <span class="text-xs font-bold text-slate-800 font-heading">5.0 on Google</span>
-            <ExternalLink class="w-3.5 h-3.5 text-slate-400 group-hover:text-orange-600 transition-colors" />
+            <ExternalLink class="w-3.5 h-3.5 text-slate-400 group-hover:text-red-600 transition-colors" />
           </a>
         </div>
       </div>
@@ -46,7 +46,7 @@
         <div 
           v-for="item in testimonials" 
           :key="item.author"
-          class="card-architectural p-5 sm:p-7 flex flex-col justify-between hover:-translate-y-1 hover:border-orange-300 hover:shadow-orange-500/10 bg-white transition-all duration-300"
+          class="card-architectural p-5 sm:p-7 flex flex-col justify-between hover:-translate-y-1 hover:border-red-300 hover:shadow-red-500/10 bg-white transition-all duration-300"
         >
           <div>
             <!-- Header: Star rating & Verified Google badge -->
@@ -79,7 +79,7 @@
               </div>
               <div class="min-w-0">
                 <h4 class="text-xs sm:text-sm font-heading font-bold text-slate-900 truncate">{{ item.author }}</h4>
-                <p class="text-[11px] text-orange-600 font-bold font-sans truncate">{{ item.role }}</p>
+                <p class="text-[11px] text-red-600 font-bold font-sans truncate">{{ item.role }}</p>
                 <p v-if="item.company" class="text-[10px] text-slate-500 font-sans truncate">{{ item.company }}</p>
               </div>
             </div>
@@ -120,13 +120,13 @@ const testimonials = [
     avatarBg: "bg-gradient-to-br from-blue-500 to-indigo-600"
   },
   {
-    quote: "Used Mirch Media's marketing services for promoting our organisation. The team is pro active and super responsive. They are quick to accommodate my requests despite time zone differences while I was travelling. They have also helped us with hosting events across many countries. Getting consultations from Mr. Vik has been a game changer, especially for our web3 events. His network and references also provided us extra added value beyond their commitment.",
+    quote: "Used Mirch Media's marketing services for promoting our organization. The team is proactive and super responsive. They are quick to accommodate my requests despite time zone differences while I was traveling. They have also helped us with hosting events across many countries. Getting consultations from Mr. Vik has been a game changer, especially for our web3 events. His network and references also provided us extra added value beyond their commitment.",
     author: "Siddhant Pandey",
     role: "Global Events & Web3 Initiatives",
     company: "International Web3 Summit",
     rating: 5,
     initials: "SP",
-    avatarBg: "bg-gradient-to-br from-orange-500 to-amber-500"
+    avatarBg: "bg-gradient-to-br from-red-600 to-rose-600"
   },
   {
     quote: "I’ve had the pleasure of working with Vivek over the past few years, and I can’t recommend him enough! He’s incredibly easy to work with, always responsive, and consistently delivers high-quality work on time and to a high standard. Whether it’s websites, marketing, or troubleshooting, Vivek is always helpful, knowledgeable, and willing to go the extra mile.",
@@ -156,7 +156,7 @@ const testimonials = [
     avatarBg: "bg-gradient-to-br from-cyan-500 to-blue-600"
   },
   {
-    quote: "I’ve used Mirch Media services for 2 websites. They are professional forth coming on work and projects. I recommend anyone starting or re-designing their website to use Mirch Media.",
+    quote: "I’ve used Mirch Media's services for 2 websites. They are professional and forthcoming on work and projects. I recommend anyone starting or redesigning their website to use Mirch Media.",
     author: "Heriberto Santiago",
     role: "Business Owner",
     company: "2 Website Projects Completed",

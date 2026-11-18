@@ -19,7 +19,7 @@
               <!-- Geometric V in pure crisp white -->
               <path d="M5 7L13 27H16.5L24.5 7H20.5L14.8 22.2L9 7H5Z" fill="#FFFFFF"/>
               <!-- Interlocking T in fiery Mirch orange -->
-              <path d="M16 10H30V13.5H25V27H21V13.5H16V10Z" fill="#F97316"/>
+              <path d="M16 10H30V13.5H25V27H21V13.5H16V10Z" fill="#DC2626"/>
               <!-- Fiery accent spark dot -->
               <circle cx="28.5" cy="7.5" r="2" fill="#FBBF24"/>
             </svg>
@@ -37,48 +37,20 @@
         </router-link>
 
         <!-- Desktop Navigation Links (Center, hidden on < 1024px) -->
-        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 shrink-0">
+        <nav class="hidden lg:flex items-center gap-0.5 xl:gap-1.5 shrink-0">
           <router-link 
             v-for="item in primaryLinks" 
             :key="item.name" 
             :to="item.to"
-            class="px-3 py-1.5 rounded-lg text-xs xl:text-[13px] font-heading font-semibold text-slate-600 hover:text-slate-950 hover:bg-slate-100 transition-all whitespace-nowrap"
-            active-class="text-slate-950 bg-slate-100 font-bold shadow-2xs"
+            class="relative px-3 py-2 text-xs xl:text-[13px] font-heading font-semibold text-slate-600 hover:text-slate-950 transition-colors whitespace-nowrap"
+            :class="{ '!text-slate-950 font-bold': $route.path === item.to || ($route.path.startsWith(item.to) && item.to !== '/') }"
           >
-            {{ item.name }}
+            <span>{{ item.name }}</span>
+            <span 
+              v-if="$route.path === item.to || ($route.path.startsWith(item.to) && item.to !== '/')"
+              class="absolute bottom-0 inset-x-3 h-[2px] bg-red-600 rounded-full"
+            ></span>
           </router-link>
-
-          <!-- More Dropdown for Secondary Links -->
-          <div 
-            class="relative"
-            @mouseenter="dropdownOpen = true"
-            @mouseleave="dropdownOpen = false"
-          >
-            <button 
-              @click="dropdownOpen = !dropdownOpen"
-              class="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs xl:text-[13px] font-heading font-semibold text-slate-600 hover:text-slate-950 hover:bg-slate-100 transition-all whitespace-nowrap cursor-pointer"
-            >
-              <span>More</span>
-              <ChevronDown class="w-3.5 h-3.5 transition-transform duration-200" :class="{ 'rotate-180': dropdownOpen }" />
-            </button>
-
-            <!-- Dropdown Panel -->
-            <div 
-              v-if="dropdownOpen"
-              class="absolute top-full left-0 mt-2 w-52 py-2 bg-white border border-slate-200 rounded-xl shadow-xl z-50 flex flex-col"
-            >
-              <router-link 
-                v-for="item in secondaryLinks" 
-                :key="item.name" 
-                :to="item.to"
-                @click="dropdownOpen = false"
-                class="px-4 py-2 text-xs font-heading font-semibold text-slate-700 hover:text-slate-950 hover:bg-slate-50 transition-colors whitespace-nowrap"
-                active-class="text-brand-600 bg-brand-50 font-bold"
-              >
-                {{ item.name }}
-              </router-link>
-            </div>
-          </div>
         </nav>
 
         <!-- Right Side: Direct Call & "Let's Connect" CTA (Desktop >= 1024px) -->
@@ -94,7 +66,7 @@
 
           <router-link 
             to="/contact"
-            class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl font-heading font-bold text-xs text-white bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 transition-all whitespace-nowrap shrink-0 cursor-pointer shadow-md shadow-orange-500/25 hover:shadow-lg hover:shadow-orange-500/35 hover:-translate-y-0.5 border border-white/20"
+            class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl font-heading font-bold text-xs text-white bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 transition-all whitespace-nowrap shrink-0 cursor-pointer shadow-md shadow-red-500/25 hover:shadow-lg hover:shadow-red-500/35 hover:-translate-y-0.5 border border-white/20"
           >
             <span class="whitespace-nowrap">Let's Connect</span>
             <ArrowRight class="w-3.5 h-3.5 shrink-0" />
@@ -168,7 +140,7 @@
             <router-link 
               to="/contact" 
               @click="mobileMenuOpen = false"
-              class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-heading font-bold text-white bg-gradient-to-r from-orange-500 to-amber-500 shadow-md shadow-orange-500/25"
+              class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-heading font-bold text-white bg-gradient-to-r from-red-600 to-rose-600 shadow-md shadow-red-500/25"
             >
               <span>Schedule a Call</span>
               <ArrowRight class="w-4 h-4 shrink-0" />
@@ -183,16 +155,14 @@
 <script setup>
 import { ref, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
-import { Phone, ArrowRight, Menu, X, ChevronDown } from 'lucide-vue-next'
+import { Phone, ArrowRight, Menu, X } from 'lucide-vue-next'
 
 const route = useRoute()
 const scrolled = ref(false)
 const mobileMenuOpen = ref(false)
-const dropdownOpen = ref(false)
 
 watch(() => route.fullPath, () => {
   mobileMenuOpen.value = false
-  dropdownOpen.value = false
 })
 
 watch(mobileMenuOpen, (isOpen) => {
@@ -200,16 +170,12 @@ watch(mobileMenuOpen, (isOpen) => {
 })
 
 const primaryLinks = [
-  { name: 'Selected Work', to: '/case-studies' },
-  { name: 'About Vivek', to: '/about' },
+  { name: 'Work', to: '/case-studies' },
+  { name: 'About', to: '/about' },
   { name: 'Services', to: '/services' },
   { name: 'Speaking', to: '/speaking' },
-  { name: 'Essays', to: '/blog' }
-]
-
-const secondaryLinks = [
-  { name: 'Civic & Community', to: '/community' },
-  { name: 'Contact & Office', to: '/contact' }
+  { name: 'Community', to: '/community' },
+  { name: 'Writing', to: '/blog' }
 ]
 
 const allLinks = [

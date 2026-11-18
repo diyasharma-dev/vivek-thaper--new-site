@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-slate-950 border-t border-slate-800/90 pt-14 sm:pt-16 pb-12 relative overflow-hidden text-slate-300">
     <!-- Warm subtle ambient glow in footer -->
-    <div class="absolute -bottom-24 -left-12 w-96 h-96 bg-gradient-to-tr from-orange-500/10 via-amber-400/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-12 w-96 h-96 bg-gradient-to-tr from-red-500/10 via-amber-400/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute -top-24 right-0 w-80 h-80 bg-gradient-to-bl from-blue-600/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -15,15 +15,15 @@
             <div class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 p-1.5 flex items-center justify-center shadow-sm">
               <svg viewBox="0 0 36 36" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 7L13 27H16.5L24.5 7H20.5L14.8 22.2L9 7H5Z" fill="#FFFFFF"/>
-                <path d="M16 10H30V13.5H25V27H21V13.5H16V10Z" fill="#F97316"/>
+                <path d="M16 10H30V13.5H25V27H21V13.5H16V10Z" fill="#DC2626"/>
                 <circle cx="28.5" cy="7.5" r="2" fill="#FBBF24"/>
               </svg>
             </div>
             <div>
-              <span class="font-heading font-extrabold text-lg text-white group-hover:text-brand-400 transition-colors">
+              <span class="font-heading font-extrabold text-lg text-white group-hover:text-red-400 transition-colors">
                 Vivek Thapar
               </span>
-              <p class="text-xs text-brand-400 font-mono font-bold tracking-tight">
+              <p class="text-xs text-red-400 font-mono font-bold tracking-tight">
                 Founder &amp; CEO · Mirch Media NYC
               </p>
             </div>
@@ -39,7 +39,7 @@
               href="https://www.mirchmedia.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="inline-flex items-center px-3.5 py-2 rounded-xl bg-white hover:bg-slate-100 border border-slate-800 hover:border-orange-400 transition-all shadow-xs group"
+              class="inline-flex items-center px-3.5 py-2 rounded-xl bg-white hover:bg-slate-100 border border-slate-800 hover:border-red-400 transition-all shadow-xs group"
               title="Mirch Media"
             >
               <img src="/media/mirch-logo.webp" alt="Mirch Media" class="h-5 w-auto object-contain group-hover:scale-105 transition-transform" />
@@ -52,7 +52,7 @@
               href="https://www.linkedin.com/in/vivekthapar" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-brand-400 flex items-center justify-center hover:text-white transition-all shadow-2xs"
+              class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-red-400 flex items-center justify-center hover:text-white transition-all shadow-2xs"
               title="LinkedIn Profile"
             >
               <Linkedin class="w-4 h-4" />
@@ -61,7 +61,7 @@
               href="https://twitter.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-brand-400 flex items-center justify-center hover:text-white transition-all shadow-2xs"
+              class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-red-400 flex items-center justify-center hover:text-white transition-all shadow-2xs"
               title="Twitter / X"
             >
               <Twitter class="w-4 h-4" />
@@ -70,7 +70,7 @@
               href="https://instagram.com/mirchmedia" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-brand-400 flex items-center justify-center hover:text-white transition-all shadow-2xs"
+              class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-red-400 flex items-center justify-center hover:text-white transition-all shadow-2xs"
               title="Instagram"
             >
               <Instagram class="w-4 h-4" />
@@ -79,7 +79,7 @@
               href="https://www.mirchmedia.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-brand-400 flex items-center justify-center hover:text-white transition-all shadow-2xs"
+              class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-red-400 flex items-center justify-center hover:text-white transition-all shadow-2xs"
               title="Mirch Media Agency"
             >
               <Globe class="w-4 h-4" />
@@ -107,10 +107,10 @@
           <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400 font-sans">
             <li><router-link to="/services" class="hover:text-white transition-colors">Custom Vue Engineering</router-link></li>
             <li><router-link to="/services" class="hover:text-white transition-colors">Local 3-Pack SEO</router-link></li>
-            <li><router-link to="/services" class="hover:text-white transition-colors">Generative AI Search (GEO)</router-link></li>
-            <li><router-link to="/services" class="hover:text-white transition-colors">High-ROI Paid Ads</router-link></li>
+            <li><router-link to="/services" class="hover:text-white transition-colors">Paid Ads &amp; Media Buying</router-link></li>
             <li><router-link to="/services" class="hover:text-white transition-colors">Conversion Architecture</router-link></li>
-            <li><router-link to="/case-studies" class="hover:text-white transition-colors">Verified Case Studies</router-link></li>
+            <li><router-link to="/services" class="hover:text-white transition-colors">Project Management Logic</router-link></li>
+            <li><router-link to="/case-studies" class="hover:text-white transition-colors">Commercial Portfolio</router-link></li>
           </ul>
         </div>
 
@@ -120,9 +120,9 @@
           <div class="space-y-2 text-xs sm:text-sm text-slate-400 font-sans">
             <p class="text-white font-bold font-heading">Queens Headquarters</p>
             <p class="text-slate-400">108-14 72nd Ave, Forest Hills, NY 11375</p>
-            <p><a href="tel:+17182074446" class="hover:text-brand-400 font-mono text-slate-300 font-bold">(718) 207-4446</a></p>
-            <p><a href="tel:+15169698550" class="hover:text-brand-400 font-mono text-slate-300 font-bold">(516) 969-8550</a></p>
-            <p class="pt-2"><a href="mailto:vivek@mirchmedia.com" class="hover:underline font-mono text-brand-400 font-bold break-all sm:break-normal">vivek@mirchmedia.com</a></p>
+            <p><a href="tel:+17182074446" class="hover:text-red-400 font-mono text-slate-300 font-bold transition-colors">(718) 207-4446</a></p>
+            <p><a href="tel:+15169698550" class="hover:text-red-400 font-mono text-slate-300 font-bold transition-colors">(516) 969-8550</a></p>
+            <p class="pt-2"><a href="mailto:vivek@mirchmedia.com" class="hover:underline font-mono text-red-400 hover:text-red-300 font-bold break-all sm:break-normal transition-colors">vivek@mirchmedia.com</a></p>
           </div>
         </div>
 

@@ -1,24 +1,73 @@
 <template>
   <div class="pt-20 sm:pt-24 pb-16 bg-white">
     
-    <!-- Hero Header with Warm Radiant Ambient Glows -->
-    <section class="relative py-12 sm:py-20 overflow-hidden bg-gradient-to-b from-orange-50/40 via-amber-50/20 to-white border-b border-slate-100">
-      <!-- Ambient Lighting Blobs -->
-      <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-br from-orange-400/15 via-amber-300/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute -top-10 right-10 w-72 h-72 bg-gradient-to-br from-blue-400/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+    <!-- Hero Banner with 100% Matched Civic Collaboration Image -->
+    <section class="relative pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 overflow-hidden bg-slate-950 text-white border-b border-slate-800">
+      <div class="absolute -top-24 right-0 w-[500px] h-[500px] bg-red-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-20 w-[400px] h-[400px] bg-slate-800/50 rounded-full blur-[100px] pointer-events-none"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] pointer-events-none"></div>
 
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200 text-orange-700 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs mb-4">
-          <Heart class="w-3.5 h-3.5 text-orange-500 fill-orange-500/20" />
-          <span>Civic Leadership &amp; Philanthropy</span>
-        </span>
-        <h1 class="text-2xl sm:text-4xl lg:text-[48px] font-heading font-extrabold text-slate-900 tracking-tight leading-tight">
-          Beyond Business: <span class="gradient-text-brand">Uplifting New York</span> Communities
-        </h1>
-        <blockquote class="mt-4 p-4 rounded-2xl bg-white/80 backdrop-blur-sm border border-orange-100 shadow-xs text-xs sm:text-sm md:text-base text-slate-700 font-sans italic leading-relaxed max-w-2xl mx-auto">
-          “You make a living by what you get. You make a life by what you give.”
-          <footer class="text-xs text-orange-600 font-mono font-bold mt-1.5 not-italic">— Winston Churchill</footer>
-        </blockquote>
+      <!-- Ambient blurred watermark of collaboration image -->
+      <div class="absolute inset-0 opacity-10 filter blur-3xl scale-125 pointer-events-none overflow-hidden">
+        <img src="/media/work-collaboration.webp" class="w-full h-full object-cover" alt="" />
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Left Column (7 cols): Copy, Quote & Credentials -->
+          <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-950/70 border border-red-500/30 text-red-400 font-mono text-xs font-bold tracking-wider uppercase shadow-2xs">
+              <Heart class="w-3.5 h-3.5 text-red-500 fill-red-500/20 shrink-0" />
+              <span>Civic Leadership &amp; Philanthropy · New York City</span>
+            </div>
+
+            <h1 class="hero-headline text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-heading font-extrabold text-white tracking-normal leading-[1.32] sm:leading-[1.35] lg:leading-[1.38] text-balance my-3.5 sm:my-4">
+              Beyond Business: <span class="text-red-500">Uplifting New York</span> Communities
+            </h1>
+
+            <blockquote class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-xs sm:text-sm text-slate-300 font-sans italic leading-relaxed text-left">
+              “You make a living by what you get. You make a life by what you give.”
+              <footer class="text-xs text-red-400 font-mono font-bold mt-1 not-italic">— Winston Churchill</footer>
+            </blockquote>
+
+            <!-- Quick Civic Tags -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1 text-xs font-mono">
+              <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">NYC Parks Dept Partner</span>
+              <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Partnership for Parks</span>
+              <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Iota Nu Delta Fraternal Board</span>
+              <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Own My Mile Queens</span>
+            </div>
+          </div>
+
+          <!-- Right Column (5 cols): 100% Matched Civic Collaboration Showcase -->
+          <div class="lg:col-span-5 relative flex justify-center">
+            <div class="w-full max-w-md lg:max-w-none">
+              <div class="relative rounded-2xl sm:rounded-3xl p-2 sm:p-2.5 bg-gradient-to-b from-slate-800/80 via-slate-900/90 to-slate-950 border border-slate-700/80 shadow-2xl shadow-red-950/30 group overflow-hidden">
+                <div class="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-square lg:aspect-[4/3] h-[420px] sm:h-[480px] lg:h-[520px] bg-slate-900">
+                  <img 
+                    src="/media/work-collaboration.webp" 
+                    alt="Community Parks and Civic Collaboration - NYC Parks Partner"
+                    class="w-full h-full object-cover object-center filter contrast-[1.03] group-hover:scale-105 transition-transform duration-700"
+                    loading="eager"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent pointer-events-none"></div>
+
+                  <!-- Glassmorphic Caption Badge on Image -->
+                  <div class="absolute bottom-3 inset-x-3 p-3.5 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/10 shadow-lg">
+                    <div class="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono text-red-400 font-bold uppercase tracking-wider mb-0.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                      <span>Civic Leadership &amp; Parks</span>
+                    </div>
+                    <p class="text-xs sm:text-sm font-heading font-bold text-white tracking-tight">Underbridge Dog Run &amp; NYC Parks Dept</p>
+                    <p class="text-[11px] text-slate-300 font-sans mt-0.5">Community Parks &amp; Student Mentorship</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -59,8 +108,8 @@
         </div>
 
         <!-- Pillar 2: Iota Nu Delta Fraternal Board (Mirch Fiery Orange / Amber Theme) -->
-        <div class="p-5 sm:p-10 bg-gradient-to-br from-white via-orange-50/25 to-amber-50/40 border border-orange-200/80 hover:border-orange-400/80 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center group">
-          <div class="lg:col-span-5 rounded-2xl overflow-hidden border-2 border-orange-200 aspect-[4/3] relative order-last lg:order-first bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 shadow-md group-hover:shadow-orange-500/20 transition-all flex items-center justify-center p-5 sm:p-8">
+        <div class="p-5 sm:p-10 bg-gradient-to-br from-white via-red-50/25 to-amber-50/40 border border-red-200/80 hover:border-red-400/80 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center group">
+          <div class="lg:col-span-5 rounded-2xl overflow-hidden border-2 border-red-200 aspect-[4/3] relative order-last lg:order-first bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 shadow-md group-hover:shadow-red-500/20 transition-all flex items-center justify-center p-5 sm:p-8">
             <img 
               src="/media/iota-nu-delta-crest.png" 
               alt="Iota Nu Delta Official National Crest"
@@ -69,11 +118,11 @@
           </div>
 
           <div class="lg:col-span-7 space-y-3.5 sm:space-y-4">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100/70 border border-orange-300/80 text-orange-800 text-xs font-mono font-bold uppercase tracking-wider shadow-2xs">
-              <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100/70 border border-red-300/80 text-red-800 text-xs font-mono font-bold uppercase tracking-wider shadow-2xs">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span>
               HERITAGE &amp; STUDENT MENTORSHIP
             </span>
-            <h2 class="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-slate-900 group-hover:text-orange-950 transition-colors">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-slate-900 group-hover:text-red-950 transition-colors">
               Board of Directors — Iota Nu Delta
             </h2>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
@@ -83,9 +132,9 @@
               Through nationwide alumni networks and collegiate chapters, Vivek mentors South Asian students navigating university life, career transitions into technology, and entrepreneurial ventures.
             </p>
             <div class="pt-2 flex flex-wrap gap-1.5 sm:gap-2 text-xs font-mono font-medium">
-              <span class="px-3 py-1 rounded-lg bg-orange-100/50 text-orange-900 border border-orange-200 font-bold shadow-2xs">National Board Member</span>
-              <span class="px-3 py-1 rounded-lg bg-orange-100/50 text-orange-900 border border-orange-200 font-bold shadow-2xs">Collegiate Scholarship</span>
-              <span class="px-3 py-1 rounded-lg bg-orange-100/50 text-orange-900 border border-orange-200 font-bold shadow-2xs">Cultural Heritage</span>
+              <span class="px-3 py-1 rounded-lg bg-red-100/50 text-red-900 border border-red-200 font-bold shadow-2xs">National Board Member</span>
+              <span class="px-3 py-1 rounded-lg bg-red-100/50 text-red-900 border border-red-200 font-bold shadow-2xs">Collegiate Scholarship</span>
+              <span class="px-3 py-1 rounded-lg bg-red-100/50 text-red-900 border border-red-200 font-bold shadow-2xs">Cultural Heritage</span>
             </div>
           </div>
         </div>

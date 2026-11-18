@@ -29,9 +29,10 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', 'Plus Jakarta Sans', -apple-system, sans-serif;
     font-weight: 700;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
     text-wrap: balance;
     color: #0f172a;
+    line-height: 1.34;
   }
 
   /* Refined minimal scrollbar */
@@ -61,30 +62,30 @@
   }
   .card-architectural:hover {
     background-color: #ffffff;
-    border-color: rgba(249, 115, 22, 0.4);
-    box-shadow: 0 14px 30px -8px rgba(15, 23, 42, 0.08), 0 6px 16px -2px rgba(249, 115, 22, 0.12);
+    border-color: rgba(239, 68, 68, 0.4);
+    box-shadow: 0 14px 30px -8px rgba(15, 23, 42, 0.08), 0 6px 16px -2px rgba(239, 68, 68, 0.12);
     transform: translateY(-2px);
   }
 
-  /* Eyebrow Label Pill with vibrant amber flame accent */
+  /* Eyebrow Label Pill with red accent */
   .eyebrow-label {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.35rem 0.85rem;
     border-radius: 9999px;
-    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
-    border: 1px solid #fed7aa;
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border: 1px solid #fecaca;
     font-family: 'JetBrains Mono', ui-monospace, monospace;
     font-size: 0.6875rem; /* 11px */
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #c2410c;
-    box-shadow: 0 1px 2px rgba(249, 115, 22, 0.08);
+    color: #b91c1c;
+    box-shadow: 0 1px 2px rgba(239, 68, 68, 0.08);
   }
 
-  /* High-Impact Vibrant Fiery Gradient Primary Button */
+  /* High-Impact Vibrant Crimson Gradient Primary Button */
   .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -98,9 +99,9 @@
     font-weight: 700;
     letter-spacing: -0.01em;
     text-align: center;
-    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
     color: #ffffff;
-    box-shadow: 0 4px 14px 0 rgba(249, 115, 22, 0.32);
+    box-shadow: 0 4px 14px 0 rgba(239, 68, 68, 0.32);
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -112,8 +113,8 @@
     }
   }
   .btn-primary:hover {
-    background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
-    box-shadow: 0 8px 24px 0 rgba(249, 115, 22, 0.45);
+    background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+    box-shadow: 0 8px 24px 0 rgba(239, 68, 68, 0.45);
     transform: translateY(-1.5px);
   }
   .btn-primary:active {
@@ -148,11 +149,11 @@
     }
   }
   .btn-secondary:hover {
-    background-color: #fff7ed;
-    border-color: #fdba74;
-    color: #c2410c;
+    background-color: #fef2f2;
+    border-color: #fca5a5;
+    color: #b91c1c;
     transform: translateY(-1.5px);
-    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.1);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.1);
   }
 
   /* Form Input Field (16px on mobile to prevent iOS auto-zoom) */
@@ -179,8 +180,8 @@
   }
   .form-input-field:focus {
     outline: none;
-    border-color: #f97316;
-    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
   }
 
   /* Hide scrollbars cleanly for horizontal pill bars */
@@ -192,9 +193,9 @@
     display: none;
   }
 
-  /* Vibrant Gradient Text Utilities */
+  /* Vibrant Crimson Gradient Text Utilities */
   .gradient-text-brand {
-    background: linear-gradient(135deg, #ea580c 0%, #f97316 50%, #f59e0b 100%);
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 50%, #ef4444 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -203,5 +204,25 @@
     background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Executive Headline Line Spacing - Guarantees Zero Collisions across all breakpoints */
+.hero-headline {
+  line-height: 1.32 !important;
+  letter-spacing: -0.01em !important;
+}
+
+@media (min-width: 640px) {
+  .hero-headline {
+    line-height: 1.35 !important;
+    letter-spacing: -0.01em !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-headline {
+    line-height: 1.38 !important;
+    letter-spacing: -0.01em !important;
   }
 }

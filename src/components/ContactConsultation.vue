@@ -1,125 +1,116 @@
 <template>
-  <section id="contact" class="py-14 sm:py-16 md:py-20 relative overflow-hidden bg-slate-50/60">
+  <section id="contact" class="py-16 sm:py-20 md:py-24 relative overflow-hidden bg-slate-50/70 border-b border-slate-200/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
-      <div class="max-w-3xl mb-10 sm:mb-12 space-y-2.5 sm:space-y-3">
-        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/90 text-orange-700 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs">
-          <Send class="w-3.5 h-3.5 text-orange-600" />
-          <span>Get In Touch</span>
-        </span>
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-slate-900 tracking-tight leading-tight">
-          Start a Conversation with Vivek Thapar
+      <div class="max-w-3xl mb-12 sm:mb-14 space-y-3">
+        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-700 font-bold">
+          <span class="w-2 h-2 rounded-full bg-red-600"></span>
+          <span>Direct Connect &amp; Office</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-slate-900 tracking-normal leading-[1.3] sm:leading-[1.32] lg:leading-[1.35]">
+          Connect Directly with Vivek Thapar
         </h2>
-        <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed font-sans">
-          Whether you need high-performance web development, SEO &amp; digital growth, or executive guidance — connect directly with Vivek.
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-sans">
+          Whether you need custom web development, digital growth strategy, or hands-on project management — reach out directly.
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
         
         <!-- Left: Contact Information & Office Details (5 cols) -->
-        <div class="lg:col-span-5 space-y-5 sm:space-y-6">
+        <div class="lg:col-span-5 space-y-6">
           
-          <div class="bg-white border border-orange-200/70 rounded-2xl sm:rounded-3xl p-5 sm:p-8 space-y-5 sm:space-y-6 shadow-sm">
+          <div class="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
             <div>
-              <span class="text-[11px] font-mono uppercase tracking-widest text-orange-600 font-bold block mb-1">Direct Headquarters</span>
-              <h3 class="text-lg sm:text-xl font-heading font-bold text-slate-900">NYC Executive Office</h3>
+              <span class="text-[11px] font-mono uppercase tracking-widest text-red-700 font-bold block mb-1">Office Headquarters</span>
+              <h3 class="text-lg sm:text-xl font-heading font-bold text-slate-900">Queens Executive Studio</h3>
             </div>
             
-            <div class="space-y-4 sm:space-y-5 text-sm">
+            <div class="space-y-5 text-sm">
               <!-- Physical Office Location -->
-              <div class="flex items-start gap-3 sm:gap-3.5">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-orange-100 border border-orange-200 flex items-center justify-center text-orange-600 shrink-0 mt-0.5 shadow-2xs">
-                  <MapPin class="w-4 h-4" />
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 shrink-0 mt-0.5">
+                  <MapPin class="w-4 h-4 text-red-600" />
                 </div>
                 <div class="min-w-0">
-                  <strong class="text-slate-900 block font-bold font-heading text-sm">Queens Executive Headquarters</strong>
+                  <strong class="text-slate-900 block font-bold font-heading text-sm">Forest Hills Headquarters</strong>
                   <span class="text-slate-600 text-xs leading-relaxed font-sans block mt-0.5">
                     108-14 72nd Avenue<br />
                     Forest Hills, Queens, New York 11375
                   </span>
-                  <span class="text-[10px] sm:text-[11px] font-mono text-slate-500 block mt-1">Austin St &amp; E/F Subway Lines</span>
+                  <span class="text-[11px] font-mono text-slate-500 block mt-1">Austin Street &amp; E/F Subway Lines</span>
                 </div>
               </div>
 
               <!-- Direct Telephones -->
-              <div class="flex items-start gap-3 sm:gap-3.5">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-600 shrink-0 mt-0.5 shadow-2xs">
-                  <Phone class="w-4 h-4" />
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 shrink-0 mt-0.5">
+                  <Phone class="w-4 h-4 text-red-600" />
                 </div>
                 <div class="min-w-0">
-                  <strong class="text-slate-900 block font-bold font-heading text-sm">Direct Telephone Lines</strong>
+                  <strong class="text-slate-900 block font-bold font-heading text-sm">Telephone Lines</strong>
                   <div class="space-y-1 text-xs mt-1 font-mono">
-                    <p class="flex flex-wrap items-baseline gap-x-1.5">
-                      <a href="tel:+17182074446" class="text-slate-900 hover:text-orange-600 font-bold text-xs sm:text-sm transition-colors">(718) 207-4446</a>
+                    <p class="flex items-baseline gap-1.5">
+                      <a href="tel:+17182074446" class="text-slate-900 hover:text-red-600 font-bold transition-colors">(718) 207-4446</a>
                       <span class="text-slate-500 font-sans text-[11px]">(Direct Desk)</span>
                     </p>
-                    <p class="flex flex-wrap items-baseline gap-x-1.5">
-                      <a href="tel:+15169698550" class="text-slate-700 hover:text-orange-600 font-bold transition-colors text-xs">(516) 969-8550</a>
-                      <span class="text-slate-500 font-sans text-[11px]">(Executive Line)</span>
+                    <p class="flex items-baseline gap-1.5">
+                      <a href="tel:+15169698550" class="text-slate-700 hover:text-red-600 font-medium transition-colors">(516) 969-8550</a>
+                      <span class="text-slate-500 font-sans text-[11px]">(Mirch Media Office)</span>
                     </p>
                   </div>
                 </div>
               </div>
 
               <!-- Direct Email -->
-              <div class="flex items-start gap-3 sm:gap-3.5">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-600 shrink-0 mt-0.5 shadow-2xs">
-                  <Mail class="w-4 h-4" />
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 shrink-0 mt-0.5">
+                  <Mail class="w-4 h-4 text-red-600" />
                 </div>
                 <div class="min-w-0">
-                  <strong class="text-slate-900 block font-bold font-heading text-sm">Confidential Inquiries</strong>
-                  <a href="mailto:vivek@mirchmedia.com" class="text-slate-900 hover:text-orange-600 font-mono text-xs font-bold block mt-1 transition-colors break-all sm:break-normal">
+                  <strong class="text-slate-900 block font-bold font-heading text-sm">Direct Inbox</strong>
+                  <a href="mailto:vivek@mirchmedia.com" class="text-slate-900 hover:text-red-600 font-mono text-xs font-bold block mt-1 transition-colors break-all">
                     vivek@mirchmedia.com
                   </a>
-                  <span class="text-[10px] sm:text-[11px] font-mono text-slate-500 block mt-0.5">Direct founder inbox</span>
+                  <span class="text-[11px] font-mono text-slate-500 block mt-0.5">Confidential direct founder inbox</span>
                 </div>
               </div>
 
               <!-- Office Hours -->
-              <div class="flex items-start gap-3 sm:gap-3.5">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-600 shrink-0 mt-0.5 shadow-2xs">
-                  <Clock class="w-4 h-4" />
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 shrink-0 mt-0.5">
+                  <Clock class="w-4 h-4 text-red-600" />
                 </div>
                 <div class="min-w-0">
-                  <strong class="text-slate-900 block font-bold font-heading text-sm">Consultation Availability</strong>
+                  <strong class="text-slate-900 block font-bold font-heading text-sm">Availability</strong>
                   <span class="text-slate-600 text-xs font-sans block mt-0.5">
                     Monday – Friday: 9:00 AM – 6:00 PM EST
                   </span>
-                  <span class="text-[10px] sm:text-[11px] font-mono text-slate-500 block mt-0.5">Evening executive briefing by appointment</span>
+                  <span class="text-[11px] font-mono text-slate-500 block mt-0.5">Evening briefings by appointment</span>
                 </div>
               </div>
             </div>
 
-            <!-- Trust highlights -->
-            <div class="pt-4 border-t border-slate-100 text-xs text-slate-700 space-y-2.5 font-sans">
+            <!-- Professional Commitments (Realistic, grounded) -->
+            <div class="pt-4 border-t border-slate-100 text-xs text-slate-700 space-y-2 font-sans">
               <div class="flex items-start gap-2">
-                <ShieldCheck class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span class="font-bold text-slate-800">Strict Mutual Non-Disclosure Agreement (NDA) Protected</span>
+                <CheckCircle2 class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <span class="font-medium text-slate-800">Direct Founder Review — Hands-on project assessment</span>
               </div>
               <div class="flex items-start gap-2">
                 <CheckCircle2 class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span class="font-bold text-slate-800">Direct Founder Review — Never Screened by Junior Staff</span>
+                <span class="font-medium text-slate-800">Clear response within one business day</span>
               </div>
             </div>
 
-          </div>
-
-          <!-- Executive Response Guarantee Strip -->
-          <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border border-orange-500/30 flex items-center justify-between gap-3 shadow-md">
-            <div class="min-w-0">
-              <span class="text-[10px] font-mono uppercase tracking-widest text-orange-400 block font-bold">SLA Commitment</span>
-              <p class="text-xs sm:text-sm font-heading font-bold text-white mt-0.5">Under 24-Hour Direct Response Guarantee</p>
-            </div>
-            <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></div>
           </div>
 
         </div>
 
         <!-- Right: Consultation Request Form (7 cols) -->
         <div class="lg:col-span-7 min-w-0">
-          <div class="bg-white border border-orange-200/70 rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-sm relative">
+          <div class="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 md:p-10 shadow-sm relative">
             
             <div v-if="submitted" class="py-10 text-center space-y-4">
               <div class="w-14 h-14 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-600 flex items-center justify-center mx-auto shadow-xs">
@@ -127,23 +118,23 @@
               </div>
               <h3 class="text-xl sm:text-2xl font-heading font-bold text-slate-900">Message Received</h3>
               <p class="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed font-sans">
-                Thank you, <strong class="text-slate-900 font-bold">{{ form.name }}</strong>. Your message has been sent directly to Vivek. You will receive a response within 24 hours.
+                Thank you, <strong class="text-slate-900 font-bold">{{ form.name }}</strong>. Your message has been sent directly to Vivek. You will receive a response within one business day.
               </p>
               <div class="pt-3">
                 <button 
                   @click="submitted = false"
-                  class="btn-secondary text-xs"
+                  class="px-4 py-2 rounded-xl bg-slate-900 text-white font-heading font-bold text-xs"
                 >
                   Send Another Message
                 </button>
               </div>
             </div>
 
-            <form v-else @submit.prevent="handleSubmit" class="space-y-5 sm:space-y-6">
+            <form v-else @submit.prevent="handleSubmit" class="space-y-5">
               
               <div>
-                <h3 class="text-lg sm:text-2xl font-heading font-bold text-slate-900">Schedule a Consultation</h3>
-                <p class="text-xs text-slate-500 mt-1 font-sans">Direct reply from Vivek Thapar · Confidential consultation</p>
+                <h3 class="text-lg sm:text-2xl font-heading font-bold text-slate-900">Start a Project Conversation</h3>
+                <p class="text-xs text-slate-500 mt-1 font-sans">Confidential inquiry · Direct review by Vivek Thapar</p>
               </div>
 
               <!-- Name & Email Row -->
@@ -177,33 +168,32 @@
                   <input 
                     type="tel" 
                     v-model="form.phone"
-                    placeholder="e.g. (212) 555-0199"
+                    placeholder="e.g. (718) 555-0199"
                     class="form-input-field font-mono"
                   />
                 </div>
                 <div>
-                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Service Needed *</label>
+                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Project Scope *</label>
                   <select 
                     v-model="form.inquiryType"
                     class="form-input-field cursor-pointer bg-white font-sans"
                   >
                     <option value="web">Web Design &amp; Development</option>
-                    <option value="seo">SEO &amp; Digital Growth</option>
-                    <option value="strategy">Growth Strategy Consultation</option>
-                    <option value="speaking">Keynote Speaking &amp; Media</option>
-                    <option value="advisory">Startup Advisory &amp; Mentorship</option>
+                    <option value="seo">Local Search &amp; Digital Marketing</option>
+                    <option value="strategy">Project Management &amp; Logic Planning</option>
+                    <option value="speaking">Speaking Engagements &amp; Mentorship</option>
                   </select>
                 </div>
               </div>
 
               <!-- Message / Goals -->
               <div>
-                <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Your Message / Project Details *</label>
+                <label class="block text-xs font-mono uppercase tracking-wider text-slate-700 font-bold mb-1.5">Project Details / Goals *</label>
                 <textarea 
                   rows="4" 
                   required
                   v-model="form.message"
-                  placeholder="Tell Vivek about your project, current goals, timeline, or what you need help with..."
+                  placeholder="Tell Vivek about your project requirements, current challenges, timeline, or objectives..."
                   class="form-input-field resize-none font-sans"
                 ></textarea>
               </div>
@@ -212,11 +202,11 @@
               <button 
                 type="submit" 
                 :disabled="isSubmitting"
-                class="w-full btn-primary py-3.5 sm:py-4 cursor-pointer disabled:opacity-50 text-xs sm:text-sm font-bold shadow-md hover:shadow-xl font-heading justify-center"
+                class="w-full py-3.5 px-6 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
               >
-                <span v-if="!isSubmitting">Schedule Consultation</span>
+                <span v-if="!isSubmitting">Send Direct Inquiry</span>
                 <span v-else>Sending Message...</span>
-                <ArrowRight class="w-4 h-4 ml-1" />
+                <ArrowRight class="w-4 h-4" />
               </button>
 
             </form>
@@ -232,7 +222,7 @@
 
 <script setup>
 import { reactive, ref } from 'vue'
-import { Send, MapPin, Phone, Mail, Clock, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-vue-next'
+import { MapPin, Phone, Mail, Clock, CheckCircle2, ArrowRight } from 'lucide-vue-next'
 
 const submitted = ref(false)
 const isSubmitting = ref(false)
@@ -250,6 +240,6 @@ function handleSubmit() {
   setTimeout(() => {
     isSubmitting.value = false
     submitted.value = true
-  }, 700)
+  }, 600)
 }
 </script>

@@ -159,7 +159,7 @@ export const blogPosts = [
     date: 'October 18, 2025',
     author: 'Vivek Thapar',
     readTime: '6 min read',
-    category: 'SEO Optimizations',
+    category: 'SEO',
     tags: ['Local SEO', 'Google Maps', 'NYC Business', 'Lead Gen'],
     image: '/media/work-digital-marketing.webp',
     content: `
