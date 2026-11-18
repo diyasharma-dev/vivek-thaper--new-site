@@ -6,10 +6,10 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+      <div class="grid grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-10 sm:pb-12 border-b border-slate-800/80">
         
         <!-- Col 1 & 2: Brand & Bio (2 cols) -->
-        <div class="sm:col-span-2 space-y-4">
+        <div class="col-span-2 space-y-4">
           <router-link to="/" class="flex items-center gap-3 group">
             <!-- Razor-Sharp Vector Brand Logo -->
             <div class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 p-1.5 flex items-center justify-center shadow-sm">
@@ -115,25 +115,25 @@
         </div>
 
         <!-- Col 5: Executive Office -->
-        <div>
+        <div class="col-span-2 lg:col-span-1">
           <h4 class="text-xs font-mono uppercase tracking-wider text-slate-200 font-bold mb-4">NYC Studio</h4>
           <div class="space-y-2 text-xs sm:text-sm text-slate-400 font-sans">
             <p class="text-white font-bold font-heading">Queens Headquarters</p>
             <p class="text-slate-400">108-14 72nd Ave, Forest Hills, NY 11375</p>
             <p><a href="tel:+17182074446" class="hover:text-brand-400 font-mono text-slate-300 font-bold">(718) 207-4446</a></p>
             <p><a href="tel:+15169698550" class="hover:text-brand-400 font-mono text-slate-300 font-bold">(516) 969-8550</a></p>
-            <p class="pt-2"><a href="mailto:vivek@mirchmedia.com" class="hover:underline font-mono text-brand-400 font-bold">vivek@mirchmedia.com</a></p>
+            <p class="pt-2"><a href="mailto:vivek@mirchmedia.com" class="hover:underline font-mono text-brand-400 font-bold break-all sm:break-normal">vivek@mirchmedia.com</a></p>
           </div>
         </div>
 
       </div>
 
       <!-- Copyright & Bottom Bar -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-sans">
+      <div class="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-slate-500 font-sans text-center sm:text-left">
         <div>
           &copy; {{ new Date().getFullYear() }} Vivek Thapar · Founder &amp; CEO, Mirch Media. All rights reserved.
         </div>
-        <div class="flex items-center gap-4 sm:gap-6">
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
           <router-link to="/contact" class="hover:text-slate-300 transition-colors">Direct Desk Access</router-link>
           <span>·</span>
           <span>Forest Hills, Queens, NYC</span>

@@ -47,18 +47,18 @@
               As a serial entrepreneur with firsthand experience founding, capitalizing, and operating companies, Vivek looks at technical problems through an owner's lens. He understands the anxiety of payroll, the necessity of predictable cash flow, and the critical importance of a digital platform that converts visitors into paying customers.
             </p>
 
-            <div class="pt-2 grid grid-cols-3 gap-3 sm:gap-4 text-center sm:text-left">
-              <div class="p-3 sm:p-4 rounded-2xl bg-orange-50/70 border border-orange-200/80 shadow-2xs">
-                <div class="text-xl sm:text-2xl font-heading font-bold text-orange-600">2006</div>
-                <div class="text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-orange-700 mt-0.5 font-bold">Founded in NYC</div>
+            <div class="pt-2 grid grid-cols-3 gap-2.5 sm:gap-4 text-center sm:text-left">
+              <div class="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-orange-50/70 border border-orange-200/80 shadow-2xs">
+                <div class="text-lg sm:text-2xl font-heading font-bold text-orange-600">2006</div>
+                <div class="text-[9px] sm:text-[11px] font-mono uppercase tracking-wider text-orange-700 mt-0.5 font-bold leading-tight">Founded in NYC</div>
               </div>
-              <div class="p-3 sm:p-4 rounded-2xl bg-blue-50/70 border border-blue-200/80 shadow-2xs">
-                <div class="text-xl sm:text-2xl font-heading font-bold text-blue-600">500+</div>
-                <div class="text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-blue-700 mt-0.5 font-bold">Projects Shipped</div>
+              <div class="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-blue-50/70 border border-blue-200/80 shadow-2xs">
+                <div class="text-lg sm:text-2xl font-heading font-bold text-blue-600">500+</div>
+                <div class="text-[9px] sm:text-[11px] font-mono uppercase tracking-wider text-blue-700 mt-0.5 font-bold leading-tight">Projects Shipped</div>
               </div>
-              <div class="p-3 sm:p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200/80 shadow-2xs">
-                <div class="text-xl sm:text-2xl font-heading font-bold text-emerald-600">98%</div>
-                <div class="text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-emerald-700 mt-0.5 font-bold">Retention Rate</div>
+              <div class="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-emerald-50/70 border border-emerald-200/80 shadow-2xs">
+                <div class="text-lg sm:text-2xl font-heading font-bold text-emerald-600">98%</div>
+                <div class="text-[9px] sm:text-[11px] font-mono uppercase tracking-wider text-emerald-700 mt-0.5 font-bold leading-tight">Retention Rate</div>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@
                 </div>
               </div>
 
-              <div class="mt-2.5 px-1 flex items-center justify-between text-[11px] text-slate-600 font-mono">
+              <div class="mt-2.5 px-1 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-600 font-mono">
                 <span class="font-bold text-slate-800">Executive Leadership</span>
                 <span>Forest Hills, Queens</span>
               </div>
@@ -166,10 +166,10 @@
             <div class="pt-2">
               <router-link 
                 to="/contact" 
-                class="btn-primary text-xs"
+                class="btn-primary text-xs w-full sm:w-auto"
               >
                 <span>Schedule a Discovery Consultation</span>
-                <ArrowRight class="w-4 h-4 ml-1" />
+                <ArrowRight class="w-4 h-4 ml-1 shrink-0" />
               </router-link>
             </div>
           </div>

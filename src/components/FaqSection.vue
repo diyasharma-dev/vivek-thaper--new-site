@@ -1,17 +1,17 @@
 <template>
-  <section id="faq" class="py-24 relative overflow-hidden bg-white border-b border-slate-200/80">
+  <section id="faq" class="py-14 sm:py-16 md:py-24 relative overflow-hidden bg-white border-b border-slate-200/80">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
-      <div class="max-w-3xl mb-14 space-y-3">
+      <div class="max-w-3xl mb-10 sm:mb-14 space-y-2.5 sm:space-y-3">
         <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200 text-orange-700 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs">
           <HelpCircle class="w-3.5 h-3.5 text-orange-500" />
           <span>Clarity &amp; Engagements</span>
         </span>
-        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 tracking-tight leading-tight">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-slate-900 tracking-tight leading-tight">
           Frequently Answered <span class="gradient-text-brand">Founder Questions</span>
         </h2>
-        <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-sans">
+        <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed font-sans">
           Clear, straightforward answers regarding advisory engagements, technical capabilities, and project delivery timelines.
         </p>
       </div>
@@ -26,7 +26,7 @@
         >
           <button 
             @click="activeFaq = activeFaq === idx ? -1 : idx"
-            class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 transition-colors focus:outline-none cursor-pointer"
+            class="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 sm:gap-4 transition-colors focus:outline-none cursor-pointer"
             :class="activeFaq === idx ? 'bg-orange-50/40' : 'hover:bg-orange-50/20'"
           >
             <span class="text-sm sm:text-base font-heading font-bold text-slate-900">{{ item.q }}</span>
@@ -38,7 +38,7 @@
 
           <div 
             v-if="activeFaq === idx"
-            class="px-5 sm:px-6 pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-orange-100 bg-white/60 font-sans"
+            class="px-4 sm:px-6 pb-5 sm:pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-orange-100 bg-white/60 font-sans"
           >
             {{ item.a }}
           </div>
@@ -46,7 +46,7 @@
       </div>
 
       <!-- Still have questions footer banner -->
-      <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border border-orange-500/30 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4 relative overflow-hidden">
+      <div class="mt-10 sm:mt-12 p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border border-orange-500/30 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left relative overflow-hidden">
         <div class="absolute -top-10 -right-10 w-48 h-48 bg-orange-500/15 rounded-full blur-2xl pointer-events-none"></div>
         <div class="relative z-10">
           <h4 class="text-base font-heading font-bold text-white">Have a nuanced architectural question?</h4>
@@ -54,10 +54,10 @@
         </div>
         <router-link 
           to="/contact" 
-          class="btn-primary text-xs shrink-0 relative z-10"
+          class="btn-primary text-xs shrink-0 relative z-10 w-full sm:w-auto"
         >
           <span>Schedule a Call</span>
-          <ArrowRight class="w-3.5 h-3.5 text-white" />
+          <ArrowRight class="w-3.5 h-3.5 text-white shrink-0" />
         </router-link>
       </div>
 

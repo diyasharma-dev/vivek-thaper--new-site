@@ -2,17 +2,17 @@
   <div class="pt-20 sm:pt-24 pb-16 bg-white">
     
     <!-- Hero Header with Warm Radiant Ambient Glows -->
-    <section class="relative py-14 sm:py-20 overflow-hidden bg-gradient-to-b from-orange-50/40 via-amber-50/20 to-white border-b border-slate-100">
+    <section class="relative py-12 sm:py-20 overflow-hidden bg-gradient-to-b from-orange-50/40 via-amber-50/20 to-white border-b border-slate-100">
       <!-- Ambient Lighting Blobs -->
       <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-br from-orange-400/15 via-amber-300/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute -top-10 right-10 w-72 h-72 bg-gradient-to-br from-blue-400/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl mx-auto">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200 text-orange-700 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs mb-4">
           <Heart class="w-3.5 h-3.5 text-orange-500 fill-orange-500/20" />
           <span>Civic Leadership &amp; Philanthropy</span>
         </span>
-        <h1 class="text-3xl sm:text-4xl lg:text-[48px] font-heading font-extrabold text-slate-900 tracking-tight leading-tight">
+        <h1 class="text-2xl sm:text-4xl lg:text-[48px] font-heading font-extrabold text-slate-900 tracking-tight leading-tight">
           Beyond Business: <span class="gradient-text-brand">Uplifting New York</span> Communities
         </h1>
         <blockquote class="mt-4 p-4 rounded-2xl bg-white/80 backdrop-blur-sm border border-orange-100 shadow-xs text-xs sm:text-sm md:text-base text-slate-700 font-sans italic leading-relaxed max-w-2xl mx-auto">
@@ -23,11 +23,11 @@
     </section>
 
     <!-- Detailed Community Pillars with Distinct Rich Colors -->
-    <section class="py-12 sm:py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-14">
+    <section class="py-10 sm:py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-14">
         
         <!-- Pillar 1: Underbridge Dog Run & NYC Parks (Emerald / Nature Green Theme) -->
-        <div class="p-6 sm:p-10 bg-gradient-to-br from-white via-emerald-50/20 to-emerald-50/40 border border-emerald-200/80 hover:border-emerald-400/80 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center group">
+        <div class="p-5 sm:p-10 bg-gradient-to-br from-white via-emerald-50/20 to-emerald-50/40 border border-emerald-200/80 hover:border-emerald-400/80 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center group">
           <div class="lg:col-span-7 space-y-3.5 sm:space-y-4">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100/70 border border-emerald-300/80 text-emerald-800 text-xs font-mono font-bold uppercase tracking-wider shadow-2xs">
               <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
@@ -59,8 +59,8 @@
         </div>
 
         <!-- Pillar 2: Iota Nu Delta Fraternal Board (Mirch Fiery Orange / Amber Theme) -->
-        <div class="p-6 sm:p-10 bg-gradient-to-br from-white via-orange-50/25 to-amber-50/40 border border-orange-200/80 hover:border-orange-400/80 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center group">
-          <div class="lg:col-span-5 rounded-2xl overflow-hidden border-2 border-orange-200 aspect-[4/3] relative order-last lg:order-first bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 shadow-md group-hover:shadow-orange-500/20 transition-all flex items-center justify-center p-6 sm:p-8">
+        <div class="p-5 sm:p-10 bg-gradient-to-br from-white via-orange-50/25 to-amber-50/40 border border-orange-200/80 hover:border-orange-400/80 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center group">
+          <div class="lg:col-span-5 rounded-2xl overflow-hidden border-2 border-orange-200 aspect-[4/3] relative order-last lg:order-first bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 shadow-md group-hover:shadow-orange-500/20 transition-all flex items-center justify-center p-5 sm:p-8">
             <img 
               src="/media/iota-nu-delta-crest.png" 
               alt="Iota Nu Delta Official National Crest"
@@ -91,7 +91,7 @@
         </div>
 
         <!-- Pillar 3: Own My Mile (Royal Tech Blue / Queens Theme) -->
-        <div class="p-6 sm:p-10 bg-gradient-to-br from-white via-blue-50/20 to-indigo-50/40 border border-blue-200/80 hover:border-blue-400/80 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center group">
+        <div class="p-5 sm:p-10 bg-gradient-to-br from-white via-blue-50/20 to-indigo-50/40 border border-blue-200/80 hover:border-blue-400/80 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center group">
           <div class="lg:col-span-7 space-y-3.5 sm:space-y-4">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100/70 border border-blue-300/80 text-blue-800 text-xs font-mono font-bold uppercase tracking-wider shadow-2xs">
               <span class="w-2 h-2 rounded-full bg-blue-500"></span>

@@ -3,7 +3,7 @@
     
     <!-- Hero Header with Warm Ambient Glow -->
     <section class="relative py-12 sm:py-16 overflow-hidden bg-gradient-to-b from-orange-50/30 via-amber-50/15 to-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl mx-auto">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/90 text-orange-700 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs mb-3">
           <Briefcase class="w-3.5 h-3.5 text-orange-600" />
           <span>Case Studies &amp; Performance Record</span>
@@ -16,7 +16,7 @@
         </p>
 
         <!-- Industry Filter Buttons (Scrollable on Mobile) -->
-        <div class="flex overflow-x-auto pb-1 scrollbar-none sm:flex-wrap items-center justify-start sm:justify-center gap-1.5 sm:gap-2 pt-6">
+        <div class="w-full max-w-full flex overflow-x-auto pb-1.5 -mx-1 px-1 scrollbar-none sm:flex-wrap items-center justify-start sm:justify-center gap-1.5 sm:gap-2 pt-6">
           <button
             v-for="filter in filters"
             :key="filter.id"
@@ -87,9 +87,9 @@
               </div>
             </div>
 
-            <div class="px-5 sm:px-6 py-3.5 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between text-xs">
+            <div class="px-5 sm:px-6 py-3.5 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between gap-3 text-xs">
               <span class="text-slate-700 font-sans">Outcome: <strong class="text-slate-950 font-bold">{{ study.outcome }}</strong></span>
-              <router-link to="/contact" class="p-1.5 rounded-md text-brand-600 hover:text-brand-800 transition-colors">
+              <router-link to="/contact" class="p-1.5 rounded-md text-brand-600 hover:text-brand-800 transition-colors shrink-0" aria-label="Inquire about similar project">
                 <ArrowUpRight class="w-4 h-4" />
               </router-link>
             </div>

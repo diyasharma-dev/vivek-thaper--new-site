@@ -29,7 +29,7 @@
             href="https://g.page/r/CYRWKmu-WcghEAI/review" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-200 shadow-xs hover:border-orange-400 hover:shadow-md transition-all group"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-200 shadow-xs hover:border-orange-400 hover:shadow-md transition-all group w-full sm:w-auto"
           >
             <div class="flex items-center gap-1 text-amber-400">
               <Star v-for="n in 5" :key="n" class="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
@@ -41,12 +41,12 @@
       </div>
 
       <!-- Testimonials Grid (6 Real GMB Reviews) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
         
         <div 
           v-for="item in testimonials" 
           :key="item.author"
-          class="card-architectural p-6 sm:p-7 flex flex-col justify-between hover:-translate-y-1 hover:border-orange-300 hover:shadow-orange-500/10 bg-white transition-all duration-300"
+          class="card-architectural p-5 sm:p-7 flex flex-col justify-between hover:-translate-y-1 hover:border-orange-300 hover:shadow-orange-500/10 bg-white transition-all duration-300"
         >
           <div>
             <!-- Header: Star rating & Verified Google badge -->

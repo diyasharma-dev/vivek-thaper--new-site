@@ -3,7 +3,7 @@
     
     <!-- Hero Header with Warm Ambient Glow -->
     <section class="relative py-12 sm:py-16 overflow-hidden bg-gradient-to-b from-orange-50/30 via-amber-50/15 to-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl mx-auto">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/90 text-orange-700 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs mb-3">
           <Mic class="w-3.5 h-3.5 text-orange-600" />
           <span>Keynotes &amp; Speaking</span>
@@ -39,7 +39,7 @@
                 </div>
               </div>
 
-              <div class="mt-2.5 px-1 flex items-center justify-between text-[11px] text-slate-600 font-mono">
+              <div class="mt-2.5 px-1 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-600 font-mono">
                 <span class="font-bold text-slate-800">Keynote Speaker</span>
                 <span class="text-slate-400">Available Worldwide</span>
               </div>
@@ -84,10 +84,10 @@
             <div class="pt-2">
               <router-link 
                 to="/contact" 
-                class="btn-primary text-xs"
+                class="btn-primary text-xs w-full sm:w-auto"
               >
                 <span>Inquire About Speaking Dates</span>
-                <ArrowRight class="w-4 h-4 ml-1" />
+                <ArrowRight class="w-4 h-4 ml-1 shrink-0" />
               </router-link>
             </div>
           </div>
@@ -106,7 +106,7 @@
             <div 
               v-for="t in keynoteTopics" 
               :key="t.title"
-              class="card-architectural p-6 sm:p-8 flex flex-col justify-between hover:-translate-y-1 hover:border-orange-300 hover:shadow-orange-500/10 transition-all duration-300"
+              class="card-architectural p-5 sm:p-8 flex flex-col justify-between hover:-translate-y-1 hover:border-orange-300 hover:shadow-orange-500/10 transition-all duration-300"
             >
               <div class="space-y-3.5">
                 <span class="text-xs font-mono font-bold text-brand-600 uppercase tracking-widest">{{ t.track }}</span>
@@ -114,17 +114,17 @@
                 <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">{{ t.synopsis }}</p>
               </div>
 
-              <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+              <div class="pt-4 mt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div>
                   <span class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold block">Target Audience</span>
                   <span class="text-xs text-slate-800 font-bold font-sans">{{ t.audience }}</span>
                 </div>
                 <router-link 
                   to="/contact" 
-                  class="btn-primary py-2 px-3 text-xs font-bold font-heading shrink-0 shadow-2xs"
+                  class="btn-primary py-2 px-3.5 text-xs font-bold font-heading shrink-0 shadow-2xs w-full sm:w-auto"
                 >
                   <span>Schedule a Call</span>
-                  <ArrowRight class="w-3.5 h-3.5" />
+                  <ArrowRight class="w-3.5 h-3.5 shrink-0" />
                 </router-link>
               </div>
             </div>

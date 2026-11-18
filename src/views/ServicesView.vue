@@ -3,7 +3,7 @@
     
     <!-- Hero Header with Warm Ambient Glow -->
     <section class="relative py-12 sm:py-16 overflow-hidden bg-gradient-to-b from-orange-50/30 via-amber-50/15 to-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl mx-auto">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/90 text-orange-700 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs mb-3">
           <Layers class="w-3.5 h-3.5 text-orange-600" />
           <span>Executive Capabilities</span>
@@ -26,10 +26,10 @@
           <div 
             v-for="service in serviceDetails" 
             :key="service.title"
-            class="card-architectural p-6 sm:p-8 flex flex-col justify-between hover:-translate-y-1 hover:shadow-lg"
+            class="card-architectural p-5 sm:p-8 flex flex-col justify-between hover:-translate-y-1 hover:shadow-lg"
           >
             <div>
-              <div class="flex items-center justify-between mb-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
                 <span class="text-xs font-mono font-bold text-brand-600 uppercase tracking-widest">{{ service.id }}</span>
                 <span class="text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 font-bold border border-slate-200">
                   {{ service.badge }}
@@ -58,7 +58,7 @@
             </div>
 
             <!-- Card Bottom Bar -->
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <span class="text-[10px] font-mono text-slate-400 uppercase font-bold block">Benchmark</span>
                 <span class="text-xs sm:text-sm font-heading font-bold text-emerald-600">{{ service.stat }}</span>
@@ -66,10 +66,10 @@
 
               <router-link 
                 to="/contact" 
-                class="btn-secondary text-xs"
+                class="btn-secondary text-xs w-full sm:w-auto"
               >
                 <span>Schedule a Call</span>
-                <ArrowRight class="w-3.5 h-3.5 text-brand-600" />
+                <ArrowRight class="w-3.5 h-3.5 text-brand-600 shrink-0" />
               </router-link>
             </div>
 
@@ -78,7 +78,7 @@
         </div>
 
         <!-- Consultation Banner -->
-        <div class="mt-12 sm:mt-16 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-900 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="mt-10 sm:mt-16 p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-900 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-6">
           <div class="space-y-1.5 text-center md:text-left">
             <span class="text-xs font-mono uppercase tracking-widest text-brand-400 font-bold">Direct Consultation</span>
             <h3 class="text-lg sm:text-xl font-heading font-bold text-white">
@@ -89,13 +89,13 @@
             </p>
           </div>
 
-          <div class="flex items-center gap-3 shrink-0">
+          <div class="w-full md:w-auto flex items-center justify-center gap-3 shrink-0">
             <router-link 
               to="/contact"
-              class="btn-primary bg-white text-slate-900 hover:bg-slate-100 text-xs shadow-md"
+              class="btn-primary bg-white text-slate-900 hover:bg-slate-100 text-xs shadow-md w-full sm:w-auto"
             >
               <span>Schedule a Call</span>
-              <ArrowRight class="w-3.5 h-3.5 text-brand-600" />
+              <ArrowRight class="w-3.5 h-3.5 text-brand-600 shrink-0" />
             </router-link>
           </div>
         </div>

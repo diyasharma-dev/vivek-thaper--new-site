@@ -16,7 +16,7 @@
         </p>
 
         <!-- Category Filter Tabs (Horizontal Scrollable on Mobile) -->
-        <div class="flex overflow-x-auto pb-1 scrollbar-none sm:flex-wrap items-center gap-1.5 sm:gap-2 pt-2">
+        <div class="w-full max-w-full flex overflow-x-auto pb-1.5 -mx-1 px-1 scrollbar-none sm:flex-wrap items-center gap-1.5 sm:gap-2 pt-2">
           <button
             v-for="cat in categories"
             :key="cat.id"

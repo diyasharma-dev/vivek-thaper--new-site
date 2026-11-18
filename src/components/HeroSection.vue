@@ -26,7 +26,7 @@
           </div>
 
           <!-- Main Title: Modern Bold Geometric Heading with Vibrant Brand Gradient -->
-          <h1 class="text-2xl sm:text-4xl lg:text-[46px] font-heading font-extrabold text-slate-900 tracking-tight leading-[1.18] sm:leading-[1.14]">
+          <h1 class="text-[26px] sm:text-4xl lg:text-[46px] font-heading font-extrabold text-slate-900 tracking-tight leading-[1.18] sm:leading-[1.14]">
             Twenty years building digital businesses, directing strategy, and scaling revenue in <span class="gradient-text-brand">New York City</span>.
           </h1>
 
@@ -43,44 +43,47 @@
           </div>
 
           <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-3 pt-1">
+          <div class="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center justify-center lg:justify-start gap-2.5 sm:gap-3 pt-1">
             <a 
               href="#work"
-              class="btn-primary"
+              class="btn-primary w-full sm:w-auto"
             >
               <span>Explore Selected Work</span>
-              <ArrowDown class="w-4 h-4 text-orange-100 ml-0.5" />
+              <ArrowDown class="w-4 h-4 text-orange-100 ml-0.5 shrink-0" />
             </a>
 
-            <button 
-              @click="$emit('open-video')"
-              class="btn-secondary"
-            >
-              <div class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center">
-                <Play class="w-2.5 h-2.5 fill-orange-600 text-orange-600 ml-0.5" />
-              </div>
-              <span>Watch Message (52s)</span>
-            </button>
+            <div class="grid grid-cols-2 sm:contents gap-2.5">
+              <button 
+                @click="$emit('open-video')"
+                class="btn-secondary w-full sm:w-auto px-3 sm:px-6 text-xs sm:text-sm"
+              >
+                <div class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
+                  <Play class="w-2.5 h-2.5 fill-orange-600 text-orange-600 ml-0.5" />
+                </div>
+                <span class="truncate">Watch Intro</span>
+                <span class="hidden sm:inline">(52s)</span>
+              </button>
 
-            <router-link 
-              to="/contact"
-              class="btn-secondary"
-            >
-              <span>Schedule Call</span>
-              <ArrowUpRight class="w-3.5 h-3.5 text-orange-600" />
-            </router-link>
+              <router-link 
+                to="/contact"
+                class="btn-secondary w-full sm:w-auto px-3 sm:px-6 text-xs sm:text-sm"
+              >
+                <span>Schedule Call</span>
+                <ArrowUpRight class="w-3.5 h-3.5 text-orange-600 shrink-0" />
+              </router-link>
+            </div>
 
             <a 
               href="tel:+17182074446"
-              class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-mono font-bold text-slate-700 hover:text-orange-600 hover:bg-orange-50 transition-colors"
+              class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-mono font-bold text-slate-700 hover:text-orange-600 hover:bg-orange-50 transition-colors"
             >
-              <Phone class="w-3.5 h-3.5 text-orange-500" />
+              <Phone class="w-3.5 h-3.5 text-orange-500 shrink-0" />
               <span>(718) 207-4446</span>
             </a>
           </div>
 
           <!-- Modern High-Contrast Metric Strip with Distinct Colors -->
-          <div class="pt-6 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center sm:text-left">
+          <div class="pt-5 sm:pt-6 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-5 text-center sm:text-left">
             <div class="p-3 rounded-2xl bg-slate-50/80 border border-slate-100">
               <div class="text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-slate-900">20+</div>
               <div class="text-[10px] sm:text-[11px] font-mono font-bold text-slate-500 uppercase tracking-wider mt-0.5">Years in Business</div>
@@ -131,11 +134,11 @@
                 </button>
 
                 <!-- In-card Bottom Identification -->
-                <div class="absolute bottom-3 inset-x-3 p-3 rounded-xl bg-white/95 backdrop-blur-md border border-orange-200/80 shadow-md">
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <h3 class="text-sm font-heading font-bold text-slate-900">Vivek Thapar</h3>
-                      <p class="text-[11px] text-orange-600 font-bold">Founder &amp; CEO · Mirch Media</p>
+                <div class="absolute bottom-3 inset-x-3 p-2.5 sm:p-3 rounded-xl bg-white/95 backdrop-blur-md border border-orange-200/80 shadow-md">
+                  <div class="flex items-center justify-between gap-2">
+                    <div class="min-w-0">
+                      <h3 class="text-sm font-heading font-bold text-slate-900 truncate">Vivek Thapar</h3>
+                      <p class="text-[11px] text-orange-600 font-bold truncate">Founder &amp; CEO · Mirch Media</p>
                     </div>
                     <div class="text-right shrink-0">
                       <span class="text-[9px] uppercase tracking-widest text-slate-400 font-mono font-bold block">HQ Studio</span>
@@ -147,7 +150,7 @@
               </div>
 
               <!-- Editorial caption beneath photo -->
-              <div class="mt-2.5 px-1 flex items-center justify-between text-[11px] text-slate-500 font-mono font-medium">
+              <div class="mt-2.5 px-1 flex flex-wrap items-center justify-between gap-x-2 gap-y-0.5 text-[10px] sm:text-[11px] text-slate-500 font-mono font-medium">
                 <span class="text-orange-700 font-bold">Executive Office</span>
                 <span>108-14 72nd Ave, Forest Hills</span>
               </div>

@@ -18,7 +18,7 @@
         </div>
 
         <!-- Filter Tabs (Horizontal Scrollable on Mobile) -->
-        <div class="flex overflow-x-auto pb-1 scrollbar-none sm:flex-wrap items-center gap-1.5 sm:gap-2 shrink-0">
+        <div class="w-full md:w-auto max-w-full flex overflow-x-auto pb-1.5 -mx-1 px-1 scrollbar-none sm:flex-wrap items-center gap-1.5 sm:gap-2 md:shrink-0">
           <button
             v-for="cat in categories"
             :key="cat.id"
@@ -96,17 +96,17 @@
           </div>
 
           <!-- Bottom Metric & Action Bar -->
-          <div class="px-5 sm:px-6 py-3.5 bg-gradient-to-r from-orange-50/50 via-slate-50 to-orange-50/30 border-t border-slate-100 flex items-center justify-between">
-            <div>
+          <div class="px-5 sm:px-6 py-3.5 bg-gradient-to-r from-orange-50/50 via-slate-50 to-orange-50/30 border-t border-slate-100 flex items-center justify-between gap-2">
+            <div class="min-w-0">
               <span class="text-[10px] font-mono uppercase tracking-wider text-slate-400 block font-bold">Key Lift</span>
-              <span class="text-xs sm:text-sm font-heading font-extrabold text-orange-600">{{ study.stat }}</span>
+              <span class="text-xs sm:text-sm font-heading font-extrabold text-orange-600 block truncate">{{ study.stat }}</span>
             </div>
 
             <button 
-              class="text-xs font-heading font-bold text-slate-900 group-hover:text-orange-600 flex items-center gap-1 transition-colors cursor-pointer"
+              class="text-xs font-heading font-bold text-slate-900 group-hover:text-orange-600 flex items-center gap-1 transition-colors cursor-pointer shrink-0 whitespace-nowrap"
             >
               <span>View Case Study</span>
-              <ArrowRight class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+              <ArrowRight class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 shrink-0" />
             </button>
           </div>
 
@@ -115,7 +115,7 @@
       </div>
 
       <!-- Bottom Portfolio Teaser Banner with Radiant Midnight Gradient -->
-      <div class="mt-10 sm:mt-12 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border border-orange-500/30 shadow-xl shadow-orange-500/5 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="mt-10 sm:mt-12 p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border border-orange-500/30 shadow-xl shadow-orange-500/5 flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-6">
         <div class="space-y-1.5 text-center md:text-left">
           <span class="text-xs font-mono uppercase tracking-widest text-orange-400 font-bold">Enterprise Client Dossiers</span>
           <h3 class="text-lg sm:text-xl font-heading font-bold text-white">
@@ -126,13 +126,13 @@
           </p>
         </div>
 
-        <div class="flex items-center gap-3 shrink-0">
+        <div class="w-full md:w-auto flex items-center justify-center gap-3 shrink-0">
           <router-link 
             to="/case-studies"
-            class="btn-primary text-xs"
+            class="btn-primary text-xs w-full sm:w-auto"
           >
             <span>View All Case Studies</span>
-            <ArrowRight class="w-3.5 h-3.5 text-orange-100" />
+            <ArrowRight class="w-3.5 h-3.5 text-orange-100 shrink-0" />
           </router-link>
         </div>
       </div>
@@ -148,43 +148,43 @@
           @click.self="closeModal"
         >
           <div 
-            class="bg-white rounded-2xl sm:rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-slate-200 shadow-2xl relative animate-scale-in"
+            class="bg-white rounded-2xl sm:rounded-3xl max-w-2xl w-full max-h-[92dvh] overflow-y-auto border border-slate-200 shadow-2xl relative animate-scale-in"
           >
             <!-- Close Button -->
             <button 
               @click="closeModal"
-              class="absolute top-3.5 right-3.5 z-30 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-900/85 hover:bg-slate-900 text-white flex items-center justify-center transition-all cursor-pointer shadow-md"
+              class="absolute top-3 right-3 sm:top-3.5 sm:right-3.5 z-30 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-900/85 hover:bg-slate-900 text-white flex items-center justify-center transition-all cursor-pointer shadow-md"
               aria-label="Close modal"
             >
               <X class="w-4 h-4" />
             </button>
 
             <!-- Modal Header Image -->
-            <div class="relative aspect-video sm:aspect-[21/9] overflow-hidden bg-slate-950">
+            <div class="relative aspect-[16/10] sm:aspect-[21/9] overflow-hidden bg-slate-950">
               <img 
                 :src="selectedStudy.image" 
                 :alt="selectedStudy.title"
                 class="w-full h-full object-cover"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
               
-              <div class="absolute bottom-3 sm:bottom-4 left-4 sm:left-6 right-4 sm:right-6 flex items-end justify-between">
-                <div>
-                  <span class="px-2.5 py-1 rounded-md bg-white/90 text-slate-900 font-mono text-[10px] font-bold uppercase tracking-wider">
+              <div class="absolute bottom-3 sm:bottom-4 left-4 sm:left-6 right-4 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+                <div class="min-w-0 pr-8 sm:pr-0">
+                  <span class="px-2.5 py-0.5 sm:py-1 rounded-md bg-white/90 text-slate-900 font-mono text-[10px] font-bold uppercase tracking-wider inline-block">
                     {{ selectedStudy.industry }}
                   </span>
-                  <h3 class="text-lg sm:text-2xl font-heading font-extrabold text-white mt-1.5">
+                  <h3 class="text-base sm:text-2xl font-heading font-extrabold text-white mt-1.5 leading-tight">
                     {{ selectedStudy.title }}
                   </h3>
                 </div>
-                <div class="px-3 py-1.5 rounded-lg bg-brand-500 text-white font-mono text-xs font-bold shrink-0">
+                <div class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-brand-500 text-white font-mono text-[11px] sm:text-xs font-bold shrink-0 self-start sm:self-auto">
                   {{ selectedStudy.stat }}
                 </div>
               </div>
             </div>
 
             <!-- Modal Body Details -->
-            <div class="p-5 sm:p-7 space-y-5">
+            <div class="p-4 sm:p-7 space-y-4 sm:space-y-5">
               
               <!-- Challenge & Solution -->
               <div class="space-y-3.5">
@@ -250,7 +250,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onUnmounted } from 'vue'
 import { Briefcase, ArrowUpRight, ArrowRight, X } from 'lucide-vue-next'
 
 const activeCategory = ref('all')
@@ -265,6 +265,10 @@ const closeModal = () => {
   selectedStudy.value = null
   document.body.style.overflow = ''
 }
+
+onUnmounted(() => {
+  document.body.style.overflow = ''
+})
 
 const categories = [
   { id: 'all', label: 'All Deployments' },

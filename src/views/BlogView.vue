@@ -2,46 +2,46 @@
   <div class="pt-20 sm:pt-24 pb-16 bg-white">
     
     <!-- Hero Header with Warm Radiant Ambient Glows -->
-    <section class="relative py-14 sm:py-20 overflow-hidden bg-gradient-to-b from-orange-50/40 via-amber-50/20 to-white border-b border-slate-100">
+    <section class="relative py-12 sm:py-20 overflow-hidden bg-gradient-to-b from-orange-50/40 via-amber-50/20 to-white border-b border-slate-100">
       <!-- Ambient Lighting Blobs -->
       <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-br from-orange-400/15 via-amber-300/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute -top-10 right-10 w-72 h-72 bg-gradient-to-br from-blue-400/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl mx-auto">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200 text-orange-700 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs mb-4">
           <BookOpen class="w-3.5 h-3.5 text-orange-500" />
           <span>Essays &amp; Technical Perspectives</span>
         </span>
-        <h1 class="text-3xl sm:text-4xl lg:text-[48px] font-heading font-extrabold text-slate-900 tracking-tight leading-tight">
+        <h1 class="text-2xl sm:text-4xl lg:text-[48px] font-heading font-extrabold text-slate-900 tracking-tight leading-tight">
           Essays on Engineering, <span class="gradient-text-brand">Search &amp; Leadership</span>
         </h1>
-        <p class="mt-4 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-sans max-w-2xl mx-auto">
+        <p class="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed font-sans max-w-2xl mx-auto">
           Deep architectural perspectives on search engine mastery, high-performance web systems, executive discipline, and 20+ years of digital agency craftsmanship.
         </p>
 
         <!-- Search & Filter Controls -->
-        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-xl mx-auto">
+        <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-xl mx-auto">
           <div class="relative w-full">
             <Search class="w-4 h-4 text-orange-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input 
               type="text" 
               v-model="searchQuery"
               placeholder="Search essays by keyword, topic, or technology..."
-              class="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 text-xs sm:text-sm text-slate-900 placeholder-slate-400 shadow-sm transition-all outline-none"
+              class="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 text-base sm:text-sm text-slate-900 placeholder-slate-400 shadow-sm transition-all outline-none"
             />
           </div>
         </div>
 
         <!-- Category Pills (Horizontal Scrollable on Mobile) with Fiery Active State -->
-        <div class="flex overflow-x-auto pb-1 scrollbar-none sm:flex-wrap items-center justify-start sm:justify-center gap-2 pt-5">
+        <div class="w-full max-w-full flex overflow-x-auto py-2 -mx-1 px-1 scrollbar-none sm:flex-wrap items-center justify-start sm:justify-center gap-2 mt-3 sm:mt-4">
           <button
             v-for="cat in categories"
             :key="cat"
             @click="selectedCategory = cat"
             :class="[
-              'px-4 py-1.5 rounded-xl text-xs font-heading font-bold transition-all cursor-pointer whitespace-nowrap shadow-2xs',
+              'px-4 py-1.5 rounded-xl text-xs font-heading font-bold transition-all cursor-pointer whitespace-nowrap shadow-2xs shrink-0',
               selectedCategory === cat 
-                ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-md shadow-orange-500/25 border border-white/20 scale-105'
+                ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-md shadow-orange-500/25 border border-white/20'
                 : 'bg-white text-slate-700 hover:text-orange-600 border border-slate-200 hover:border-orange-300 hover:bg-orange-50/50'
             ]"
           >

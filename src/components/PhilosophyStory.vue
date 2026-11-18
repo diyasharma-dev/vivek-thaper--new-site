@@ -89,21 +89,21 @@
           </div>
 
           <!-- Bottom Action Buttons -->
-          <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+          <div class="pt-2 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center justify-center lg:justify-start gap-2.5 sm:gap-3">
             <router-link 
               to="/about"
-              class="btn-primary text-xs"
+              class="btn-primary text-xs w-full sm:w-auto"
             >
               <span>Read Full Founder Story</span>
-              <ArrowRight class="w-3.5 h-3.5 text-brand-300" />
+              <ArrowRight class="w-3.5 h-3.5 text-brand-300 shrink-0" />
             </router-link>
 
             <router-link 
               to="/contact"
-              class="btn-secondary text-xs"
+              class="btn-secondary text-xs w-full sm:w-auto"
             >
               <span>Schedule a Call</span>
-              <ArrowUpRight class="w-3.5 h-3.5 text-brand-600" />
+              <ArrowUpRight class="w-3.5 h-3.5 text-brand-600 shrink-0" />
             </router-link>
           </div>
 

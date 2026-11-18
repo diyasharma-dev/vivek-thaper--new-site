@@ -8,10 +8,10 @@
     ]"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between gap-3 sm:gap-6">
+      <div class="flex items-center justify-between gap-2 sm:gap-6">
         
         <!-- Brand Monogram Logo & Name (Left) -->
-        <router-link to="/" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+        <router-link to="/" class="flex items-center gap-2 sm:gap-3 group min-w-0">
           <!-- Crystal-Clear Vector Brand Logo (No green dot) -->
           <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border border-slate-700/80 group-hover:border-brand-500/80 p-1.5 flex items-center justify-center shadow-sm transition-all duration-300 group-hover:shadow-brand-500/10 shrink-0">
             <!-- Razor-Sharp SVG Monogram -->
@@ -26,12 +26,12 @@
           </div>
 
           <!-- Brand Typography Lockup (Compact & Pristine) -->
-          <div class="flex items-center gap-2 shrink-0">
-            <span class="font-heading font-extrabold text-base sm:text-lg text-slate-900 group-hover:text-brand-600 transition-colors tracking-tight whitespace-nowrap">
+          <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+            <span class="font-heading font-extrabold text-[15px] sm:text-lg text-slate-900 group-hover:text-brand-600 transition-colors tracking-tight whitespace-nowrap truncate">
               Vivek Thapar
             </span>
             <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-brand-50 border border-brand-200/80 text-brand-700 text-[10px] font-mono font-bold tracking-wider uppercase shrink-0">
-              <span class="hidden xs:inline">Mirch Media</span> NYC
+              <span class="hidden sm:inline">Mirch Media&nbsp;</span><span>NYC</span>
             </span>
           </div>
         </router-link>
@@ -105,17 +105,19 @@
         <div class="flex items-center gap-2 lg:hidden shrink-0">
           <a 
             href="tel:+17182074446"
-            class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium text-brand-700 bg-brand-50 border border-brand-200 whitespace-nowrap shrink-0"
+            class="flex items-center justify-center gap-1.5 min-w-[40px] h-10 px-2.5 rounded-lg text-xs font-medium text-brand-700 bg-brand-50 border border-brand-200 whitespace-nowrap shrink-0"
             title="Call Vivek Thapar Direct"
+            aria-label="Call Vivek Thapar Direct"
           >
-            <Phone class="w-3.5 h-3.5 text-brand-600 shrink-0" />
+            <Phone class="w-4 h-4 text-brand-600 shrink-0" />
             <span class="font-mono text-[11px] font-bold whitespace-nowrap hidden sm:inline">(718) 207-4446</span>
           </a>
 
           <button 
             @click="mobileMenuOpen = !mobileMenuOpen"
-            class="p-2 rounded-lg text-slate-700 hover:text-slate-950 hover:bg-slate-100 border border-slate-200 focus:outline-none shrink-0 cursor-pointer"
+            class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:text-slate-950 hover:bg-slate-100 border border-slate-200 focus:outline-none shrink-0 cursor-pointer"
             aria-label="Toggle navigation menu"
+            :aria-expanded="mobileMenuOpen"
           >
             <Menu v-if="!mobileMenuOpen" class="w-5 h-5" />
             <X v-else class="w-5 h-5" />
@@ -125,41 +127,51 @@
       </div>
     </div>
 
+    <!-- Mobile Backdrop Overlay -->
+    <Transition name="fade">
+      <div
+        v-if="mobileMenuOpen"
+        @click="mobileMenuOpen = false"
+        class="lg:hidden fixed inset-x-0 top-full h-[100dvh] bg-slate-950/40 backdrop-blur-[2px] z-40"
+        aria-hidden="true"
+      ></div>
+    </Transition>
+
     <!-- Mobile Drawer Menu -->
     <Transition name="slide-down">
       <div 
         v-if="mobileMenuOpen" 
-        class="lg:hidden fixed inset-x-0 top-full bg-white/98 backdrop-blur-xl border-b border-slate-200 p-5 shadow-2xl transition-all max-h-[85vh] overflow-y-auto"
+        class="lg:hidden fixed inset-x-0 top-full z-50 bg-white border-b border-slate-200 px-4 py-5 sm:p-6 shadow-2xl transition-all max-h-[calc(100dvh-4rem)] overflow-y-auto"
       >
-        <div class="flex flex-col gap-1.5">
+        <div class="flex flex-col gap-1">
           <router-link 
             v-for="item in allLinks" 
             :key="item.name" 
             :to="item.to"
             @click="mobileMenuOpen = false"
-            class="px-4 py-2.5 rounded-lg text-sm font-heading font-semibold text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition-colors flex items-center justify-between"
+            class="px-4 py-3 rounded-xl text-sm font-heading font-semibold text-slate-700 hover:text-slate-950 hover:bg-slate-100 transition-colors flex items-center justify-between"
             active-class="text-brand-800 bg-brand-50 font-bold"
           >
             <span>{{ item.name }}</span>
-            <ArrowRight class="w-4 h-4 text-slate-400" />
+            <ArrowRight class="w-4 h-4 text-slate-400 shrink-0" />
           </router-link>
 
-          <div class="pt-4 mt-2 border-t border-slate-200 flex flex-col gap-3">
+          <div class="pt-4 mt-2 border-t border-slate-200 flex flex-col gap-2.5">
             <a 
               href="tel:+17182074446"
-              class="flex items-center justify-center gap-2 p-3 rounded-xl text-xs font-mono font-bold text-slate-800 border border-slate-200 bg-slate-50"
+              class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-mono font-bold text-slate-800 border border-slate-200 bg-slate-50"
             >
-              <Phone class="w-4 h-4 text-brand-600" />
+              <Phone class="w-4 h-4 text-brand-600 shrink-0" />
               <span>Direct Desk: (718) 207-4446</span>
             </a>
 
             <router-link 
               to="/contact" 
               @click="mobileMenuOpen = false"
-              class="flex items-center justify-center gap-2 p-3 rounded-xl text-xs font-heading font-bold text-white bg-gradient-to-r from-orange-500 to-amber-500 shadow-md shadow-orange-500/25"
+              class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-heading font-bold text-white bg-gradient-to-r from-orange-500 to-amber-500 shadow-md shadow-orange-500/25"
             >
               <span>Schedule a Call</span>
-              <ArrowRight class="w-4 h-4" />
+              <ArrowRight class="w-4 h-4 shrink-0" />
             </router-link>
           </div>
         </div>
@@ -169,12 +181,23 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, watch, onMounted, onUnmounted } from 'vue'
+import { useRoute } from 'vue-router'
 import { Phone, ArrowRight, Menu, X, ChevronDown } from 'lucide-vue-next'
 
+const route = useRoute()
 const scrolled = ref(false)
 const mobileMenuOpen = ref(false)
 const dropdownOpen = ref(false)
+
+watch(() => route.fullPath, () => {
+  mobileMenuOpen.value = false
+  dropdownOpen.value = false
+})
+
+watch(mobileMenuOpen, (isOpen) => {
+  document.body.style.overflow = isOpen ? 'hidden' : ''
+})
 
 const primaryLinks = [
   { name: 'Selected Work', to: '/case-studies' },
@@ -210,10 +233,19 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  document.body.style.overflow = ''
 })
 </script>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 .slide-down-enter-active,
 .slide-down-leave-active {
   transition: all 0.25s ease-out;

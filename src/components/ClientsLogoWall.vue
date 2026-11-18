@@ -37,20 +37,20 @@
       </div>
 
       <!-- Trust & Engagement Principles with Colorful Icon Badges -->
-      <div class="mt-8 pt-6 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 lg:gap-12 text-slate-700 text-xs font-sans text-center sm:text-left">
-        <div class="flex items-center gap-2.5">
+      <div class="mt-7 sm:mt-8 pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:flex sm:flex-wrap items-center justify-center gap-2.5 sm:gap-x-8 sm:gap-y-4 lg:gap-12 text-slate-700 text-xs font-sans">
+        <div class="flex items-center gap-2.5 px-3.5 py-2.5 sm:p-0 rounded-xl sm:rounded-none bg-white sm:bg-transparent border border-slate-100 sm:border-none">
           <div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 shadow-2xs">
             <ShieldCheck class="w-4 h-4" />
           </div>
           <span class="font-bold text-slate-800">100% Client Code &amp; Asset Ownership</span>
         </div>
-        <div class="flex items-center gap-2.5">
+        <div class="flex items-center gap-2.5 px-3.5 py-2.5 sm:p-0 rounded-xl sm:rounded-none bg-white sm:bg-transparent border border-slate-100 sm:border-none">
           <div class="w-7 h-7 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center shrink-0 shadow-2xs">
             <CheckCircle class="w-4 h-4" />
           </div>
           <span class="font-bold text-slate-800">Direct Founder Architecture &amp; Review</span>
         </div>
-        <div class="flex items-center gap-2.5">
+        <div class="flex items-center gap-2.5 px-3.5 py-2.5 sm:p-0 rounded-xl sm:rounded-none bg-white sm:bg-transparent border border-slate-100 sm:border-none">
           <div class="w-7 h-7 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 shadow-2xs">
             <Clock class="w-4 h-4" />
           </div>
