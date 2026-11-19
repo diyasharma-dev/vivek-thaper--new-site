@@ -1,44 +1,44 @@
 <template>
-  <section id="faq" class="py-16 sm:py-24 relative overflow-hidden bg-transparent border-t border-white/10">
+  <section id="faq" class="py-14 sm:py-16 md:py-24 relative overflow-hidden bg-white border-b border-slate-200/80">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
-      <div class="max-w-3xl mb-12 sm:mb-16 space-y-3">
-        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-950/70 border border-red-500/30 text-red-400 font-mono text-xs font-bold tracking-wider uppercase shadow-glow-red">
+      <div class="max-w-3xl mb-10 sm:mb-14 space-y-2.5 sm:space-y-3">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-red-50 to-rose-50 border border-red-200 text-red-700 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs">
           <HelpCircle class="w-3.5 h-3.5 text-red-500" />
           <span>Clarity &amp; Engagements</span>
         </span>
-        <h2 class="text-3xl sm:text-4xl lg:text-[44px] font-heading font-black text-white tracking-tight leading-[1.2]">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-slate-900 tracking-normal leading-[1.3] sm:leading-[1.32] lg:leading-[1.35]">
           Frequently Answered <span class="gradient-text-brand">Founder Questions</span>
         </h2>
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-sans">
+        <p class="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed font-sans">
           Clear, straightforward answers regarding advisory engagements, technical capabilities, and project delivery timelines.
         </p>
       </div>
 
       <!-- FAQ Accordion List -->
-      <div class="space-y-3.5">
+      <div class="space-y-3">
         <div 
           v-for="(item, idx) in faqs" 
           :key="item.q"
-          class="rounded-2xl overflow-hidden transition-all duration-300"
-          :class="activeFaq === idx ? 'card-glass border-red-500/40 shadow-glow-red' : 'bg-[#0c0e17]/80 border border-white/10 hover:border-white/20'"
+          class="border rounded-2xl overflow-hidden transition-all shadow-2xs"
+          :class="activeFaq === idx ? 'border-red-300 shadow-sm bg-gradient-to-r from-red-50/20 via-white to-amber-50/20' : 'border-slate-200 bg-white'"
         >
           <button 
             @click="activeFaq = activeFaq === idx ? -1 : idx"
-            class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 transition-colors focus:outline-none cursor-pointer"
-            :class="activeFaq === idx ? 'bg-red-950/20' : 'hover:bg-white/[0.02]'"
+            class="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 sm:gap-4 transition-colors focus:outline-none cursor-pointer"
+            :class="activeFaq === idx ? 'bg-red-50/40' : 'hover:bg-red-50/20'"
           >
-            <span class="text-base sm:text-lg font-heading font-bold text-white">{{ item.q }}</span>
+            <span class="text-sm sm:text-base font-heading font-bold text-slate-900">{{ item.q }}</span>
             <ChevronDown 
-              class="w-4 h-4 shrink-0 transition-transform duration-300"
-              :class="activeFaq === idx ? 'rotate-180 text-red-400' : 'text-slate-400'"
+              class="w-4 h-4 shrink-0 transition-transform duration-200"
+              :class="activeFaq === idx ? 'rotate-180 text-red-600' : 'text-slate-400'"
             />
           </button>
 
           <div 
             v-if="activeFaq === idx"
-            class="px-5 sm:px-6 pb-6 pt-2 text-sm text-slate-300 leading-relaxed border-t border-white/10 bg-transparent font-sans"
+            class="px-4 sm:px-6 pb-5 sm:pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-red-100 bg-white/60 font-sans"
           >
             {{ item.a }}
           </div>
@@ -46,18 +46,18 @@
       </div>
 
       <!-- Still have questions footer banner -->
-      <div class="mt-12 sm:mt-16 p-6 sm:p-10 rounded-3xl bg-gradient-to-r from-[#0c0e17] via-[#141829] to-[#0c0e17] border border-red-500/30 text-white shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left relative overflow-hidden">
-        <div class="absolute -top-10 -right-10 w-60 h-60 bg-red-600/15 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="relative z-10 space-y-1">
-          <h4 class="text-lg sm:text-xl font-heading font-black text-white">Have a nuanced architectural question?</h4>
-          <p class="text-xs sm:text-sm text-slate-300 font-sans">Speak directly with Vivek. No junior sales pitch, just practical strategic clarity.</p>
+      <div class="mt-10 sm:mt-12 p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border border-red-500/30 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-48 h-48 bg-red-500/15 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="relative z-10">
+          <h4 class="text-base font-heading font-bold text-white">Have a nuanced architectural question?</h4>
+          <p class="text-xs sm:text-sm text-slate-300 mt-0.5 font-sans">Speak directly with Vivek. No junior sales pitch, just practical strategic clarity.</p>
         </div>
         <router-link 
           to="/contact" 
-          class="btn-primary text-xs shrink-0 relative z-10 w-full sm:w-auto shadow-glow-red"
+          class="btn-primary text-xs shrink-0 relative z-10 w-full sm:w-auto"
         >
           <span>Schedule a Call</span>
-          <ArrowRight class="w-3.5 h-3.5 ml-1 text-white shrink-0" />
+          <ArrowRight class="w-3.5 h-3.5 text-white shrink-0" />
         </router-link>
       </div>
 

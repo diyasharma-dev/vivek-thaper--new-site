@@ -38,7 +38,7 @@
             <!-- Video Status Bar -->
             <div class="p-3.5 sm:p-4 bg-white border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600">
               <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
+                <span class="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span>
                 <span class="font-sans text-slate-800 font-semibold">Vivek Thapar speaking from NYC</span>
               </div>
               <div class="font-mono text-[11px] text-slate-500 font-medium">

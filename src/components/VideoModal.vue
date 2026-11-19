@@ -11,7 +11,7 @@
           <!-- Modal Header -->
           <div class="flex items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4 border-b border-slate-800 bg-slate-950 shrink-0">
             <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
               <div class="min-w-0">
                 <h3 class="text-xs sm:text-sm font-heading font-bold text-white truncate">Message from Vivek Thapar</h3>
                 <p class="text-[10px] sm:text-[11px] text-brand-400 font-mono truncate">Founder &amp; CEO, Mirch Media NYC · Est. 2006</p>

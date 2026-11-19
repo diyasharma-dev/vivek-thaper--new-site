@@ -9,7 +9,7 @@ export const blogPosts = [
     readTime: '6 min read',
     category: 'Development',
     tags: ['Machine Learning', 'AI', 'Technology', 'Future of Search'],
-    image: '/media/vivek-thapar-innovation.webp',
+    image: '/media/work-innovation.webp',
     content: `
       <h2>The Shift From Keyword Matching to Cognitive Understanding</h2>
       <p>For more than twenty years, search engines relied primarily on keyword occurrences and link graphs. Today, machine learning models like Google's Gemini, OpenAI's GPT architectures, and Claude have transformed how consumers search and make purchasing decisions.</p>
@@ -42,7 +42,7 @@ export const blogPosts = [
     readTime: '5 min read',
     category: 'Lifestyle',
     tags: ['Endurance', 'Mindset', 'Discipline', 'Health'],
-    image: '/media/vivek-thapar-founder.webp',
+    image: '/media/work-progress.webp',
     content: `
       <h2>Pacing, Persistence, and the Long Game</h2>
       <p>Running is often portrayed as a purely physical sport, but anyone who has run long distances knows it is fundamentally a test of mental fortitude. When you first lace up your running shoes, the natural instinct is to sprint. Within two hundred meters, your lungs burn and you want to stop.</p>
@@ -72,7 +72,7 @@ export const blogPosts = [
     readTime: '4 min read',
     category: 'Philosophy',
     tags: ['Minimalism', 'Productivity', 'Design', 'Strategy'],
-    image: '/media/vivek-thapar-ceo.webp',
+    image: '/media/work-vision.webp',
     content: `
       <h2>The Trap of Artificial Complexity</h2>
       <p>In both lifestyle and digital engineering, there is a pervasive myth that complexity equals sophistication. Companies install dozens of disjointed SaaS tools, add fifty plugins to their CMS, and wonder why their site takes seven seconds to load and their team spends half their day updating spreadsheets.</p>
@@ -102,7 +102,7 @@ export const blogPosts = [
     readTime: '5 min read',
     category: 'Leadership',
     tags: ['Deep Work', 'Focus', 'Entrepreneurship', 'Productivity'],
-    image: '/media/vivek-thapar-keynote.webp',
+    image: '/media/work-foundation.webp',
     content: `
       <h2>The Sanctuary of Silence</h2>
       <p>Monday through Friday is dominated by execution: client calls, team standups, Slack notifications, and emergency firefighting. It is reactive by nature.</p>
@@ -161,14 +161,14 @@ export const blogPosts = [
     readTime: '6 min read',
     category: 'SEO',
     tags: ['Local SEO', 'Google Maps', 'NYC Business', 'Lead Gen'],
-    image: '/media/vivek-thapar-seo.webp',
+    image: '/media/work-digital-marketing.webp',
     content: `
-      <h2>The High-Intent Google 3-Pack Opportunity</h2>
-      <p>When someone in Forest Hills, Flushing, or Midtown searches for a personal injury attorney, optometrist, or commercial accountant, a substantial share of clicks go directly to the top results in the Google Maps 3-Pack.</p>
+      <h2>The Multimillion-Dollar 3-Pack Opportunity</h2>
+      <p>When someone in Forest Hills, Flushing, or Midtown searches for a personal injury attorney, emergency dental clinic, or commercial real estate broker, over 70% of clicks go to the top three results in the Google Maps 3-Pack.</p>
       
       <p>Winning this position is not an accident; it is the result of methodical local entity optimization, citation consistency, and hyper-targeted geo-relevance signals.</p>
 
-      <h2>The Core Pillars of Local Search Reach</h2>
+      <h2>The Core Pillars of Local Dominance</h2>
       <ol>
         <li><strong>Google Business Profile Authority:</strong> Verified primary categories, secondary category layering, and regular weekly geo-tagged updates.</li>
         <li><strong>Review Velocity & Sentiment:</strong> Continuous acquisition of verified customer reviews containing natural industry keywords and location terms.</li>
@@ -176,7 +176,7 @@ export const blogPosts = [
         <li><strong>Crawl Efficiency:</strong> Fast-loading mobile web infrastructure that passes Core Web Vitals with flying colors.</li>
       </ol>
 
-      <p>By executing these four pillars systematically, local businesses establish consistent organic visibility, qualified client inquiries, and verified authority across their target neighborhoods.</p>
+      <p>By executing these four pillars systematically, our clients routinely generate 40+ inbound calls every single day with zero paid ad spend required.</p>
     `
   }
 ]

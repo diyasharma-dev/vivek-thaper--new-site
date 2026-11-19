@@ -26,9 +26,10 @@ const routes = [
     component: ServicesView
   },
   {
-    path: '/case-studies',
-    name: 'case-studies',
-    component: CaseStudiesView
+    path: '/portfolio',
+    name: 'portfolio',
+    component: CaseStudiesView,
+    alias: ['/case-studies', '/projects', '/work']
   },
   {
     path: '/speaking',

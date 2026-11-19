@@ -27,9 +27,9 @@ export const projects = [
   },
   {
     id: 'property-buyer-nj',
-    title: 'Property Buyers NJ',
+    title: 'Property Buyer NJ',
     subtitle: 'Residential Property Acquisition Portal',
-    client: 'Property Buyers NJ',
+    client: 'Property Buyer NJ',
     liveUrl: 'https://propertybuyernj.com/',
     displayUrl: 'propertybuyernj.com',
     category: 'realestate',
