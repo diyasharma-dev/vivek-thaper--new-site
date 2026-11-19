@@ -73,7 +73,18 @@
         
         <!-- Pillar 1: Underbridge Dog Run & NYC Parks (Emerald / Nature Green Theme) -->
         <div class="p-5 sm:p-10 bg-gradient-to-br from-white via-emerald-50/20 to-emerald-50/40 border border-emerald-200/80 hover:border-emerald-400/80 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center group">
-          <div class="lg:col-span-7 space-y-3.5 sm:space-y-4">
+          <!-- Image on LEFT (5 cols) -->
+          <div class="lg:col-span-5 rounded-2xl overflow-hidden border-2 border-emerald-200 aspect-[4/3] relative bg-slate-100 shadow-md group-hover:shadow-emerald-500/20 transition-all order-2 lg:order-1">
+            <img 
+              src="/media/nyc-dog-run.jpg" 
+              alt="The Underdogs &amp; Underbridge Dog Run Volunteer Group - NYC Parks"
+              class="w-full h-full object-cover object-center filter contrast-[1.02] group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Text on RIGHT (7 cols) -->
+          <div class="lg:col-span-7 space-y-3.5 sm:space-y-4 order-1 lg:order-2">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100/70 border border-emerald-300/80 text-emerald-800 text-xs font-mono font-bold uppercase tracking-wider shadow-2xs">
               <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
               CIVIC LEADERSHIP · NYC PARKS
@@ -93,26 +104,11 @@
               <span class="px-3 py-1 rounded-lg bg-emerald-100/50 text-emerald-900 border border-emerald-200 font-bold shadow-2xs">Recreation Preservation</span>
             </div>
           </div>
-
-          <div class="lg:col-span-5 rounded-2xl overflow-hidden border-2 border-emerald-200 aspect-[4/3] relative bg-slate-100 shadow-md group-hover:shadow-emerald-500/20 transition-all">
-            <img 
-              src="/media/work-collaboration.webp" 
-              alt="Community Parks and Collaboration"
-              class="w-full h-full object-cover object-center filter contrast-[1.03] group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
         </div>
 
         <!-- Pillar 2: Iota Nu Delta Fraternal Board (Mirch Fiery Orange / Amber Theme) -->
         <div class="p-5 sm:p-10 bg-gradient-to-br from-white via-red-50/25 to-amber-50/40 border border-red-200/80 hover:border-red-400/80 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center group">
-          <div class="lg:col-span-5 rounded-2xl overflow-hidden border-2 border-red-200 aspect-[4/3] relative order-last lg:order-first bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 shadow-md group-hover:shadow-red-500/20 transition-all flex items-center justify-center p-5 sm:p-8">
-            <img 
-              src="/media/iota-nu-delta-crest.png" 
-              alt="Iota Nu Delta Official National Crest"
-              class="max-h-full max-w-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)] group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-
+          <!-- Text on LEFT (7 cols) -->
           <div class="lg:col-span-7 space-y-3.5 sm:space-y-4">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100/70 border border-red-300/80 text-red-800 text-xs font-mono font-bold uppercase tracking-wider shadow-2xs">
               <span class="w-2 h-2 rounded-full bg-red-500"></span>
@@ -133,11 +129,31 @@
               <span class="px-3 py-1 rounded-lg bg-red-100/50 text-red-900 border border-red-200 font-bold shadow-2xs">Cultural Heritage</span>
             </div>
           </div>
+
+          <!-- Crest on RIGHT (5 cols) -->
+          <div class="lg:col-span-5 rounded-2xl overflow-hidden border-2 border-red-200 aspect-[4/3] relative bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 shadow-md group-hover:shadow-red-500/20 transition-all flex items-center justify-center p-5 sm:p-8">
+            <img 
+              src="/media/iota-nu-delta-crest.png" 
+              alt="Iota Nu Delta Official National Crest"
+              class="max-h-full max-w-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)] group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
         </div>
 
         <!-- Pillar 3: Own My Mile (Royal Tech Blue / Queens Theme) -->
         <div class="p-5 sm:p-10 bg-gradient-to-br from-white via-blue-50/20 to-indigo-50/40 border border-blue-200/80 hover:border-blue-400/80 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center group">
-          <div class="lg:col-span-7 space-y-3.5 sm:space-y-4">
+          <!-- Image on LEFT (5 cols) -->
+          <div class="lg:col-span-5 rounded-2xl overflow-hidden border-2 border-blue-200 aspect-[4/3] relative bg-slate-100 shadow-md group-hover:shadow-blue-500/20 transition-all order-2 lg:order-1">
+            <img 
+              src="/media/work-progress.webp" 
+              alt="Queens NYC Neighborhood Walk and Own My Mile Initiative"
+              class="w-full h-full object-cover object-center filter contrast-[1.03] group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Text on RIGHT (7 cols) -->
+          <div class="lg:col-span-7 space-y-3.5 sm:space-y-4 order-1 lg:order-2">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100/70 border border-blue-300/80 text-blue-800 text-xs font-mono font-bold uppercase tracking-wider shadow-2xs">
               <span class="w-2 h-2 rounded-full bg-blue-500"></span>
               NEIGHBORHOOD CARE · QUEENS, NYC
@@ -156,14 +172,6 @@
               <span class="px-3 py-1 rounded-lg bg-blue-100/50 text-blue-900 border border-blue-200 font-bold shadow-2xs">Local Merchant Advocacy</span>
               <span class="px-3 py-1 rounded-lg bg-blue-100/50 text-blue-900 border border-blue-200 font-bold shadow-2xs">Queens Neighborhood Pride</span>
             </div>
-          </div>
-
-          <div class="lg:col-span-5 rounded-2xl overflow-hidden border-2 border-blue-200 aspect-[4/3] relative bg-slate-100 shadow-md group-hover:shadow-blue-500/20 transition-all">
-            <img 
-              src="/media/work-vision.webp" 
-              alt="Queens NYC Neighborhood and Community Vision"
-              class="w-full h-full object-cover object-center filter contrast-[1.03] group-hover:scale-105 transition-transform duration-500"
-            />
           </div>
         </div>
 
