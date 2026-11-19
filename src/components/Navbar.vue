@@ -134,7 +134,7 @@
               class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-mono font-bold text-slate-800 border border-slate-200 bg-slate-50"
             >
               <Phone class="w-4 h-4 text-brand-600 shrink-0" />
-              <span>Direct Desk: (718) 207-4446</span>
+              <span>Direct Line: (718) 207-4446</span>
             </a>
 
             <router-link 

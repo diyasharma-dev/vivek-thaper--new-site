@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
-      <div class="max-w-3xl mb-12 sm:mb-14 space-y-3">
+      <div v-reveal class="max-w-3xl mb-12 sm:mb-14 space-y-3">
         <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-700 font-bold">
           <span class="w-2 h-2 rounded-full bg-red-600"></span>
           <span>Core Capabilities &amp; Stack</span>
@@ -38,6 +38,7 @@
         <div
           v-for="(domain, idx) in filteredDomains"
           :key="domain.title"
+          v-reveal
           class="p-6 rounded-2xl bg-slate-50/70 border border-slate-200/90 flex flex-col justify-between hover:bg-white hover:border-slate-300 hover:shadow-lg transition-all duration-300"
         >
           <div>

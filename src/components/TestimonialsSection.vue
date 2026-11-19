@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 gap-6">
+      <div v-reveal class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 gap-6">
         <div class="max-w-3xl space-y-2.5 sm:space-y-3">
           <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-800 font-mono text-[11px] font-bold tracking-wider uppercase shadow-2xs">
             <!-- Google 4-color icon -->
@@ -46,6 +46,7 @@
         <div 
           v-for="item in testimonials" 
           :key="item.author"
+          v-reveal
           class="card-architectural p-5 sm:p-7 flex flex-col justify-between hover:-translate-y-1 hover:border-red-300 hover:shadow-red-500/10 bg-white transition-all duration-300"
         >
           <div>

@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header -->
-      <div class="max-w-3xl mb-12 sm:mb-14 space-y-3">
+      <div v-reveal class="max-w-3xl mb-12 sm:mb-14 space-y-3">
         <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-700 font-bold">
           <span class="w-2 h-2 rounded-full bg-red-600"></span>
           <span>Direct Connect &amp; Office</span>
@@ -19,7 +19,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
         
         <!-- Left: Contact Information & Office Details (5 cols) -->
-        <div class="lg:col-span-5 space-y-6">
+        <div v-reveal class="lg:col-span-5 space-y-6">
           
           <div class="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
             <div>
@@ -53,7 +53,7 @@
                   <div class="space-y-1 text-xs mt-1 font-mono">
                     <p class="flex items-baseline gap-1.5">
                       <a href="tel:+17182074446" class="text-slate-900 hover:text-red-600 font-bold transition-colors">(718) 207-4446</a>
-                      <span class="text-slate-500 font-sans text-[11px]">(Direct Desk)</span>
+                      <span class="text-slate-500 font-sans text-[11px]">(Direct Line)</span>
                     </p>
                     <p class="flex items-baseline gap-1.5">
                       <a href="tel:+15169698550" class="text-slate-700 hover:text-red-600 font-medium transition-colors">(516) 969-8550</a>
@@ -109,7 +109,7 @@
         </div>
 
         <!-- Right: Consultation Request Form (7 cols) -->
-        <div class="lg:col-span-7 min-w-0">
+        <div v-reveal class="lg:col-span-7 min-w-0">
           <div class="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-8 md:p-10 shadow-sm relative">
             
             <div v-if="submitted" class="py-10 text-center space-y-4">

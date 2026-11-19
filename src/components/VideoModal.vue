@@ -43,7 +43,7 @@
           <div class="p-4 sm:p-5 bg-slate-950 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 shrink-0">
             <div class="space-y-0.5 text-center sm:text-left">
               <p class="text-xs font-sans italic text-slate-300">"We don't just do marketing, we build the businesses marketing supports."</p>
-              <p class="text-[10px] sm:text-[11px] text-slate-500 font-mono">Forest Hills, Queens, New York · Direct Founder Access</p>
+              <p class="text-[10px] sm:text-[11px] text-slate-500 font-mono">Forest Hills, Queens, New York · Executive Leadership</p>
             </div>
 
             <router-link 

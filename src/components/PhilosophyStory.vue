@@ -6,7 +6,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         
         <!-- Left: Image Showcase with Vivek in Strategy Session -->
-        <div class="lg:col-span-5 relative flex justify-center">
+        <div v-reveal class="lg:col-span-5 relative flex justify-center">
           <div class="w-full max-w-sm sm:max-w-md bg-slate-50 border border-slate-200/90 p-3 sm:p-3.5 rounded-3xl shadow-lg">
             <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-slate-100">
               <img 
@@ -35,13 +35,13 @@
             <!-- Quote caption below portrait -->
             <div class="mt-3 px-2 py-1 text-xs text-slate-700 font-sans leading-relaxed">
               "We don't just do marketing — we have built the actual businesses that marketing needs to support."
-              <span class="block text-[11px] font-mono font-bold text-slate-900 mt-1">— Vivek Thapar, Founder &amp; CEO</span>
+              <span class="block text-[11px] font-mono font-bold text-slate-900 mt-1">— Vivek Thapar, Mirch Media NYC</span>
             </div>
           </div>
         </div>
 
         <!-- Right: The Authentic Knowledgebase & Philosophy Narrative -->
-        <div class="lg:col-span-7 space-y-6">
+        <div v-reveal class="lg:col-span-7 space-y-6">
           
           <div class="space-y-2.5 text-center lg:text-left">
             <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-700 font-bold">

@@ -134,7 +134,7 @@
           &copy; {{ new Date().getFullYear() }} Vivek Thapar · Founder &amp; CEO, Mirch Media. All rights reserved.
         </div>
         <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
-          <router-link to="/contact" class="hover:text-slate-300 transition-colors">Direct Desk Access</router-link>
+          <router-link to="/contact" class="hover:text-slate-300 transition-colors">Schedule Consultation</router-link>
           <span>·</span>
           <span>Forest Hills, Queens, NYC</span>
         </div>

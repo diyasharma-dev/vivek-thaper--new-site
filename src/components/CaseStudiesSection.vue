@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Section Header (Refined, Editorial & Authoritative) -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-14">
+      <div v-reveal class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-14">
         <div class="max-w-3xl space-y-3">
           <div class="flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-red-600"></span>
@@ -41,6 +41,7 @@
         <div 
           v-for="study in filteredStudies" 
           :key="study.id"
+          v-reveal
           class="bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-slate-300 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
           @click="openModal(study)"
         >
