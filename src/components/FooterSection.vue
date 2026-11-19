@@ -1,21 +1,21 @@
 <template>
-  <footer class="bg-slate-950 border-t border-slate-800/90 pt-14 sm:pt-16 pb-12 relative overflow-hidden text-slate-300">
+  <footer class="bg-[#05060c] border-t border-white/[0.08] pt-16 sm:pt-20 pb-12 relative overflow-hidden text-slate-300">
     <!-- Warm subtle ambient glow in footer -->
-    <div class="absolute -bottom-24 -left-12 w-96 h-96 bg-gradient-to-tr from-red-500/10 via-amber-400/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute -top-24 right-0 w-80 h-80 bg-gradient-to-bl from-blue-600/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-12 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -top-24 right-0 w-80 h-80 bg-amber-500/[0.06] rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <div class="grid grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-10 sm:pb-12 border-b border-slate-800/80">
+      <div class="grid grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-10 sm:pb-12 border-b border-white/[0.08]">
         
         <!-- Col 1 & 2: Brand & Bio (2 cols) -->
         <div class="col-span-2 space-y-4">
           <router-link to="/" class="flex items-center gap-3 group">
             <!-- Razor-Sharp Vector Brand Logo -->
-            <div class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 p-1.5 flex items-center justify-center shadow-sm">
+            <div class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#0c0f1d] to-[#07080e] border border-white/10 p-1.5 flex items-center justify-center shadow-lg group-hover:border-red-500/50 transition-colors">
               <svg viewBox="0 0 36 36" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 7L13 27H16.5L24.5 7H20.5L14.8 22.2L9 7H5Z" fill="#FFFFFF"/>
-                <path d="M16 10H30V13.5H25V27H21V13.5H16V10Z" fill="#DC2626"/>
+                <path d="M16 10H30V13.5H25V27H21V13.5H16V10Z" fill="#EF4444"/>
                 <circle cx="28.5" cy="7.5" r="2" fill="#FBBF24"/>
               </svg>
             </div>
@@ -34,15 +34,15 @@
           </p>
 
           <!-- Mirch Media Agency Logo -->
-          <div class="pt-2">
+          <div class="pt-1">
             <a 
               href="https://www.mirchmedia.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="inline-flex items-center px-3.5 py-2 rounded-xl bg-white hover:bg-slate-100 border border-slate-800 hover:border-red-400 transition-all shadow-xs group"
+              class="inline-flex items-center px-3.5 py-2 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-red-500/50 transition-all shadow-xs group"
               title="Mirch Media"
             >
-              <img src="/media/mirch-logo.webp" alt="Mirch Media" class="h-5 w-auto object-contain group-hover:scale-105 transition-transform" />
+              <img src="/media/mirch-logo.webp" alt="Mirch Media" class="h-5 w-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all" />
             </a>
           </div>
 
@@ -52,7 +52,7 @@
               href="https://www.linkedin.com/in/vivekthapar" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-red-400 flex items-center justify-center hover:text-white transition-all shadow-2xs"
+              class="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/10 hover:border-red-500/50 flex items-center justify-center hover:text-white hover:bg-white/[0.08] hover:shadow-glow-red transition-all"
               title="LinkedIn Profile"
             >
               <Linkedin class="w-4 h-4" />
@@ -61,7 +61,7 @@
               href="https://twitter.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-red-400 flex items-center justify-center hover:text-white transition-all shadow-2xs"
+              class="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/10 hover:border-red-500/50 flex items-center justify-center hover:text-white hover:bg-white/[0.08] hover:shadow-glow-red transition-all"
               title="Twitter / X"
             >
               <Twitter class="w-4 h-4" />
@@ -70,7 +70,7 @@
               href="https://instagram.com/mirchmedia" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-red-400 flex items-center justify-center hover:text-white transition-all shadow-2xs"
+              class="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/10 hover:border-red-500/50 flex items-center justify-center hover:text-white hover:bg-white/[0.08] hover:shadow-glow-red transition-all"
               title="Instagram"
             >
               <Instagram class="w-4 h-4" />
@@ -79,7 +79,7 @@
               href="https://www.mirchmedia.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-red-400 flex items-center justify-center hover:text-white transition-all shadow-2xs"
+              class="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/10 hover:border-red-500/50 flex items-center justify-center hover:text-white hover:bg-white/[0.08] hover:shadow-glow-red transition-all"
               title="Mirch Media Agency"
             >
               <Globe class="w-4 h-4" />
@@ -91,13 +91,13 @@
         <div>
           <h4 class="text-xs font-mono uppercase tracking-wider text-slate-200 font-bold mb-4">Navigation</h4>
           <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400 font-sans">
-            <li><router-link to="/" class="hover:text-white transition-colors">Home Portfolio</router-link></li>
-            <li><router-link to="/case-studies" class="hover:text-white transition-colors">Selected Work</router-link></li>
+            <li><router-link to="/" class="hover:text-white transition-colors">Home</router-link></li>
+            <li><router-link to="/case-studies" class="hover:text-white transition-colors">Portfolio</router-link></li>
             <li><router-link to="/about" class="hover:text-white transition-colors">About Vivek</router-link></li>
-            <li><router-link to="/services" class="hover:text-white transition-colors">Capabilities &amp; Stack</router-link></li>
-            <li><router-link to="/speaking" class="hover:text-white transition-colors">Keynotes &amp; Speaking</router-link></li>
-            <li><router-link to="/community" class="hover:text-white transition-colors">Civic &amp; Community</router-link></li>
-            <li><router-link to="/blog" class="hover:text-white transition-colors">Essays &amp; Insights</router-link></li>
+            <li><router-link to="/services" class="hover:text-white transition-colors">Services</router-link></li>
+            <li><router-link to="/community" class="hover:text-white transition-colors">Community</router-link></li>
+            <li><router-link to="/blog" class="hover:text-white transition-colors">Blog &amp; Articles</router-link></li>
+            <li><router-link to="/contact" class="hover:text-white transition-colors">Contact</router-link></li>
           </ul>
         </div>
 
@@ -105,12 +105,12 @@
         <div>
           <h4 class="text-xs font-mono uppercase tracking-wider text-slate-200 font-bold mb-4">Capabilities</h4>
           <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400 font-sans">
-            <li><router-link to="/services" class="hover:text-white transition-colors">Custom Vue Engineering</router-link></li>
-            <li><router-link to="/services" class="hover:text-white transition-colors">Local 3-Pack SEO</router-link></li>
-            <li><router-link to="/services" class="hover:text-white transition-colors">Paid Ads &amp; Media Buying</router-link></li>
-            <li><router-link to="/services" class="hover:text-white transition-colors">Conversion Architecture</router-link></li>
-            <li><router-link to="/services" class="hover:text-white transition-colors">Project Management Logic</router-link></li>
-            <li><router-link to="/case-studies" class="hover:text-white transition-colors">Commercial Portfolio</router-link></li>
+            <li><router-link to="/services" class="hover:text-white transition-colors">Website Development Management</router-link></li>
+            <li><router-link to="/services" class="hover:text-white transition-colors">Google Maps 3-Pack SEO</router-link></li>
+            <li><router-link to="/services" class="hover:text-white transition-colors">Digital Ad Campaigns</router-link></li>
+            <li><router-link to="/services" class="hover:text-white transition-colors">Sales Automation &amp; Logic</router-link></li>
+            <li><router-link to="/services" class="hover:text-white transition-colors">Project Management</router-link></li>
+            <li><router-link to="/case-studies" class="hover:text-white transition-colors">Client Portfolio</router-link></li>
           </ul>
         </div>
 
