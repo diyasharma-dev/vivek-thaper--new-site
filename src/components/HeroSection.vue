@@ -8,10 +8,10 @@
     <div class="absolute -top-24 -right-12 w-96 h-96 bg-gradient-to-br from-red-400/15 via-rose-300/10 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
-        <!-- Left Column: Copy & Actions (7 cols) -->
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <!-- Left Column: Copy & Actions (6 cols on lg) -->
+        <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
           
           <!-- Editorial Label: Mirch Media NYC Heritage + Live Active Beacon -->
           <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
@@ -89,82 +89,70 @@
 
         </div>
 
-        <!-- Right Column: Live Video Preview Player Container (5 cols) -->
-        <div class="lg:col-span-5 relative flex justify-center">
+        <!-- Right Column: Live Video Player Showcase (6 cols on lg) -->
+        <div class="lg:col-span-6 relative flex justify-center">
           
-          <div class="relative w-full max-w-sm sm:max-w-md">
+          <div class="relative w-full max-w-lg lg:max-w-none">
             
-            <div class="bg-white p-3 sm:p-3.5 rounded-3xl border border-slate-200/90 shadow-xl relative group transition-all duration-300">
+            <div class="bg-white p-3.5 sm:p-4 rounded-3xl border border-slate-200/90 shadow-xl relative group transition-all duration-300">
               
-              <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-slate-950">
+              <!-- Video Frame: Native 16:9 widescreen with object-contain so ZERO text or images are cut -->
+              <div class="relative rounded-2xl overflow-hidden aspect-video bg-black shadow-inner">
                 <!-- Live Video Preview (Autoplaying muted preview of Vivek speaking) -->
                 <video 
                   ref="previewVideo"
                   src="/media/vivek-intro-video.mp4" 
-                  poster="/media/vivek-thapar-ceo.webp"
                   autoplay
                   muted
                   loop
                   playsinline
-                  class="w-full h-full object-cover object-top filter contrast-[1.02] transition-transform duration-700"
+                  preload="auto"
+                  class="w-full h-full object-contain bg-black"
                 ></video>
+              </div>
 
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/15 to-transparent pointer-events-none"></div>
-
-                <!-- Video Controls Badge Bar (Top Overlay) -->
-                <div class="absolute top-3 inset-x-3 z-20 flex items-center justify-between gap-2">
-                  <!-- Live Preview Indicator Pill -->
-                  <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-950/70 backdrop-blur-md border border-white/10 text-white text-[10px] font-mono font-bold tracking-wider uppercase">
-                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
-                    <span>Video Message</span>
+              <!-- Dedicated Player Controls & Info Bar (Placed BELOW video so video is 100% clean & unobstructed) -->
+              <div class="mt-3.5 p-3 sm:p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-wrap items-center justify-between gap-3">
+                <div class="min-w-0">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 shrink-0 animate-pulse"></span>
+                    <h3 class="text-sm font-heading font-bold text-slate-900 truncate">Vivek Thapar</h3>
+                    <span class="px-2 py-0.5 rounded-full bg-red-100 text-red-700 text-[10px] font-mono font-bold uppercase tracking-wider">Briefing</span>
                   </div>
-
-                  <div class="flex items-center gap-1.5">
-                    <!-- Audio Toggle Button -->
-                    <button 
-                      @click="toggleAudio"
-                      class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/90 hover:bg-white text-slate-900 text-xs font-bold transition-all cursor-pointer shadow-md hover:scale-105 backdrop-blur-md border border-slate-200"
-                      :title="isMuted ? 'Turn Sound On' : 'Mute Video'"
-                      :aria-label="isMuted ? 'Turn Sound On' : 'Mute Video'"
-                    >
-                      <VolumeX v-if="isMuted" class="w-3.5 h-3.5 text-slate-600" />
-                      <template v-else>
-                        <Volume2 class="w-3.5 h-3.5 text-red-600" />
-                        <span class="inline-flex items-center gap-0.5">
-                          <span class="w-0.5 h-2 bg-red-600 rounded-full animate-bounce"></span>
-                          <span class="w-0.5 h-3 bg-red-600 rounded-full animate-bounce [animation-delay:0.15s]"></span>
-                          <span class="w-0.5 h-1.5 bg-red-600 rounded-full animate-bounce [animation-delay:0.3s]"></span>
-                        </span>
-                      </template>
-                      <span class="text-[11px] font-mono">{{ isMuted ? 'Sound' : 'Playing' }}</span>
-                    </button>
-
-                    <!-- Theatre Modal Expand Button -->
-                    <button 
-                      @click="$emit('open-video')"
-                      class="w-7 h-7 flex items-center justify-center rounded-full bg-white/90 hover:bg-white text-slate-900 transition-all cursor-pointer shadow-md hover:scale-105 backdrop-blur-md border border-slate-200"
-                      title="Expand to Full Theatre"
-                      aria-label="Expand video to full theatre"
-                    >
-                      <Maximize2 class="w-3.5 h-3.5 text-slate-700" />
-                    </button>
-                  </div>
+                  <p class="text-[11px] text-slate-500 font-medium truncate mt-0.5">Founder &amp; CEO · Mirch Media NYC · Queens, NY</p>
                 </div>
 
-                <!-- In-card Bottom Identification -->
-                <div class="absolute bottom-3 inset-x-3 p-3 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-md">
-                  <div class="flex items-center justify-between gap-2">
-                    <div class="min-w-0">
-                      <h3 class="text-sm font-heading font-bold text-slate-900 truncate">Vivek Thapar</h3>
-                      <p class="text-[11px] text-red-600 font-bold truncate">Executive Leadership · Mirch Media</p>
-                    </div>
-                    <div class="text-right shrink-0">
-                      <span class="text-[9px] uppercase tracking-widest text-slate-400 font-mono font-bold block">Studio</span>
-                      <span class="text-xs font-bold text-slate-800">Queens, NYC</span>
-                    </div>
-                  </div>
-                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <!-- Audio Toggle Button -->
+                  <button 
+                    @click="toggleAudio"
+                    class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-800 text-xs font-bold transition-all cursor-pointer shadow-2xs border border-slate-200 hover:border-slate-300"
+                    :title="isMuted ? 'Turn Sound On' : 'Mute Video'"
+                    :aria-label="isMuted ? 'Turn Sound On' : 'Mute Video'"
+                  >
+                    <VolumeX v-if="isMuted" class="w-3.5 h-3.5 text-slate-500" />
+                    <template v-else>
+                      <Volume2 class="w-3.5 h-3.5 text-red-600" />
+                      <span class="inline-flex items-center gap-0.5">
+                        <span class="w-0.5 h-2 bg-red-600 rounded-full animate-bounce"></span>
+                        <span class="w-0.5 h-3 bg-red-600 rounded-full animate-bounce [animation-delay:0.15s]"></span>
+                        <span class="w-0.5 h-1.5 bg-red-600 rounded-full animate-bounce [animation-delay:0.3s]"></span>
+                      </span>
+                    </template>
+                    <span class="text-[11px] font-mono">{{ isMuted ? 'Sound' : 'Playing' }}</span>
+                  </button>
 
+                  <!-- Theatre Modal Expand Button -->
+                  <button 
+                    @click="handleOpenTheatre"
+                    class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition-all cursor-pointer shadow-2xs hover:scale-105"
+                    title="Expand to Full Theatre"
+                    aria-label="Expand video to full theatre"
+                  >
+                    <Maximize2 class="w-3.5 h-3.5 text-white" />
+                    <span class="text-[11px] font-mono">Theatre</span>
+                  </button>
+                </div>
               </div>
 
               <!-- Editorial caption beneath video card -->
@@ -188,7 +176,7 @@
 import { ref } from 'vue'
 import { ArrowDown, ArrowRight, Volume2, VolumeX, Maximize2 } from 'lucide-vue-next'
 
-defineEmits(['open-video'])
+const emit = defineEmits(['open-video'])
 
 const previewVideo = ref(null)
 const isMuted = ref(true)
@@ -205,5 +193,12 @@ function toggleAudio() {
       isMuted.value = true
     }
   }
+}
+
+function handleOpenTheatre() {
+  if (previewVideo.value) {
+    previewVideo.value.pause()
+  }
+  emit('open-video')
 }
 </script>

@@ -30,7 +30,7 @@
               poster="/media/vivek-thapar-founder.webp"
               playsinline
               controls
-              class="w-full aspect-video object-cover bg-slate-950"
+              class="w-full aspect-video object-contain bg-slate-950"
               @play="isPlaying = true"
               @pause="isPlaying = false"
             ></video>
